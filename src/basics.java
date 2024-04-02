@@ -5,8 +5,8 @@ import static org.hamcrest.Matchers.*;
 
 import org.testng.Assert;
 
-import files.ReusableMethod;
-import files.payload;
+import files.DemoReusableMethod;
+import files.demoPayload;
 
 public class basics {
 
@@ -17,7 +17,7 @@ public class basics {
 		/*add place*/
 		String response = given().log().all().queryParam("key","qaclick123").header("Content-Type","application/json").and().header("Connection", "keep-alive").and().header("Accept-Encoding","gzip, deflate, br")
 		.and().header("Accept", "*/*").and().header("User-Agent","PostmanRuntime/7.37.0")
-		.body(payload.AddlocationPayload())
+		.body(demoPayload.AddlocationPayload())
 		.when().post("maps/api/place/add/json")
 		.then().assertThat().statusCode(200).body("scope",equalTo("APP"))
 		.header("Server","Apache/2.4.52 (Ubuntu)").extract().response().asString();
@@ -25,8 +25,8 @@ public class basics {
 		System.out.println(response);
 		
 		//JsonPath jp = new JsonPath(response);
-		JsonPath jp = ReusableMethod.rawToJson(response);
-		String placeID = jp.getString("place_id");
+		JsonPath jp = DemoReusableMethod.rawToJson(response); //converting raw body in response to json 
+		String placeID = jp.getString("place_id"); //extracting string from that json 
 		
 		System.out.println("placeID = "+placeID);
 		
@@ -49,7 +49,7 @@ public class basics {
 		.then().assertThat().log().all().statusCode(200).extract().response().asString();
 		//System.out.println("response: "+getupdatedresponse);
 		
-		JsonPath jp1 = ReusableMethod.rawToJson(getupdatedresponse);
+		JsonPath jp1 = DemoReusableMethod.rawToJson(getupdatedresponse);
 		String updatedaddress = jp1.getString("address");
 		System.out.println("New address after Put: "+updatedaddress);
 		
