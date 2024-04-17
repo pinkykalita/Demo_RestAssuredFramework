@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ControldatafromTC">
+      <class name="deserializationDemo">
         <methods>
-          <include name="addBookSendDatafromTC"/>
+          <include name="pojogetterDemo"/>
         </methods>
-      </class> <!-- ControldatafromTC -->
+      </class> <!-- deserializationDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document xmlns="urn:standardbank:nbol:h2h:nBOLMandateInitiationRequestImportSchema">
+    <MndtInitnReq>
+        <GrpHdr>
+            <MsgId>100/MANIN/00210001/20240307/DJ01</MsgId>
+            <CreDtTm>2024-03-07T00:00:00</CreDtTm>
+            <Authstn>
+                <Prtry>BOL Customer/BOL UAT</Prtry>
+            </Authstn>
+            <InitgPty>
+                <Nm>Junaid</Nm>
+            </InitgPty>
+            <InstgAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <MmbId>051001</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </InstgAgt>
+        </GrpHdr>
+        <Mndt>
+		
+		<!-- client reference not unique -->
+            <MndtId>ClntRef</MndtId>   
+			
+			<!-- contract reference mandatory and uniqu -->
+            <MndtReqId>732024A1</MndtReqId> 
+            <Tp>
+                <SvcLvl>
+				<!-- tracking -->
+                    <Prtry>T</Prtry>
+                </SvcLvl>
+                <LclInstrm>
+				<!-- Auth code -->
+                    <Prtry>0229</Prtry>
+                </LclInstrm>
+            </Tp>
+            <Ocrncs>
+			<!-- occurence from collection details screen -->
+			
+			<!-- Recurring - RCUR , Once off - OOFF ( if the occurence is OOFF, debit variable type = FIXED , collection frequency should be ADHO and adjustment category NEVER(N) -->
+                <SeqTp>RCUR</SeqTp>
+				<!-- Frequency WEEK, MNTH,ADHO, QURT, FRTN -->
+                <Frqcy>WEEK</Frqcy>
+                <Drtn>
+				<!-- mandate init date  -->
+                    <FrDt>2024-03-07</FrDt>
+                </Drtn>
+				<!-- first collection date -->
+                <!--FrstColltnDt>2018-05-28</FrstColltnDt-->
+            </Ocrncs>
+			
+            <ColltnAmt Ccy="ZAR">30</ColltnAmt>
+            <MaxAmt Ccy="ZAR">45</MaxAmt>
+            <CdtrSchmeId>
+                <Id>
+                    <OrgId>
+                        <Othr>
+                            <Id>001</Id>
+                        </Othr>
+                    </OrgId>
+                </Id>
+            </CdtrSchmeId>
+            <Cdtr>
+			
+		<!-- customer profile or credtior details -->
+                <Nm>Standard Bank HTH</Nm>
+                <CtctDtls>
+				
+				<!-- creditor phone number -->
+                    <PhneNb>+27-821234567</PhneNb>
+					
+					<!-- creditor email -->
+                    <EmailAdr>junzismail@gmail.com</EmailAdr>
+                </CtctDtls>
+            </Cdtr>
+            <CdtrAcct>
+                <Id>
+                    <Othr>
+					
+					<!-- creditor acc no -->
+                        <Id>021452954</Id>
+                    </Othr>
+                </Id>
+            </CdtrAcct>
+            <CdtrAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <MmbId>051001</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </CdtrAgt>
+            <UltmtCdtr>
+                <Id>
+                    <OrgId>
+                        <Othr>
+						
+						<!-- short name attached to account -->
+                            <Id>AC Col</Id>
+                        </Othr>
+                    </OrgId>
+                </Id>
+            </UltmtCdtr>
+			
+			<!-- debtor data as below -->
+            <Dbtr>
+			
+			<!-- debtor name -->
+                <Nm>DebiCheck</Nm>
+                <Id>
+                    <PrvtId>
+                        <Othr>
+						
+						<!-- ID as below -->
+						<!-- I- ID -->
+						<!-- P-passport
+						T - tempororary  -->
+                            <Id>I/7502159754090</Id>  
+                        </Othr>
+                    </PrvtId>
+                </Id>
+                <CtctDtls>
+				
+				<!-- debtor phone number -->
+                   
+                    <PhneNb>+27-832942961</PhneNb>
+					
+					<!-- debtor email id - not mandatory -->
+                    <EmailAdr>ismail@gmail.com</EmailAdr>
+                </CtctDtls>
+            </Dbtr>
+            <DbtrAcct>
+                <Id>
+                    <Othr>
+					
+					<!-- debtor acc -->
+                        <Id>10005415908</Id>
+                    </Othr>
+                </Id>
+                <Tp>
+				
+				<!-- account Type - CURRENT, SAVINGS, TRANSMISSION -->
+                    <Prtry>SAVINGS</Prtry>
+                </Tp>
+            </DbtrAcct>
+            <DbtrAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+					
+					<!-- sort code of Debtor -->
+                        <MmbId>051001</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </DbtrAgt>
+			
+			<!-- if u have an ultimate debotr- not mandatory -->
+            <UltmtDbtr>
+                <Nm>Test</Nm>
+            </UltmtDbtr>
+			
+			<!-- MAC value for 0228/Preauth ( mandatory only for preauth / migration mandates which is decommisioned) -->
+			<!-- <RfrdDoc>
+				<Nb>4D4452EB</Nb>
+			</RfrdDoc> -->
+	
+            <SplmtryData>
+                <Envlp>
+                    <Cnts>
+					
+					<!-- Auth type - Real time , Batch and Preauth -->
+                        <AuthtnctnTp>Real time</AuthtnctnTp>
+						
+                        <RqstTrnsnbr>1</RqstTrnsnbr>
+						<!-- collection day as below varies accoriding with collection frequency tag value -->
+                        <CllctnDy>03</CllctnDy>
+						
+						<!-- collection day adjustment -->
+                        <DtAdjRI>Y</DtAdjRI>
+						
+						<!-- Adjustment category( N - Never , R - REPO, A- Annually , B - BI-Anually, Q- Quarterly -->
+                        <AdsjCtgy>N</AdsjCtgy>
+						 <!--AdsjRt>0.87000</AdsjRt> 
+                        <AdsjAmt Ccy="ZAR">15.0</AdsjAmt-->
+						
+						<!-- if First collection date is present , below First collection amt also need to be added -->
+                        <!--FrstColltnAmt Ccy="ZAR">10.00</FrstColltnAmt-->
+						
+						<!-- Debit value Type , VARIABLE, USAGEBASED and FIXED -->
+                        <DbVlTp>VARIABLE</DbVlTp>
+                    </Cnts>
+                </Envlp>
+            </SplmtryData>
+        </Mndt>
+    </MndtInitnReq>
+</Document>

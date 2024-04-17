@@ -93,5 +93,49 @@ public class demoPayload {
 				+ "";
 		return addBookPayload;
 	}
+	
+	
+	public static String CookieAutorizationdata(String username, String password)
+	{
+		String cookiePayload = "{ \r\n"
+				+ "    \"username\": \""+username+"\", \r\n"
+				+ "    \"password\": \""+password+"\"\r\n"
+				+ " }";
+		return cookiePayload;
+	}
 
+	
+	public static String createissuePayload()
+	{
+		return "{\"fields\": {\r\n"
+				+ "\"project\": \r\n"
+				+ "{ \"key\": \"RES\"},\r\n"
+				+ "\"summary\": \"Creating new ticket from Eclipse to send attachment\",\r\n"
+				+ "\"description\": \"this ticket has been created from Eclipse on Sunday 07/04/2024\",\r\n"
+				+ "\"issuetype\": {\r\n"
+				+ "\"name\": \"Bug\"\r\n"
+				+ "}\r\n"
+				+ "}\r\n"
+				+ "}";
+	}
+	
+	
+	public static String addCommnet()
+	{
+		String expectedMessage = "Adding comments and attachments from Eclipse Test";
+		return "{\r\n"
+				+ "    \"body\": \""+expectedMessage+"\",\r\n"
+				+ "    \"visibility\": {\r\n"
+				+ "        \"type\": \"role\",\r\n"
+				+ "        \"value\": \"Administrators\"\r\n"
+				+ "    }\r\n"
+				+ "}";
+	}
+	
+	
+	
+	
+	
+	
+	
 }

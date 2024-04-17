@@ -1,4 +1,4 @@
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 import java.lang.Object;
