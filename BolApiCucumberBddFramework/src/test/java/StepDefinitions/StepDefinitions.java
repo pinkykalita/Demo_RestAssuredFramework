@@ -52,7 +52,7 @@ public class StepDefinitions extends Utils{
 	public void a_request_is_sent_to_generate_an_access_token() {
 		generateAccesstoken = req.filter(session).when().log().all()
 				.post("https://enterprisestssit.standardbank.co.za/as/token.oauth2")
-			.then().spec(responseSpecifications()).extract().response().asString();
+			.then().spec(successresponseSpecifications()).extract().response().asString();
 		System.out.println("response = "+generateAccesstoken+"\n\n");		
 	}	
 	@Then("the response should contain a valid access token")
@@ -75,12 +75,12 @@ public class StepDefinitions extends Utils{
 	@When("user sends a POST request to create a new Mandate Processing Options")
 	public void user_sends_a_post_request_to_create_a_new_mandate_processing_options() {
 		responsecode = request.when().post("authenticated/processing-options")
-				.then().log().all().spec(responseSpecifications()).extract().response();
+				.then().log().all().spec(successresponseSpecifications()).extract().response();
 		response = responsecode.asString();
 	}
 	@Then("the response status code should be {int}")
 	public void the_response_status_code_should_be(Integer expectedStatusCode) {
-		assertEquals(responsecode.getStatusCode(),200);
+		assertEquals(responsecode.getStatusCode(),expectedStatusCode.intValue());
 	}
 	@And("{string} in response body should be same as {string}")
 	public void in_response_body_should_be_same_as(String actualValue, String expectedValue) {
@@ -89,6 +89,7 @@ public class StepDefinitions extends Utils{
 		assertEquals(actualOptionKey.toString(), expectedValue);
 		System.out.println("Request successfull\n");   
 	}
+	
 	
 	/*retrieve mandate option*/
 	@Given("the user has a request prepared with the {string}")
@@ -101,9 +102,11 @@ public class StepDefinitions extends Utils{
 	public void user_sends_get_request_with_access_token()
 	{
 		responsecode = req1.when().get("authenticated/processing-options/{mandateProcessingOptionsKey}")
-				.then().log().all().spec(responseSpecifications()).extract().response();
+				.then().log().all().spec(successresponseSpecifications()).extract().response();
 		response = responsecode.asString();
+		System.out.println("I am in When block og Get");
 	}
+	
 	
 	/*update mandate processing option*/
 	@Given("user has request Payload with {string} and {string}")
@@ -116,11 +119,20 @@ public class StepDefinitions extends Utils{
 	public void user_sends_put_request_with_access_token() 
 	{
 		responsecode = req1.when().put("authenticated/processing-options/{mandateProcessingOptionsKey}")
-				.then().log().all().spec(responseSpecifications()).extract().response();
+				.then().log().all().spec(successresponseSpecifications()).extract().response();
 		response = responsecode.asString();
+		System.out.println("I am in When block og Put");
 	}
 	
+	
 	/*create mandate with existing mandate processing key*/
+	@When("user sends a POST request with existingKey to create a new Mandate Processing Options")
+	public void user_sends_a_post_request_with_existing_key_to_create_a_new_mandate_processing_options() {
+		responsecode = request.when().post("authenticated/processing-options")
+				.then().log().all().spec(alreadyexistsresponseSpecifications()).extract().response();
+		response = responsecode.asString();
+		System.out.println("I am in When block og RE-Post");
+	}
 	@Then("the response body should indicate {string}")
 	public void the_response_body_should_indicate(String errormMessage) 
 	{
@@ -136,6 +148,12 @@ public class StepDefinitions extends Utils{
 		processingOptionsPayload.setMandateProcessingOptionsKey(newKey);
 		request = given().log().all().spec(requestSpecifications())
 				.body(data.CreateProcessingOptionsPayload(newKey));
+	}
+	@When("user sends a POST request without bearer token")
+	public void user_sends_a_post_request_without_bearer_token() {
+		responsecode = request.when().post("authenticated/processing-options")
+				.then().log().all().spec(unauthorizedresponseSpecifications()).extract().response();
+		response = responsecode.asString();
 	}
 
 

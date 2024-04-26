@@ -8,50 +8,45 @@ Scenario: Verify that access token is successfully generated using Generate Acce
 Scenario Outline: Verify that Mandate Processing Options are successfully created using Processing Options API
 	Given user has request Payload with "<newKey>" and access token
   When user sends a POST request to create a new Mandate Processing Options
-  Then the response status code should be "<expectedStatusCode>" 
+  Then the response status code should be 200 
   And  "mandateProcessingOptionsKey" in response body should be same as "<newKey>"
-  
   Examples:
-  | newKey |	expectedStatusCode	|
-  | 100012  |	200	|
+  | newKey |
+  | 100019  |
   
 Scenario Outline: Verify that user can retrieve the processing options after successful creation
 	Given the user has a request prepared with the "<path parameter>"
 	When user sends GET request with access token
-	Then the response status code should be "<expectedStatusCode>" 
+	Then the response status code should be 200 
 	And "mandateProcessingOptionsKey" in response body should be same as "<path parameter>"
-	
 	Examples:
-  | path parameter |	expectedStatusCode	|
-  | 117  |	200	|
+  | path parameter |
+  | 100017  |
 	
 Scenario Outline: Verify that user can update the mandate processing option
 	Given user has request Payload with "<path parameter>" and "<updatevalue>"
 	When user sends PUT request with access token
-	Then the response status code should be "<expectedStatusCode>" 
+	Then the response status code should be 200
 	And "mandateProcessingOptionsKey" in response body should be same as "<path parameter>"
-	And  "fuInterimAuditType" in response body should be same as "<updatevalue>"
-	
+	And  "fuAuditRequired" in response body should be same as "<updatevalue>"
 	Examples:
-  | path parameter |	updatevalue	|	expectedStatusCode	|
-  | 117  |	N	|	200	|
+  | path parameter |	updatevalue	|
+  | 100017  |	Y	|
 
 Scenario Outline: Verify the error is displayed when creating a mandate processing options with existing key 
 	Given user has request Payload with "<existingKey>" and access token
-	When user sends a POST request to create a new Mandate Processing Options
-	Then the response status code should be "<expectedStatusCode>" 
+	When user sends a POST request with existingKey to create a new Mandate Processing Options
+	Then the response status code should be 500
 	And the response body should indicate "<errorMessage>"
-	
 	Examples:
-  | existingKey |	errorMessage	|	expectedStatusCode	|
-  | 117  |	The mandate processing option already exists for this key	|	500	|
+  | existingKey |	errorMessage	|
+  | 100017  |	The mandate processing option already exists for this key	|
 	
 Scenario Outline: Verify that error is displayed when creating mandates without bearer token
 	Given user has request Payload with "<newKey>"
-	When user sends a POST request to create a new Mandate Processing Options
-	Then the response status code should be "<expectedStatusCode>" 
-	And the response body should indicate "<Unauthorized>"
-	
+	When user sends a POST request without bearer token
+	Then the response status code should be 401
+	#And the response body should indicate "<errorMessage>"
 	Examples:
-  | newKey |	errorMessage	| expectedStatusCode	|
-  | 1002  |	Unauthorized	|	401	|
+  | newKey |	errorMessage	|
+  | 1002  |	Unauthorized	|

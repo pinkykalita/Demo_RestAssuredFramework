@@ -29,9 +29,9 @@ public class TestDataBuild {
 		UpdateMandateProcessingOptions mandateProcessingObject = new UpdateMandateProcessingOptions();
 		
 		mandateProcessingObject.setAcceptanceType("W");
-		mandateProcessingObject.setFuAuditRequired("N");
+		mandateProcessingObject.setFuAuditRequired(updatevalue);
 		mandateProcessingObject.setFuAuthorisationRequired("N");
-		mandateProcessingObject.setFuInterimAuditType(updatevalue);
+		mandateProcessingObject.setFuInterimAuditType("F");
 		mandateProcessingObject.setH2hAuditRequired("Y");
 		mandateProcessingObject.setH2hAuthorisationRequired("N");
 		mandateProcessingObject.setH2hInterimAuditType("F");

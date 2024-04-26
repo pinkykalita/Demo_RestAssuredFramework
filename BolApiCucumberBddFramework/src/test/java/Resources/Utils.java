@@ -31,14 +31,6 @@ public class Utils {
 		
 	}
 	
-	public ResponseSpecification responseSpecifications()
-	{
-		responseSpec = new ResponseSpecBuilder().expectStatusCode(200)
-				.build();
-		return responseSpec;
-		
-	}
-	
 	public RequestSpecification requestSpecifications()
 	{
 		String accessToken = GenerateToken.getAccessToken();
@@ -55,6 +47,28 @@ public class Utils {
 		return requestSpec;
 		
 	}
+	
+	public ResponseSpecification successresponseSpecifications()
+	{
+		responseSpec = new ResponseSpecBuilder().expectStatusCode(200)
+				.build();
+		return responseSpec;
+	}
+	
+	public ResponseSpecification alreadyexistsresponseSpecifications()
+	{
+		responseSpec = new ResponseSpecBuilder().expectStatusCode(500)
+				.build();
+		return responseSpec;
+	}
+	
+	public ResponseSpecification unauthorizedresponseSpecifications()
+	{
+		responseSpec = new ResponseSpecBuilder().expectStatusCode(401)
+				.build();
+		return responseSpec;
+	}
+	
 	
 	
 }
