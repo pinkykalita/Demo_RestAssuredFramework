@@ -42,6 +42,7 @@ public class Utils {
 	public RequestSpecification requestSpecifications()
 	{
 		String accessToken = GenerateToken.getAccessToken();
+		
 		requestSpec = new RequestSpecBuilder().setBaseUri("https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/")
 				.setRelaxedHTTPSValidation()
 				.addHeader("Authorization", "Bearer " + accessToken)

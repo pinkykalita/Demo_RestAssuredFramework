@@ -41,7 +41,7 @@ public class StepDefinitions extends Utils{
 	TestDataBuild data = new TestDataBuild();
 	CreateMandateProcessingOptions processingOptionsPayload = new CreateMandateProcessingOptions();
 
-	
+	/*generate access token*/
 	@Given("the Generate Access Token API is available")
 	public void the_generate_access_token_api_is_available() 
 	{
@@ -65,12 +65,12 @@ public class StepDefinitions extends Utils{
 	}
 
 	
-	
+	/*create mandate processing option options*/
 	@Given("user has request Payload with {string} and access token")
 	public void user_has_request_payload_with_and_access_token(String newKey) {
 		processingOptionsPayload.setMandateProcessingOptionsKey(newKey);
 		request = given().log().all().spec(requestSpecifications())
-				.body(data.ProcessingOptionsPayload(newKey));
+				.body(data.CreateProcessingOptionsPayload(newKey));
 	}
 	@When("user sends a POST request to create a new Mandate Processing Options")
 	public void user_sends_a_post_request_to_create_a_new_mandate_processing_options() {
@@ -90,21 +90,54 @@ public class StepDefinitions extends Utils{
 		System.out.println("Request successfull\n");   
 	}
 	
-	
+	/*retrieve mandate option*/
 	@Given("the user has a request prepared with the {string}")
 	public void the_user_has_a_request_prepared_with_the(String pathParameter) 
 	{
 		req1 = given().relaxedHTTPSValidation().log().all().spec(requestSpecifications())
 				.pathParam("mandateProcessingOptionsKey", pathParameter);
 	}
-	@When("user sends GET request")
-	public void user_sends_get_request()
+	@When("user sends GET request with access token")
+	public void user_sends_get_request_with_access_token()
 	{
 		responsecode = req1.when().get("authenticated/processing-options/{mandateProcessingOptionsKey}")
 				.then().log().all().spec(responseSpecifications()).extract().response();
 		response = responsecode.asString();
 	}
 	
+	/*update mandate processing option*/
+	@Given("user has request Payload with {string} and {string}")
+	public void user_has_request_payload_with(String pathParameter, String updatevalue)
+	{
+		req1 = given().spec(requestSpecifications()).pathParam("mandateProcessingOptionsKey", pathParameter)
+				.body(data.UpdateProcessingOptionsPayload(pathParameter, updatevalue));
+	}
+	@When("user sends PUT request with access token")
+	public void user_sends_put_request_with_access_token() 
+	{
+		responsecode = req1.when().put("authenticated/processing-options/{mandateProcessingOptionsKey}")
+				.then().log().all().spec(responseSpecifications()).extract().response();
+		response = responsecode.asString();
+	}
 	
+	/*create mandate with existing mandate processing key*/
+	@Then("the response body should indicate {string}")
+	public void the_response_body_should_indicate(String errormMessage) 
+	{
+		assertEquals(response, errormMessage);
+	}
 	
+	/*unauthorized access*/
+	@Given("user has request Payload with {string}")
+	public void user_has_request_payload_with(String newKey) 
+	{
+		accessToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF";
+		GenerateToken.setAccessToken(accessToken);
+		processingOptionsPayload.setMandateProcessingOptionsKey(newKey);
+		request = given().log().all().spec(requestSpecifications())
+				.body(data.CreateProcessingOptionsPayload(newKey));
+	}
+
+
+
 }
