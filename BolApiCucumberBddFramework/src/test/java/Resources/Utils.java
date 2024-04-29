@@ -98,10 +98,16 @@ public class Utils {
 		return responseSpec;
 	}
 		
-	public JsonPath rawToJson(String response)
+	public JsonPath rawToJson(String generateAccesstoken)
+	{
+		JsonPath jp = new JsonPath(generateAccesstoken);
+		return jp;
+	}
+	
+	public String getJsonPath(String response, String keyValue)
 	{
 		JsonPath jp = new JsonPath(response);
-		return jp;
+		return jp.get(keyValue).toString();
 	}
 	
 }

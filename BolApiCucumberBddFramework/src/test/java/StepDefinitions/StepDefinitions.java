@@ -32,6 +32,7 @@ public class StepDefinitions extends Utils{
 	
 	Response responsecode;
 	Response reuestResponse;
+	Response generateAccesstokenrequest;
 	RequestSpecification request;
 	RequestSpecification req;
 	RequestSpecification req1;
@@ -42,8 +43,8 @@ public class StepDefinitions extends Utils{
 	String accessToken;
 	Object mandateprocessingoptionsKey;
 	ResourceURL resourceAPI;
-	JsonPath jp;
-	JsonPath jp1;
+	
+	
 	
 	TestDataBuild data = new TestDataBuild();
 	CreateMandateProcessingOptions processingOptionsPayload = new CreateMandateProcessingOptions();
@@ -61,14 +62,13 @@ public class StepDefinitions extends Utils{
 	{
 		resourceAPI = ResourceURL.valueOf(resource);
 		
-		generateAccesstoken = req.filter(session).when()
-				.post(resourceAPI.getResource())
-			.then().spec(successresponseSpecifications()).extract().response().asString();		
+		generateAccesstokenrequest = req.filter(session).when()
+				.post(resourceAPI.getResource());	
 	}	
 	@Then("the response should contain a valid access token")
 	public void the_response_should_contain_a_valid_access_token() {
-		jp = new JsonPath(generateAccesstoken);
-		accessToken = jp.getString("access_token");
+		generateAccesstoken = generateAccesstokenrequest.then().spec(successresponseSpecifications()).extract().response().asString();
+		accessToken = rawToJson(generateAccesstoken).getString("access_token");
 		GenerateToken.setAccessToken(accessToken);
 		System.out.println("accessToken = "+accessToken+"\n\n");
 	}
@@ -94,14 +94,12 @@ public class StepDefinitions extends Utils{
 		responsecode = reuestResponse.then().spec(responseSpecifications(expectedStatusCode)).extract().response();
 		int statusCode = responsecode.getStatusCode();
 		response = responsecode.asString();
-	//	int statusCode = responsecode.getStatusCode();
 		assertEquals(statusCode,Integer.parseInt(expectedStatusCode));
 	}
 	@And("{string} in response body should be same as {string}")
-	public void in_response_body_should_be_same_as(String actualValue, String expectedValue) {
-		jp1 = new JsonPath(response);
-		actualOptionKey = jp1.getString(actualValue);
-		assertEquals(actualOptionKey.toString(), expectedValue);  
+	public void in_response_body_should_be_same_as(String keyValue, String expectedValue) 
+	{
+		assertEquals(getJsonPath(response,keyValue), expectedValue);  
 	}
 	
 	
