@@ -68,7 +68,7 @@ public class StepDefinitions extends Utils{
 	@Then("the response should contain a valid access token")
 	public void the_response_should_contain_a_valid_access_token() {
 		generateAccesstoken = generateAccesstokenrequest.then().spec(successresponseSpecifications()).extract().response().asString();
-		accessToken = rawToJson(generateAccesstoken).getString("access_token");
+		accessToken = rawToJson(generateAccesstoken);
 		GenerateToken.setAccessToken(accessToken);
 		System.out.println("accessToken = "+accessToken+"\n\n");
 	}

@@ -12,7 +12,7 @@ Scenario Outline: Verify that Mandate Processing Options are successfully create
   And  "mandateProcessingOptionsKey" in response body should be same as "<newKey>"
   Examples:
   | newKey |
-  | 10027  |
+  | 10028  |
   
 Scenario Outline: Verify that user can retrieve the processing options after successful creation
 	Given the user has a request prepared with the "<path parameter>"
