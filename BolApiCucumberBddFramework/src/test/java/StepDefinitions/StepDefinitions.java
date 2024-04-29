@@ -3,10 +3,13 @@ package StepDefinitions;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
 import POJO.CreateMandateProcessingOptions;
 import POJO.GenerateToken;
+import Resources.ResourceURL;
 import Resources.TestDataBuild;
 import Resources.Utils;
 import io.cucumber.java.Scenario;
@@ -28,6 +31,7 @@ public class StepDefinitions extends Utils{
 	
 	
 	Response responsecode;
+	Response reuestResponse;
 	RequestSpecification request;
 	RequestSpecification req;
 	RequestSpecification req1;
@@ -37,28 +41,33 @@ public class StepDefinitions extends Utils{
 	String generateAccesstoken;
 	String accessToken;
 	Object mandateprocessingoptionsKey;
+	ResourceURL resourceAPI;
+	JsonPath jp;
+	JsonPath jp1;
 	
 	TestDataBuild data = new TestDataBuild();
 	CreateMandateProcessingOptions processingOptionsPayload = new CreateMandateProcessingOptions();
 
+	
 	/*generate access token*/
 	@Given("the Generate Access Token API is available")
-	public void the_generate_access_token_api_is_available() 
+	public void the_generate_access_token_api_is_available() throws IOException 
 	{
 		session = new SessionFilter();
 		req = given().spec(accessTokenRequest());
 	}
-	@When("a request is sent to generate an access token")
-	public void a_request_is_sent_to_generate_an_access_token() {
-		generateAccesstoken = req.filter(session).when().log().all()
-				.post("https://enterprisestssit.standardbank.co.za/as/token.oauth2")
-			.then().spec(successresponseSpecifications()).extract().response().asString();
-		System.out.println("response = "+generateAccesstoken+"\n\n");		
+	@When("a request is sent to {string}")
+	public void a_request_is_sent_to(String resource) 
+	{
+		resourceAPI = ResourceURL.valueOf(resource);
+		
+		generateAccesstoken = req.filter(session).when()
+				.post(resourceAPI.getResource())
+			.then().spec(successresponseSpecifications()).extract().response().asString();		
 	}	
 	@Then("the response should contain a valid access token")
 	public void the_response_should_contain_a_valid_access_token() {
-		//JsonPath jp = ReusableMethod.rawToJson(generateAccesstoken);
-		JsonPath jp = new JsonPath(generateAccesstoken);
+		jp = new JsonPath(generateAccesstoken);
 		accessToken = jp.getString("access_token");
 		GenerateToken.setAccessToken(accessToken);
 		System.out.println("accessToken = "+accessToken+"\n\n");
@@ -67,71 +76,73 @@ public class StepDefinitions extends Utils{
 	
 	/*create mandate processing option options*/
 	@Given("user has request Payload with {string} and access token")
-	public void user_has_request_payload_with_and_access_token(String newKey) {
+	public void user_has_request_payload_with_and_access_token(String newKey) throws IOException 
+	{
 		processingOptionsPayload.setMandateProcessingOptionsKey(newKey);
-		request = given().log().all().spec(requestSpecifications())
+		request = given().spec(requestSpecifications())
 				.body(data.CreateProcessingOptionsPayload(newKey));
 	}
-	@When("user sends a POST request to create a new Mandate Processing Options")
-	public void user_sends_a_post_request_to_create_a_new_mandate_processing_options() {
-		responsecode = request.when().post("authenticated/processing-options")
-				.then().log().all().spec(successresponseSpecifications()).extract().response();
-		response = responsecode.asString();
+	@When("user sends a POST request to {string}")
+	public void user_sends_a_post_request_to(String resource)
+	{
+		resourceAPI = ResourceURL.valueOf(resource);
+		reuestResponse = request.when().post(resourceAPI.getResource());
 	}
-	@Then("the response status code should be {int}")
-	public void the_response_status_code_should_be(Integer expectedStatusCode) {
-		assertEquals(responsecode.getStatusCode(),expectedStatusCode.intValue());
+	@Then("the response status code should be {string}")
+	public void the_response_status_code_should_be(String expectedStatusCode)
+	{
+		responsecode = reuestResponse.then().spec(responseSpecifications(expectedStatusCode)).extract().response();
+		int statusCode = responsecode.getStatusCode();
+		response = responsecode.asString();
+	//	int statusCode = responsecode.getStatusCode();
+		assertEquals(statusCode,Integer.parseInt(expectedStatusCode));
 	}
 	@And("{string} in response body should be same as {string}")
 	public void in_response_body_should_be_same_as(String actualValue, String expectedValue) {
-		JsonPath jp1 = new JsonPath(response);
+		jp1 = new JsonPath(response);
 		actualOptionKey = jp1.getString(actualValue);
-		assertEquals(actualOptionKey.toString(), expectedValue);
-		System.out.println("Request successfull\n");   
+		assertEquals(actualOptionKey.toString(), expectedValue);  
 	}
 	
 	
 	/*retrieve mandate option*/
 	@Given("the user has a request prepared with the {string}")
-	public void the_user_has_a_request_prepared_with_the(String pathParameter) 
+	public void the_user_has_a_request_prepared_with_the(String pathParameter) throws IOException 
 	{
-		req1 = given().relaxedHTTPSValidation().log().all().spec(requestSpecifications())
+		req1 = given().relaxedHTTPSValidation().spec(requestSpecifications())
 				.pathParam("mandateProcessingOptionsKey", pathParameter);
 	}
-	@When("user sends GET request with access token")
-	public void user_sends_get_request_with_access_token()
+	@When("user sends {string} request to {string}")
+	public void user_sends_request_to(String method, String resource)
 	{
-		responsecode = req1.when().get("authenticated/processing-options/{mandateProcessingOptionsKey}")
-				.then().log().all().spec(successresponseSpecifications()).extract().response();
-		response = responsecode.asString();
-		System.out.println("I am in When block og Get");
+		resourceAPI = ResourceURL.valueOf(resource);
+		
+		switch (method.toUpperCase()) {
+        case "GET":
+        	reuestResponse = req1.when().get(resourceAPI.getResource());
+            break;
+        case "PUT":
+        	reuestResponse = req1.when().put(resourceAPI.getResource());
+            break;
+		}
 	}
 	
 	
 	/*update mandate processing option*/
 	@Given("user has request Payload with {string} and {string}")
-	public void user_has_request_payload_with(String pathParameter, String updatevalue)
+	public void user_has_request_payload_with(String pathParameter, String updatevalue) throws IOException
 	{
 		req1 = given().spec(requestSpecifications()).pathParam("mandateProcessingOptionsKey", pathParameter)
 				.body(data.UpdateProcessingOptionsPayload(pathParameter, updatevalue));
 	}
-	@When("user sends PUT request with access token")
-	public void user_sends_put_request_with_access_token() 
-	{
-		responsecode = req1.when().put("authenticated/processing-options/{mandateProcessingOptionsKey}")
-				.then().log().all().spec(successresponseSpecifications()).extract().response();
-		response = responsecode.asString();
-		System.out.println("I am in When block og Put");
-	}
 	
 	
 	/*create mandate with existing mandate processing key*/
-	@When("user sends a POST request with existingKey to create a new Mandate Processing Options")
-	public void user_sends_a_post_request_with_existing_key_to_create_a_new_mandate_processing_options() {
-		responsecode = request.when().post("authenticated/processing-options")
-				.then().log().all().spec(alreadyexistsresponseSpecifications()).extract().response();
-		response = responsecode.asString();
-		System.out.println("I am in When block og RE-Post");
+	@When("user sends a POST request with existing mandateProcessingOptionsKey to {string}")
+	public void user_sends_a_post_request_with_existing_mandate_processing_options_key_to(String resource) 
+	{
+		resourceAPI = ResourceURL.valueOf(resource);
+		reuestResponse = request.when().post(resourceAPI.getResource());
 	}
 	@Then("the response body should indicate {string}")
 	public void the_response_body_should_indicate(String errormMessage) 
@@ -139,21 +150,22 @@ public class StepDefinitions extends Utils{
 		assertEquals(response, errormMessage);
 	}
 	
+	
 	/*unauthorized access*/
 	@Given("user has request Payload with {string}")
-	public void user_has_request_payload_with(String newKey) 
+	public void user_has_request_payload_with(String newKey) throws IOException 
 	{
 		accessToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF";
 		GenerateToken.setAccessToken(accessToken);
 		processingOptionsPayload.setMandateProcessingOptionsKey(newKey);
-		request = given().log().all().spec(requestSpecifications())
+		request = given().spec(requestSpecifications())
 				.body(data.CreateProcessingOptionsPayload(newKey));
 	}
-	@When("user sends a POST request without bearer token")
-	public void user_sends_a_post_request_without_bearer_token() {
-		responsecode = request.when().post("authenticated/processing-options")
-				.then().log().all().spec(unauthorizedresponseSpecifications()).extract().response();
-		response = responsecode.asString();
+	@When("user sends a POST request without bearer token to {string}")
+	public void user_sends_a_post_request_without_bearer_token_to(String resource)
+	{
+		resourceAPI = ResourceURL.valueOf(resource);
+		reuestResponse = request.when().post(resourceAPI.getResource());
 	}
 
 
