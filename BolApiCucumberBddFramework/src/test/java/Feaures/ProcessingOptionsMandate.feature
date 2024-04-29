@@ -12,7 +12,7 @@ Scenario Outline: Verify that Mandate Processing Options are successfully create
   And  "mandateProcessingOptionsKey" in response body should be same as "<newKey>"
   Examples:
   | newKey |
-  | 10028  |
+  | 1019  |
   
 Scenario Outline: Verify that user can retrieve the processing options after successful creation
 	Given the user has a request prepared with the "<path parameter>"
@@ -21,17 +21,17 @@ Scenario Outline: Verify that user can retrieve the processing options after suc
 	And "mandateProcessingOptionsKey" in response body should be same as "<path parameter>"
 	Examples:
   | path parameter 	|
-  | 100025  				|
+  | 1029  				|
 	
 Scenario Outline: Verify that user can update the mandate processing option
-	Given user has request Payload with "<path parameter>" and "<updatevalue>"
+	Given user has request Payload with "<path parameter>" and "<fuAuditRequired>"
 	When user sends "PUT" request to "GetAndUpdateProcessingOptionsAPI"
 	Then the response status code should be "200"
 	And "mandateProcessingOptionsKey" in response body should be same as "<path parameter>"
-	And  "fuAuditRequired" in response body should be same as "<updatevalue>"
+	And  verify that updated fuAuditRequired should be same as "<fuAuditRequired>" using "GetAndUpdateProcessingOptionsAPI"
 	Examples:
-  | path parameter	|	updatevalue	|
-  | 100020  				|	Y						|
+  | path parameter	|	fuAuditRequired	|
+  | 1029  				|	Y								|
 
 Scenario Outline: Verify the error is displayed when creating a mandate processing options with existing key 
 	Given user has request Payload with "<existingKey>" and access token

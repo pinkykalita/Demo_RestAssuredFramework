@@ -24,12 +24,12 @@ public class TestDataBuild {
 		return mandateProcessingObject;
 	}
 	
-	public UpdateMandateProcessingOptions UpdateProcessingOptionsPayload(String Key, String updatevalue)
+	public UpdateMandateProcessingOptions UpdateProcessingOptionsPayload(String Key, String expectedfuAuditRequired)
 	{
 		UpdateMandateProcessingOptions mandateProcessingObject = new UpdateMandateProcessingOptions();
 		
 		mandateProcessingObject.setAcceptanceType("W");
-		mandateProcessingObject.setFuAuditRequired(updatevalue);
+		mandateProcessingObject.setFuAuditRequired(expectedfuAuditRequired);
 		mandateProcessingObject.setFuAuthorisationRequired("N");
 		mandateProcessingObject.setFuInterimAuditType("F");
 		mandateProcessingObject.setH2hAuditRequired("Y");

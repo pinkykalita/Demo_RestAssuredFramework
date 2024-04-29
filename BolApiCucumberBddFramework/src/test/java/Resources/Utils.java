@@ -29,7 +29,7 @@ public class Utils {
 		RestAssured.useRelaxedHTTPSValidation();
 		session = new SessionFilter();
 		accessTokenRequestSpec = new RequestSpecBuilder()
-				//.setBaseUri(getGlobalValues("generateToken"))
+				.setBaseUri(getGlobalValues("generateToken"))
 				.addFormParam("client_id", "0c7b708b-d115-4955-868f-af34dd01012f").and()
 				.addFormParam("client_secret", "S3cr3t-75bf6-522ed").and()
 				.addFormParam("grant_type", "client_credentials").and()
