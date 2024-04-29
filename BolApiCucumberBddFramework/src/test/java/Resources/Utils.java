@@ -43,21 +43,25 @@ public class Utils {
 	public RequestSpecification requestSpecifications() throws IOException
 	{
 		String accessToken = GenerateToken.getAccessToken();
-		PrintStream log = new PrintStream(new FileOutputStream("Log.txt",true));
+		if (requestSpec == null)
+		{
+			//PrintStream log = new PrintStream(new FileOutputStream("Log.txt",true));
+			PrintStream log = new PrintStream(new FileOutputStream("Log.txt"));
+			
+			requestSpec = new RequestSpecBuilder()
+					.setBaseUri(getGlobalValues("DevEnv"))
+					.setRelaxedHTTPSValidation()
+					.addFilter(RequestLoggingFilter.logRequestTo(log))
+					.addFilter(ResponseLoggingFilter.logResponseTo(log))
+					.addHeader("Authorization", "Bearer " + accessToken)
+					.addHeader("Content-Type", "application/json")
+					.addHeader("User-Agent", "PostmanRuntime/7.37.0")
+					.addHeader("Accept", "*/*")
+					.addHeader("Accept-Encoding", "gzip, deflate, br")
+					.addHeader("Connection", "keep-alive")
+					.build();
+		}return requestSpec;
 		
-		requestSpec = new RequestSpecBuilder()
-				.setBaseUri(getGlobalValues("DevEnv"))
-				.setRelaxedHTTPSValidation()
-				.addFilter(RequestLoggingFilter.logRequestTo(log))
-				.addFilter(ResponseLoggingFilter.logResponseTo(log))
-				.addHeader("Authorization", "Bearer " + accessToken)
-				.addHeader("Content-Type", "application/json")
-				.addHeader("User-Agent", "PostmanRuntime/7.37.0")
-				.addHeader("Accept", "*/*")
-				.addHeader("Accept-Encoding", "gzip, deflate, br")
-				.addHeader("Connection", "keep-alive")
-				.build();
-		return requestSpec;
 		
 	}
 	

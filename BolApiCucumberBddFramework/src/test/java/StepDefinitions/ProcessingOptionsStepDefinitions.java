@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import POJO.CreateMandateProcessingOptions;
 import POJO.GenerateToken;
@@ -40,7 +40,7 @@ public class ProcessingOptionsStepDefinitions extends Utils{
 	String response;
 	SessionFilter session;
 	String generateAccesstoken;
-	String accessToken;
+	static String accessToken;
 	Object mandateprocessingoptionsKey;
 	ResourceURL resourceAPI;
 	
