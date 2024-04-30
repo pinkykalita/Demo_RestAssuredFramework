@@ -21,7 +21,7 @@ Scenario Outline: Verify that user can retrieve the processing options after suc
 	Given the user has a request prepared with the "<path parameter>"
 	When user sends "GET" request to "GetAndUpdateProcessingOptionsAPI"
 	Then the response status code should be "200"
-	And "mandateProcessingOptionsKey" in response body should be same as "<path parameter>"
+	And "mandateProcessingOptionsKey" in response body should be same as "<path parameter>" 
 	Examples:
   | path parameter 	|
   | 1029  					|

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Cucumber.Options.TestRunner" time="29.106" tests="6" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Cucumber.Options.TestRunner" time="25.933" tests="5" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire2062262016277610969\surefirebooter-20240430004649598_3.jar C:\Users\bbdnet10211\AppData\Local\Temp\surefire2062262016277610969 2024-04-30T00-46-49_513-jvmRun1 surefire-20240430004649598_1tmp surefire_0-20240430004649598_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire8555133511417242723\surefirebooter-20240501013325454_3.jar C:\Users\bbdnet10211\AppData\Local\Temp\surefire8555133511417242723 2024-05-01T01-33-25_344-jvmRun1 surefire-20240501013325454_1tmp surefire_0-20240501013325454_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\bbdnet10211\eclipse-workspace\BOLAPIFramework\target\test-classes;C:\Users\bbdnet10211\eclipse-workspace\BOLAPIFramework\target\classes;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\rest-assured\5.4.0\rest-assured-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\groovy\groovy\4.0.16\groovy-4.0.16.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\groovy\groovy-xml\4.0.16\groovy-xml-4.0.16.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\bbdnet10211\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\bbdnet10211\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\bbdnet10211\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\json-path\5.4.0\json-path-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\groovy\groovy-json\4.0.16\groovy-json-4.0.16.jar;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\rest-assured-common\5.4.0\rest-assured-common-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\xml-path\5.4.0\xml-path-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-java\7.17.0\cucumber-java-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-core\7.17.0\cucumber-core-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-gherkin\7.17.0\cucumber-gherkin-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.17.0\cucumber-gherkin-messages-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\testng-xml-formatter\0.1.0\testng-xml-formatter-0.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\query\12.1.2\query-12.1.2.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\datatable\7.17.0\datatable-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-plugin\7.17.0\cucumber-plugin-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\docstring\7.17.0\docstring-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\html-formatter\21.3.1\html-formatter-21.3.1.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\junit-xml-formatter\0.4.0\junit-xml-formatter-0.4.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\bbdnet10211\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-junit\7.17.0\cucumber-junit-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\bbdnet10211\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\bbdnet10211\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.0\jackson-databind-2.17.0.jar;C:\Users\bbdnet10211\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.0\jackson-annotations-2.17.0.jar;C:\Users\bbdnet10211\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.0\jackson-core-2.17.0.jar;C:\Users\bbdnet10211\.m2\repository\net\bytebuddy\byte-buddy\1.14.9\byte-buddy-1.14.9.jar;C:\Users\bbdnet10211\.m2\repository\org\codehaus\groovy\groovy\3.0.21\groovy-3.0.21.jar;C:\Users\bbdnet10211\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\bbdnet10211\.m2\repository\com\github\scribejava\scribejava-apis\2.5.3\scribejava-apis-2.5.3.jar;C:\Users\bbdnet10211\.m2\repository\com\github\scribejava\scribejava-core\2.5.3\scribejava-core-2.5.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire2062262016277610969\surefirebooter-20240430004649598_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire8555133511417242723\surefirebooter-20240501013325454_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -50,7 +50,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-21\bin;C:\Program Files\Git\cmd;C:\Users\bbdnet10211\Downloads\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin;C:\Users\bbdnet10211\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-21\bin;C:\Program Files\Git\cmd;C:\Users\bbdnet10211\Downloads\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin;C:\Users\bbdnet10211\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -58,41 +58,21 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Verify that access token is successfully generated using Generate Access Token API" classname="Validating Processing Options Mandate" time="8.118">
-    <system-out><![CDATA[accessToken = eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiczRVSHN1aEtxTlFYa2NjWmpjRmNGdSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQxODE3MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0MTgxNzIsImV4cCI6MTcxNDQyMTc3Mn0.YEt9VZ-VoGV7w_7lUmvhsS8xmFYdlX7EVsm4aO39dbt2JyvykK2G6TJ1koi-mawPZLGYZ0Ld2K7iajZkoM7ZGieaAQTIkyrPLhN9QfBqpM7vB-r9y9gbcd0piut6k5u05vRWdq9ZM7bNpO-1Ep0FJmD8Aticfb863gciAxiHJmRw6BeI1fx8Hzu7vVmQFqDuBMTKtv8t2ufDAu2UoWPi7cjyqjX5ZXO02G0I1rRkC6pSQlveAKqWsPmKJ3F8HlJCt6nen0ji3mNlwgKbHY7J1grN-vPwHFLy5nkvVndg7P51A1asP4MO81GwSr_FKx07uIvNblBYdC-V51LPfa4cyA
-
-
-accessToken = eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiNEk3MmtWVkRsekdCNktwMkgzSkRwYSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQxODE3NSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0MTgxNzUsImV4cCI6MTcxNDQyMTc3NX0.EZC2nPOd56qsz0kCQDG9O9wQZd7vBivzNSk_bI12UUV8sIdXuF-jguGG9q_dRcnDXF0afgb_ve62pCty7RgQ-CAkFC9QA6UzEFK-ukS0dSUTDuK7cW-2yEiEHPfcvNcbNcjSqXhes7kO1hFyGXRa2GrynLkRIiXRqGvFcxsKkvAEmU0OGlggDv3iDnipx0J6yrCJmNed2enlRAv7tMNmhpjFOef_c_EoXruLkFAlxJh9X6VLWGJ4wnqbnU4SzATAJhvWm__AJENCFMBDEYO0BxPt6aLuyVzRG1CMg-kxvrhJf3LWONQ8kevGzcjQexnBi-lQxxkyrX35AVOrR_Bpvw
+  <testcase name="Verify that Mandate Interchange are successfully created using Create Mandate Intercahnege API" classname="Validating Mandate Interchange API" time="10.446">
+    <system-out><![CDATA[accessToken = eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiTzg3WFJnNlQ1RmN0MWNTeERtUWRTRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzM2NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDczNjcsImV4cCI6MTcxNDUxMDk2N30.hyZw9UCtg4JM3XcvNPwUcXIHU4T8eInWMbOFdAYnLZTvBjhfRY3Gn_k_fxTg_1G-95GndEFgtV5Hb0EA93-hDhqTVT3ILDiFniGBKFx0LV4CZQ2hAZMzRvAw1NwlzS32xXgqLQ-iJjUdT4nxrv7txXTKPt4vv_cuGRwbF9D6TspWBnb6F-2gF5J20-Z6iEF8Swnp1iccAgOtk-a941npD8zVzm8uATotAOyQ6EdkWAwKm5Zcu4WdYXeu7xtYu0QPlW7BmRh7vAtAVVEL78_fvQEtiGXAaKUxEvQIj7eDvNHPxrnz5DGiV9CXDq-O3C_i_MTOGh_wauGvCiLiVbrDEg
 
 
 ]]></system-out>
   </testcase>
-  <testcase name="Verify that Mandate Processing Options are successfully created using Processing Options API" classname="Validating Processing Options Mandate" time="4.772">
-    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-1 expectation failed.
-Expected status code <200> but was <500>.
-
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-	at StepDefinitions.ProcessingOptionsStepDefinitions.the_response_status_code_should_be(ProcessingOptionsStepDefinitions.java:94)
-	at ✽.the response status code should be "200"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/ProcessingOptionsMandate.feature:13)
+  <testcase name="Verify that user can retrieve the Mandate Interchange using mandateInterchangeKey" classname="Validating Mandate Interchange API" time="4.475"/>
+  <testcase name="Verify that user can retrieve the Mandate Interchange with query parameters" classname="Validating Mandate Interchange API" time="3.22">
+    <failure message="expected:&lt;[[null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]]&gt; but was:&lt;[19]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[[null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]]]]><![CDATA[> but was:<[19]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinitions.MandatesAPIStepDefinitions.in_response_body_should_be_same_as(MandatesAPIStepDefinitions.java:99)
+	at ✽."customerkey" in response body should be same as "19"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/MandateInterchange.feature:28)
 ]]></failure>
   </testcase>
-  <testcase name="Verify that user can retrieve the processing options after successful creation" classname="Validating Processing Options Mandate" time="3.267"/>
-  <testcase name="Verify that user can update the mandate processing option" classname="Validating Processing Options Mandate" time="6.097">
-    <system-out><![CDATA[Y in response is same as the update value  Y
-]]></system-out>
-  </testcase>
-  <testcase name="Verify the error is displayed when creating a mandate processing options with existing key" classname="Validating Processing Options Mandate" time="3.248"/>
-  <testcase name="Verify that error is displayed when creating mandates without bearer token" classname="Validating Processing Options Mandate" time="3.142"/>
+  <testcase name="Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithQueryParamsAPI when no data found" classname="Validating Mandate Interchange API" time="3.313"/>
+  <testcase name="Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithKeyAPI when no data found" classname="Validating Mandate Interchange API" time="4.009"/>
 </testsuite>

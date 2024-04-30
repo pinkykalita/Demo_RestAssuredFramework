@@ -86,7 +86,10 @@ public class Utils {
             responseSpec = new ResponseSpecBuilder().expectStatusCode(500).build();
             break;
         case "403":
-            responseSpec = new ResponseSpecBuilder().expectStatusCode(500).build();
+            responseSpec = new ResponseSpecBuilder().expectStatusCode(403).build();
+            break;
+        case "404":
+            responseSpec = new ResponseSpecBuilder().expectStatusCode(404).build();
             break;
         default:
             throw new IllegalArgumentException("Unsupported status code: " + expectedStatusCode);

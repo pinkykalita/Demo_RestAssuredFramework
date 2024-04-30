@@ -14,20 +14,13 @@ import POJO.GenerateToken;
 import Resources.ResourceURL;
 import Resources.TestDataBuild;
 import Resources.Utils;
-import io.cucumber.java.Scenario;
-//import Files.ReusableMethod;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.session.SessionFilter;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
 
 public class MandatesAPIStepDefinitions extends Utils{
 	
@@ -194,13 +187,34 @@ public class MandatesAPIStepDefinitions extends Utils{
 		
 		mandateInterchangeKey = getJsonPath(response,keyValue);
 		System.out.println("mandateInterchangeKey returned in response = "+mandateInterchangeKey);
+		
 	}
 	
 	/*get Mandate Interchange with Key*/
 	@Given("request prepared with {string}")
-	public void request_prepared_with(String interchangekey) throws IOException {
+	public void request_prepared_with(String interchangekey) throws IOException 
+	{
 		req1 = given().spec(requestSpecifications())
 				.pathParam("mandateInterchangeKey", interchangekey);
 	}
+	
+	/*get Mandate Interchange with query parameters*/
+	@Given("request prepared with query parameters {string},{string},{string}")
+	public void request_prepared_with_query_parameters(String customerkey, String filename, String uploadedusername) throws IOException 
+	{
+		req1 = given().spec(requestSpecifications())
+				.queryParam("customerKey", customerkey)
+				.queryParam("fileName", filename)
+				.queryParam("uploadedUsername", uploadedusername);
+	}
+	
+	/*No mandate interchange data found*/
+	@Given("request prepared with query parameters {string},{string}")
+	public void request_prepared_with_query_parameters(String customerkey, String uploadedusername) throws IOException 
+	{
+		req1 = given().spec(requestSpecifications())
+				.queryParam("customerKey", customerkey)
+				.queryParam("uploadedUsername", uploadedusername);
+    }
 
 }

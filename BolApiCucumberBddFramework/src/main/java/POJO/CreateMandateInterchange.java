@@ -10,17 +10,8 @@ public class CreateMandateInterchange {
 	 private String submissionChannel;
 	 private int totalMandateFieldCount;
 	 private String uploadedUsername;
-	// private int mandateInterchangeKey;
+	
 	 
-	 
-	/*
-	public int getMandateInterchangeKey() {
-		return mandateInterchangeKey;
-	}
-	public void setMandateInterchangeKey(int i) {
-		this.mandateInterchangeKey = i;
-	}
-	*/
 	public String getCustomerKey() {
 		return customerKey;
 	}

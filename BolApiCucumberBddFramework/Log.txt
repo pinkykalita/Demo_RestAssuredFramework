@@ -1,11 +1,11 @@
 Request method:	POST
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidnlYMFA4dlZ4Z1cxY0pvVGxERDBlciIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjQ1OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY0NTgsImV4cCI6MTcxNDUxMDA1OH0.BO3OioeGvLNNcoO8vNd6NyK8dn6qUOHs3HqJ0BuLmFCzgGtaTHSXoIKIoMRLxb5jaYs7hl9PhkINQpIZrDXVmPpX7kQyfITAH0NZT8lZfLRk___Q-lmc6P-cklsCIuQXBjmtyfZojII8xQZPaulzyZoersvslIMDupkE0JVAbH69kNHl6cfpn2F3ZsqOUtHhlzMFUBtnv7CBupC1jnKVQSRb2VAE0tTeltjvAjtXESj76mfXKNWI-_bDIk8UwFuHONq23TKCpwePA9F4DJVN9OIexRDm2dAylUT7pBruj1dVccgVZ4VmDN2QamgAeVy-v3ZdFxHEHnC5ACm3uJQOCA
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -15,22 +15,229 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "acceptanceType": "W",
-    "fuAuditRequired": "N",
-    "fuAuthorisationRequired": "N",
-    "fuInterimAuditType": "F",
-    "h2hAuditRequired": "Y",
-    "h2hAuthorisationRequired": "N",
-    "h2hInterimAuditType": "F",
-    "mandateProcessingOptionsKey": "1005",
-    "acceptanceTypeEnum": "AS_AND_WHEN",
-    "fuInterimAuditTypeEnum": "FULL",
-    "h2hInterimAuditTypeEnum": "FULL"
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
 }
-HTTP/1.1 401 Unauthorized
+HTTP/1.1 200 OK
+Content-Length: 327
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:47:42 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 29,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidnlYMFA4dlZ4Z1cxY0pvVGxERDBlciIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjQ1OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY0NTgsImV4cCI6MTcxNDUxMDA1OH0.BO3OioeGvLNNcoO8vNd6NyK8dn6qUOHs3HqJ0BuLmFCzgGtaTHSXoIKIoMRLxb5jaYs7hl9PhkINQpIZrDXVmPpX7kQyfITAH0NZT8lZfLRk___Q-lmc6P-cklsCIuQXBjmtyfZojII8xQZPaulzyZoersvslIMDupkE0JVAbH69kNHl6cfpn2F3ZsqOUtHhlzMFUBtnv7CBupC1jnKVQSRb2VAE0tTeltjvAjtXESj76mfXKNWI-_bDIk8UwFuHONq23TKCpwePA9F4DJVN9OIexRDm2dAylUT7pBruj1dVccgVZ4VmDN2QamgAeVy-v3ZdFxHEHnC5ACm3uJQOCA
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:47:46 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=19&fileName=TEST.xml&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=19
+				fileName=TEST.xml
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidnlYMFA4dlZ4Z1cxY0pvVGxERDBlciIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjQ1OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY0NTgsImV4cCI6MTcxNDUxMDA1OH0.BO3OioeGvLNNcoO8vNd6NyK8dn6qUOHs3HqJ0BuLmFCzgGtaTHSXoIKIoMRLxb5jaYs7hl9PhkINQpIZrDXVmPpX7kQyfITAH0NZT8lZfLRk___Q-lmc6P-cklsCIuQXBjmtyfZojII8xQZPaulzyZoersvslIMDupkE0JVAbH69kNHl6cfpn2F3ZsqOUtHhlzMFUBtnv7CBupC1jnKVQSRb2VAE0tTeltjvAjtXESj76mfXKNWI-_bDIk8UwFuHONq23TKCpwePA9F4DJVN9OIexRDm2dAylUT7pBruj1dVccgVZ4VmDN2QamgAeVy-v3ZdFxHEHnC5ACm3uJQOCA
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 2953
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:47:50 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-04-30T13:26:17.726Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 20,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:26:17.726Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 21,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 22,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:22:33.825Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 23,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:22:33.825Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:49:57.398Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 24,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:49:57.398Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:54:25.715Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 25,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:54:25.715Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:34:45.296Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 27,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:34:45.296Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:36:53.961Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 28,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:36:53.961Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 29,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+    }
+]
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidnlYMFA4dlZ4Z1cxY0pvVGxERDBlciIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjQ1OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY0NTgsImV4cCI6MTcxNDUxMDA1OH0.BO3OioeGvLNNcoO8vNd6NyK8dn6qUOHs3HqJ0BuLmFCzgGtaTHSXoIKIoMRLxb5jaYs7hl9PhkINQpIZrDXVmPpX7kQyfITAH0NZT8lZfLRk___Q-lmc6P-cklsCIuQXBjmtyfZojII8xQZPaulzyZoersvslIMDupkE0JVAbH69kNHl6cfpn2F3ZsqOUtHhlzMFUBtnv7CBupC1jnKVQSRb2VAE0tTeltjvAjtXESj76mfXKNWI-_bDIk8UwFuHONq23TKCpwePA9F4DJVN9OIexRDm2dAylUT7pBruj1dVccgVZ4VmDN2QamgAeVy-v3ZdFxHEHnC5ACm3uJQOCA
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
 Content-Length: 0
-Www-Authenticate: Bearer
-Date: Tue, 30 Apr 2024 13:26:48 GMT
+Date: Tue, 30 Apr 2024 19:47:55 GMT
 Request method:	POST
 Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
 Proxy:			<none>
@@ -38,7 +245,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiZFg2MVA2SDZJeU13QjEwbmk0dFViUSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4MzczMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3MzAsImV4cCI6MTcxNDQ4NzMzMH0.WF5sWzg7FPmHVG5M3_uuWhjfb5ea1WzphXoqCYZxSA_yCgtq3_TfEDH0MwRjz9ZIE9qGTPtDFBAGXjM4EH-afZPZTwOVGSfvxggwcSwrzspLGGYLHiSeBkmk-ClzZRzwvAG1YE83qlCvQmiFjwaI5QQyrSVpRyLx7x10dIfSym7JxDCUbfFtkZf6qzA9gYowrkAdG-7vRcfHbKhMUbuZKVC8Mnbdbit-Mz-HGJ2-dNCdgn-Q44yO0fea_7rEo0sb_YD67bblclq60EfKP5WSTlo5hPgMoQxisWQQL28jmMLvLGXwPGtacadikAwILMTRR7jMrG76psTqwErZEerukQ
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidUE0OGp3bEdIQmt5WG1xaGtJcDhPRyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjU3MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY1NzIsImV4cCI6MTcxNDUxMDE3Mn0.mCiqTdduhp6QHniy6w4WG25PRetF292vprypzNiwMMNfIfuJ6BR9-p1vYycJ94tVrqgAQlo0qDxOZW8soSUVeaetfTfLxvAeBZg9LDDSQsA7gdSY5xOJPYiEnkCJpa7_8MNGPnTTvEXgx1gqKfIW2ZUEZriqurZPyYPYv7HPRoKwCet-0eowh1hSTqsZz7ax1j31pjkuqT62SKUiClx3Pjn3I-2LPHcuz0_WSGwYodFl_pgkCLWQIKwnEDlL9Pn2jwOU1WZTmXKaCJd90_T5BuS40B1LZNvkP04xA3r3KjU40YlgS0aC0xBlyULsv1dPDRzeMYCFslfjvDt0yB3cVw
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -60,20 +267,20 @@ Body:
 HTTP/1.1 200 OK
 Content-Length: 327
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:28:55 GMT
+Date: Tue, 30 Apr 2024 19:49:35 GMT
 
 {
-    "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+    "creationDateAndTime": "2024-04-30T19:49:35.808Z[UTC]",
     "customerId": "BOL Customer",
     "customerKey": 19,
     "failedMandateCount": 0,
     "fileName": "TEST.xml",
-    "mandateInterchangeKey": 21,
+    "mandateInterchangeKey": 30,
     "status": "T",
     "submissionChannel": "File Upload",
     "totalMandateFieldCount": 0,
     "uploadedUsername": "Test User123",
-    "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    "whenModified": "2024-04-30T19:49:35.808Z[UTC]"
 }
 Request method:	GET
 Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
@@ -82,7 +289,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	mandateInterchangeKey=12
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiZFg2MVA2SDZJeU13QjEwbmk0dFViUSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4MzczMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3MzAsImV4cCI6MTcxNDQ4NzMzMH0.WF5sWzg7FPmHVG5M3_uuWhjfb5ea1WzphXoqCYZxSA_yCgtq3_TfEDH0MwRjz9ZIE9qGTPtDFBAGXjM4EH-afZPZTwOVGSfvxggwcSwrzspLGGYLHiSeBkmk-ClzZRzwvAG1YE83qlCvQmiFjwaI5QQyrSVpRyLx7x10dIfSym7JxDCUbfFtkZf6qzA9gYowrkAdG-7vRcfHbKhMUbuZKVC8Mnbdbit-Mz-HGJ2-dNCdgn-Q44yO0fea_7rEo0sb_YD67bblclq60EfKP5WSTlo5hPgMoQxisWQQL28jmMLvLGXwPGtacadikAwILMTRR7jMrG76psTqwErZEerukQ
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidUE0OGp3bEdIQmt5WG1xaGtJcDhPRyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjU3MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY1NzIsImV4cCI6MTcxNDUxMDE3Mn0.mCiqTdduhp6QHniy6w4WG25PRetF292vprypzNiwMMNfIfuJ6BR9-p1vYycJ94tVrqgAQlo0qDxOZW8soSUVeaetfTfLxvAeBZg9LDDSQsA7gdSY5xOJPYiEnkCJpa7_8MNGPnTTvEXgx1gqKfIW2ZUEZriqurZPyYPYv7HPRoKwCet-0eowh1hSTqsZz7ax1j31pjkuqT62SKUiClx3Pjn3I-2LPHcuz0_WSGwYodFl_pgkCLWQIKwnEDlL9Pn2jwOU1WZTmXKaCJd90_T5BuS40B1LZNvkP04xA3r3KjU40YlgS0aC0xBlyULsv1dPDRzeMYCFslfjvDt0yB3cVw
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -94,7 +301,7 @@ Body:			<none>
 HTTP/1.1 200 OK
 Content-Length: 324
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:29:06 GMT
+Date: Tue, 30 Apr 2024 19:49:39 GMT
 
 {
     "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
@@ -109,6 +316,745 @@ Date: Tue, 30 Apr 2024 13:29:06 GMT
     "uploadedUsername": "Test User",
     "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
 }
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=19&fileName=TEST.xml&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=19
+				fileName=TEST.xml
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidUE0OGp3bEdIQmt5WG1xaGtJcDhPRyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjU3MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY1NzIsImV4cCI6MTcxNDUxMDE3Mn0.mCiqTdduhp6QHniy6w4WG25PRetF292vprypzNiwMMNfIfuJ6BR9-p1vYycJ94tVrqgAQlo0qDxOZW8soSUVeaetfTfLxvAeBZg9LDDSQsA7gdSY5xOJPYiEnkCJpa7_8MNGPnTTvEXgx1gqKfIW2ZUEZriqurZPyYPYv7HPRoKwCet-0eowh1hSTqsZz7ax1j31pjkuqT62SKUiClx3Pjn3I-2LPHcuz0_WSGwYodFl_pgkCLWQIKwnEDlL9Pn2jwOU1WZTmXKaCJd90_T5BuS40B1LZNvkP04xA3r3KjU40YlgS0aC0xBlyULsv1dPDRzeMYCFslfjvDt0yB3cVw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 3281
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:49:43 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-04-30T13:26:17.726Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 20,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:26:17.726Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 21,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 22,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:22:33.825Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 23,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:22:33.825Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:49:57.398Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 24,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:49:57.398Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:54:25.715Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 25,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:54:25.715Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:34:45.296Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 27,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:34:45.296Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:36:53.961Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 28,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:36:53.961Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 29,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:49:35.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 30,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:49:35.808Z[UTC]"
+    }
+]
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidUE0OGp3bEdIQmt5WG1xaGtJcDhPRyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjU3MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY1NzIsImV4cCI6MTcxNDUxMDE3Mn0.mCiqTdduhp6QHniy6w4WG25PRetF292vprypzNiwMMNfIfuJ6BR9-p1vYycJ94tVrqgAQlo0qDxOZW8soSUVeaetfTfLxvAeBZg9LDDSQsA7gdSY5xOJPYiEnkCJpa7_8MNGPnTTvEXgx1gqKfIW2ZUEZriqurZPyYPYv7HPRoKwCet-0eowh1hSTqsZz7ax1j31pjkuqT62SKUiClx3Pjn3I-2LPHcuz0_WSGwYodFl_pgkCLWQIKwnEDlL9Pn2jwOU1WZTmXKaCJd90_T5BuS40B1LZNvkP04xA3r3KjU40YlgS0aC0xBlyULsv1dPDRzeMYCFslfjvDt0yB3cVw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 19:49:48 GMT
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYzVvTWdFMWJ2R1JOOFJWbmdISk1iSCIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjY5MCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY2OTAsImV4cCI6MTcxNDUxMDI5MH0.JT19F1e3ppsGPE49_zJQkBUUUq3Y_vnsmDKNVyeTfUWIWoBI5_M8DUxLTYwgK4R2h6OI325ARQwCAE9bEAqss40wYUmwL1hh2ezpyU5t5TrLVtsAPyZ3AZpBlElkpoqwcb2ZMemlku_mQTuMYZGba1xy9uTM_knECRPHW-ka0F8Ox4WAMRDSTjZ2lNgApOQ-Q3OZfkKshioMXvOJF0_iAYvXH58-eLws5lyAcN0ruhm_BEDX50PGmj9HOUbIlZfnyPoW-FkBmiC618YDU8IlpNVIWKsPtcSWkj0t93DWLZKaH00vaG_1WzH-GIbSGTLQUbqZHDqIhqkutWMWFQd9oQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
+HTTP/1.1 200 OK
+Content-Length: 327
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:51:35 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T19:51:35.856Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 31,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T19:51:35.856Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYzVvTWdFMWJ2R1JOOFJWbmdISk1iSCIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjY5MCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY2OTAsImV4cCI6MTcxNDUxMDI5MH0.JT19F1e3ppsGPE49_zJQkBUUUq3Y_vnsmDKNVyeTfUWIWoBI5_M8DUxLTYwgK4R2h6OI325ARQwCAE9bEAqss40wYUmwL1hh2ezpyU5t5TrLVtsAPyZ3AZpBlElkpoqwcb2ZMemlku_mQTuMYZGba1xy9uTM_knECRPHW-ka0F8Ox4WAMRDSTjZ2lNgApOQ-Q3OZfkKshioMXvOJF0_iAYvXH58-eLws5lyAcN0ruhm_BEDX50PGmj9HOUbIlZfnyPoW-FkBmiC618YDU8IlpNVIWKsPtcSWkj0t93DWLZKaH00vaG_1WzH-GIbSGTLQUbqZHDqIhqkutWMWFQd9oQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:51:38 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=19&fileName=TEST.xml&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=19
+				fileName=TEST.xml
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYzVvTWdFMWJ2R1JOOFJWbmdISk1iSCIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjY5MCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY2OTAsImV4cCI6MTcxNDUxMDI5MH0.JT19F1e3ppsGPE49_zJQkBUUUq3Y_vnsmDKNVyeTfUWIWoBI5_M8DUxLTYwgK4R2h6OI325ARQwCAE9bEAqss40wYUmwL1hh2ezpyU5t5TrLVtsAPyZ3AZpBlElkpoqwcb2ZMemlku_mQTuMYZGba1xy9uTM_knECRPHW-ka0F8Ox4WAMRDSTjZ2lNgApOQ-Q3OZfkKshioMXvOJF0_iAYvXH58-eLws5lyAcN0ruhm_BEDX50PGmj9HOUbIlZfnyPoW-FkBmiC618YDU8IlpNVIWKsPtcSWkj0t93DWLZKaH00vaG_1WzH-GIbSGTLQUbqZHDqIhqkutWMWFQd9oQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 3609
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:51:41 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-04-30T13:26:17.726Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 20,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:26:17.726Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 21,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 22,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:22:33.825Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 23,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:22:33.825Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:49:57.398Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 24,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:49:57.398Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:54:25.715Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 25,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:54:25.715Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:34:45.296Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 27,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:34:45.296Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:36:53.961Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 28,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:36:53.961Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 29,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:49:35.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 30,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:49:35.808Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:51:35.856Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 31,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:51:35.856Z[UTC]"
+    }
+]
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYzVvTWdFMWJ2R1JOOFJWbmdISk1iSCIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjY5MCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY2OTAsImV4cCI6MTcxNDUxMDI5MH0.JT19F1e3ppsGPE49_zJQkBUUUq3Y_vnsmDKNVyeTfUWIWoBI5_M8DUxLTYwgK4R2h6OI325ARQwCAE9bEAqss40wYUmwL1hh2ezpyU5t5TrLVtsAPyZ3AZpBlElkpoqwcb2ZMemlku_mQTuMYZGba1xy9uTM_knECRPHW-ka0F8Ox4WAMRDSTjZ2lNgApOQ-Q3OZfkKshioMXvOJF0_iAYvXH58-eLws5lyAcN0ruhm_BEDX50PGmj9HOUbIlZfnyPoW-FkBmiC618YDU8IlpNVIWKsPtcSWkj0t93DWLZKaH00vaG_1WzH-GIbSGTLQUbqZHDqIhqkutWMWFQd9oQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 19:51:44 GMT
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiS3RjVTJrUUpCV1h4bjZmWktjQkVDeSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjg1NSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY4NTUsImV4cCI6MTcxNDUxMDQ1NX0.fy7-zepfGxGG8qAQvcIqmjGTXrMRRPYJkjkvEHIQ9OEsL9XXzM5Kj95EXu4-AjtR8pHi55qyL4Rt_oiJV1rG9lAGU2lLQg3L8YvYZyTuJQPEa8F1661mHdaUn84RUBwN_DL0GO9Qj_WSdkBtdpJOHvrjZGSuxz7X715M-aLWrgJm3qs4_m9_z_7Qt0t5bxiGe7uSMnFVYqY0s-LlpU-zT5_2X4ylOPS4Z8sma3pyb-ilU7_h7hlze0Tmlfs-nOfq7Zb95cM3RgcW_D9LfXjADrteMZd1sNzCO28T9zSnroEVAQPGk3mUYo9FVV6pz_GOp5u59r8cXJH97OvYin7ZTQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
+HTTP/1.1 200 OK
+Content-Length: 327
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:54:19 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T19:54:19.769Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 32,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T19:54:19.769Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiS3RjVTJrUUpCV1h4bjZmWktjQkVDeSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjg1NSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY4NTUsImV4cCI6MTcxNDUxMDQ1NX0.fy7-zepfGxGG8qAQvcIqmjGTXrMRRPYJkjkvEHIQ9OEsL9XXzM5Kj95EXu4-AjtR8pHi55qyL4Rt_oiJV1rG9lAGU2lLQg3L8YvYZyTuJQPEa8F1661mHdaUn84RUBwN_DL0GO9Qj_WSdkBtdpJOHvrjZGSuxz7X715M-aLWrgJm3qs4_m9_z_7Qt0t5bxiGe7uSMnFVYqY0s-LlpU-zT5_2X4ylOPS4Z8sma3pyb-ilU7_h7hlze0Tmlfs-nOfq7Zb95cM3RgcW_D9LfXjADrteMZd1sNzCO28T9zSnroEVAQPGk3mUYo9FVV6pz_GOp5u59r8cXJH97OvYin7ZTQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:54:24 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=19&fileName=TEST.xml&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=19
+				fileName=TEST.xml
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiS3RjVTJrUUpCV1h4bjZmWktjQkVDeSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjg1NSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY4NTUsImV4cCI6MTcxNDUxMDQ1NX0.fy7-zepfGxGG8qAQvcIqmjGTXrMRRPYJkjkvEHIQ9OEsL9XXzM5Kj95EXu4-AjtR8pHi55qyL4Rt_oiJV1rG9lAGU2lLQg3L8YvYZyTuJQPEa8F1661mHdaUn84RUBwN_DL0GO9Qj_WSdkBtdpJOHvrjZGSuxz7X715M-aLWrgJm3qs4_m9_z_7Qt0t5bxiGe7uSMnFVYqY0s-LlpU-zT5_2X4ylOPS4Z8sma3pyb-ilU7_h7hlze0Tmlfs-nOfq7Zb95cM3RgcW_D9LfXjADrteMZd1sNzCO28T9zSnroEVAQPGk3mUYo9FVV6pz_GOp5u59r8cXJH97OvYin7ZTQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 3937
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:54:29 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-04-30T13:26:17.726Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 20,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:26:17.726Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 21,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 22,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:22:33.825Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 23,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:22:33.825Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:49:57.398Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 24,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:49:57.398Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:54:25.715Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 25,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:54:25.715Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:34:45.296Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 27,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:34:45.296Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:36:53.961Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 28,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:36:53.961Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 29,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:49:35.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 30,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:49:35.808Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:51:35.856Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 31,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:51:35.856Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:54:19.769Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 32,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:54:19.769Z[UTC]"
+    }
+]
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiS3RjVTJrUUpCV1h4bjZmWktjQkVDeSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjg1NSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY4NTUsImV4cCI6MTcxNDUxMDQ1NX0.fy7-zepfGxGG8qAQvcIqmjGTXrMRRPYJkjkvEHIQ9OEsL9XXzM5Kj95EXu4-AjtR8pHi55qyL4Rt_oiJV1rG9lAGU2lLQg3L8YvYZyTuJQPEa8F1661mHdaUn84RUBwN_DL0GO9Qj_WSdkBtdpJOHvrjZGSuxz7X715M-aLWrgJm3qs4_m9_z_7Qt0t5bxiGe7uSMnFVYqY0s-LlpU-zT5_2X4ylOPS4Z8sma3pyb-ilU7_h7hlze0Tmlfs-nOfq7Zb95cM3RgcW_D9LfXjADrteMZd1sNzCO28T9zSnroEVAQPGk3mUYo9FVV6pz_GOp5u59r8cXJH97OvYin7ZTQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 19:54:33 GMT
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiS3RjVTJrUUpCV1h4bjZmWktjQkVDeSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjg1NSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY4NTUsImV4cCI6MTcxNDUxMDQ1NX0.fy7-zepfGxGG8qAQvcIqmjGTXrMRRPYJkjkvEHIQ9OEsL9XXzM5Kj95EXu4-AjtR8pHi55qyL4Rt_oiJV1rG9lAGU2lLQg3L8YvYZyTuJQPEa8F1661mHdaUn84RUBwN_DL0GO9Qj_WSdkBtdpJOHvrjZGSuxz7X715M-aLWrgJm3qs4_m9_z_7Qt0t5bxiGe7uSMnFVYqY0s-LlpU-zT5_2X4ylOPS4Z8sma3pyb-ilU7_h7hlze0Tmlfs-nOfq7Zb95cM3RgcW_D9LfXjADrteMZd1sNzCO28T9zSnroEVAQPGk3mUYo9FVV6pz_GOp5u59r8cXJH97OvYin7ZTQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 19:54:37 GMT
 Request method:	POST
 Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
 Proxy:			<none>
@@ -116,7 +1062,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiV3B0NEJCVzcwdUJpSGpRZUhDY0xOZSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzc0OSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3NDksImV4cCI6MTcxNDQ4NzM0OX0.Wn_okCGoJMGRjAUpmGKSZU2Tu998NOgwI7ah-UcOMkUmakRNt3osRsER4YuGazcjoFfCwrc_WFY7VTuv8d09nMZp9uDDmCHbWjXvoSYGqiZLrFTU9BrXxyrlfAu03Nd2viinBpUqtauOjVaTp9lo49sh3CAkeOy40cAoQdFEC2ZB_WOljM85jxARg3McX1hBIWKlJEMMk8DDAEXilRdFx8xoTxQl7rJ7HZx4DUcaPu5CQDIyyybED9i5FxSdv2A8SC1Juu6DU9GEKLjGK5pN4v-4s-FDchGXBeDbL59UuEDpvwDiCZgM3GlPExegQLKRU_rbH7Hg_WqjR1v1ajGuYA
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiRWpsSkx5ZEtvdDV5YXVNQTlhbml1dyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjkzMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5MzAsImV4cCI6MTcxNDUxMDUzMH0.V09oWEbkdAN71vSDu5YT7CMRbGuUbhYBSLn_7SA_y0zPenmNkG_rCkeu8wOroUbmfSO5IfEzZtGEUXVbcMiVpcUZKWSOgZ1UoMoGKxSAZgb01Z_ztkkQ7efBdUiUjFhmUqHvRVToQrDS2hX8KK7NPiJg9Q19mhxodpTQBuSwdvyHcIH93E67V5nfrlyOk6Gdcf_XmvEvVIxaCI_Jechc5RZ3jJJhxsnbO9L52t4FvtpW7zfUOgsqprOv0aTy4PTcYWzkxD_FbjOl81jJ2bod4hCmTns42Tiz5Vua9n2QA5qu8cViPQzTqVNp878nlNMtneVzYiTI-5qesRJI-pw9RQ
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -141,7 +1087,7 @@ Body:
 HTTP/1.1 500 Internal Server Error
 Content-Length: 57
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:29:16 GMT
+Date: Tue, 30 Apr 2024 19:55:35 GMT
 
 The mandate processing option already exists for this key
 Request method:	GET
@@ -151,7 +1097,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	mandateProcessingOptionsKey=1029
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiV3B0NEJCVzcwdUJpSGpRZUhDY0xOZSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzc0OSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3NDksImV4cCI6MTcxNDQ4NzM0OX0.Wn_okCGoJMGRjAUpmGKSZU2Tu998NOgwI7ah-UcOMkUmakRNt3osRsER4YuGazcjoFfCwrc_WFY7VTuv8d09nMZp9uDDmCHbWjXvoSYGqiZLrFTU9BrXxyrlfAu03Nd2viinBpUqtauOjVaTp9lo49sh3CAkeOy40cAoQdFEC2ZB_WOljM85jxARg3McX1hBIWKlJEMMk8DDAEXilRdFx8xoTxQl7rJ7HZx4DUcaPu5CQDIyyybED9i5FxSdv2A8SC1Juu6DU9GEKLjGK5pN4v-4s-FDchGXBeDbL59UuEDpvwDiCZgM3GlPExegQLKRU_rbH7Hg_WqjR1v1ajGuYA
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiRWpsSkx5ZEtvdDV5YXVNQTlhbml1dyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjkzMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5MzAsImV4cCI6MTcxNDUxMDUzMH0.V09oWEbkdAN71vSDu5YT7CMRbGuUbhYBSLn_7SA_y0zPenmNkG_rCkeu8wOroUbmfSO5IfEzZtGEUXVbcMiVpcUZKWSOgZ1UoMoGKxSAZgb01Z_ztkkQ7efBdUiUjFhmUqHvRVToQrDS2hX8KK7NPiJg9Q19mhxodpTQBuSwdvyHcIH93E67V5nfrlyOk6Gdcf_XmvEvVIxaCI_Jechc5RZ3jJJhxsnbO9L52t4FvtpW7zfUOgsqprOv0aTy4PTcYWzkxD_FbjOl81jJ2bod4hCmTns42Tiz5Vua9n2QA5qu8cViPQzTqVNp878nlNMtneVzYiTI-5qesRJI-pw9RQ
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -163,154 +1109,7 @@ Body:			<none>
 HTTP/1.1 200 OK
 Content-Length: 314
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:29:23 GMT
-
-{
-    "acceptanceType": "W",
-    "acceptanceTypeEnum": "AS_AND_WHEN",
-    "fuAuditRequired": "Y",
-    "fuAuthorisationRequired": "N",
-    "fuInterimAuditType": "F",
-    "fuInterimAuditTypeEnum": "FULL",
-    "h2hAuditRequired": "Y",
-    "h2hAuthorisationRequired": "N",
-    "h2hInterimAuditType": "F",
-    "h2hInterimAuditTypeEnum": "FULL",
-    "mandateProcessingOptionsKey": 1029
-}
-Request method:	POST
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYUM0eUI0c21abExRUzg4bk1yYTJHcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg0MSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NDEsImV4cCI6MTcxNDQ4NzQ0MX0.Ib9BmhuzSHhOyeNtylthzvhUehFs9KWW5BcRW9Y4Hb2P955cCdCBIN9c2crFOaf7Re8kOt_zyIY1zZLy5vD3fR5y43aQjO40pxJW4Xlt9uXeHIc5f7NPB-eQsJffQJdIaFRs5YWL5ZvIw2UD6hOVeuZi3ObOQWRXYiIDUH--_kieCBf2UvJUI6i7GVkVlqfIVZnyh-oG547kcU4gndDFtRppEAF84SL1euctEAPWW6k3i8KjF7LVxIWwloSNnOQAPNlkjge4S0ew6ppfkhAiF4IlTwKlwqrBR3u9ljbPufGHeXt2LL_sYx5_U0cgzS4MG1WW3JgJJpEY6I-gQgSLsg
-				User-Agent=PostmanRuntime/7.37.0
-				Accept=*/*
-				Accept-Encoding=gzip, deflate, br
-				Connection=keep-alive
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "customerId": "BOL Customer",
-    "customerKey": "19",
-    "failedMandateCount": 0,
-    "fileName": "TEST.xml",
-    "status": "T",
-    "submissionChannel": "File Upload",
-    "totalMandateFieldCount": 0,
-    "uploadedUsername": "Test User123"
-}
-HTTP/1.1 200 OK
-Content-Length: 327
-Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:30:49 GMT
-
-{
-    "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
-    "customerId": "BOL Customer",
-    "customerKey": 19,
-    "failedMandateCount": 0,
-    "fileName": "TEST.xml",
-    "mandateInterchangeKey": 22,
-    "status": "T",
-    "submissionChannel": "File Upload",
-    "totalMandateFieldCount": 0,
-    "uploadedUsername": "Test User123",
-    "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
-}
-Request method:	GET
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	mandateInterchangeKey=12
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYUM0eUI0c21abExRUzg4bk1yYTJHcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg0MSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NDEsImV4cCI6MTcxNDQ4NzQ0MX0.Ib9BmhuzSHhOyeNtylthzvhUehFs9KWW5BcRW9Y4Hb2P955cCdCBIN9c2crFOaf7Re8kOt_zyIY1zZLy5vD3fR5y43aQjO40pxJW4Xlt9uXeHIc5f7NPB-eQsJffQJdIaFRs5YWL5ZvIw2UD6hOVeuZi3ObOQWRXYiIDUH--_kieCBf2UvJUI6i7GVkVlqfIVZnyh-oG547kcU4gndDFtRppEAF84SL1euctEAPWW6k3i8KjF7LVxIWwloSNnOQAPNlkjge4S0ew6ppfkhAiF4IlTwKlwqrBR3u9ljbPufGHeXt2LL_sYx5_U0cgzS4MG1WW3JgJJpEY6I-gQgSLsg
-				User-Agent=PostmanRuntime/7.37.0
-				Accept=*/*
-				Accept-Encoding=gzip, deflate, br
-				Connection=keep-alive
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Content-Length: 324
-Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:30:57 GMT
-
-{
-    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
-    "customerId": "BOL Customer",
-    "customerKey": 19,
-    "failedMandateCount": 0,
-    "fileName": "TEST.xml",
-    "mandateInterchangeKey": 12,
-    "status": "T",
-    "submissionChannel": "File Upload",
-    "totalMandateFieldCount": 0,
-    "uploadedUsername": "Test User",
-    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
-}
-Request method:	POST
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
-				User-Agent=PostmanRuntime/7.37.0
-				Accept=*/*
-				Accept-Encoding=gzip, deflate, br
-				Connection=keep-alive
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "acceptanceType": "W",
-    "fuAuditRequired": "N",
-    "fuAuthorisationRequired": "N",
-    "fuInterimAuditType": "F",
-    "h2hAuditRequired": "Y",
-    "h2hAuthorisationRequired": "N",
-    "h2hInterimAuditType": "F",
-    "mandateProcessingOptionsKey": "1046",
-    "acceptanceTypeEnum": "AS_AND_WHEN",
-    "fuInterimAuditTypeEnum": "FULL",
-    "h2hInterimAuditTypeEnum": "FULL"
-}
-HTTP/1.1 500 Internal Server Error
-Content-Length: 57
-Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:31:06 GMT
-
-The mandate processing option already exists for this key
-Request method:	GET
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options/1029
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	mandateProcessingOptionsKey=1029
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
-				User-Agent=PostmanRuntime/7.37.0
-				Accept=*/*
-				Accept-Encoding=gzip, deflate, br
-				Connection=keep-alive
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Content-Length: 314
-Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:31:09 GMT
+Date: Tue, 30 Apr 2024 19:55:39 GMT
 
 {
     "acceptanceType": "W",
@@ -332,7 +1131,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	mandateProcessingOptionsKey=1029
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiRWpsSkx5ZEtvdDV5YXVNQTlhbml1dyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjkzMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5MzAsImV4cCI6MTcxNDUxMDUzMH0.V09oWEbkdAN71vSDu5YT7CMRbGuUbhYBSLn_7SA_y0zPenmNkG_rCkeu8wOroUbmfSO5IfEzZtGEUXVbcMiVpcUZKWSOgZ1UoMoGKxSAZgb01Z_ztkkQ7efBdUiUjFhmUqHvRVToQrDS2hX8KK7NPiJg9Q19mhxodpTQBuSwdvyHcIH93E67V5nfrlyOk6Gdcf_XmvEvVIxaCI_Jechc5RZ3jJJhxsnbO9L52t4FvtpW7zfUOgsqprOv0aTy4PTcYWzkxD_FbjOl81jJ2bod4hCmTns42Tiz5Vua9n2QA5qu8cViPQzTqVNp878nlNMtneVzYiTI-5qesRJI-pw9RQ
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -357,7 +1156,7 @@ Body:
 HTTP/1.1 200 OK
 Content-Length: 314
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:31:17 GMT
+Date: Tue, 30 Apr 2024 19:55:42 GMT
 
 {
     "acceptanceType": "W",
@@ -379,7 +1178,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	mandateProcessingOptionsKey=1029
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiRWpsSkx5ZEtvdDV5YXVNQTlhbml1dyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjkzMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5MzAsImV4cCI6MTcxNDUxMDUzMH0.V09oWEbkdAN71vSDu5YT7CMRbGuUbhYBSLn_7SA_y0zPenmNkG_rCkeu8wOroUbmfSO5IfEzZtGEUXVbcMiVpcUZKWSOgZ1UoMoGKxSAZgb01Z_ztkkQ7efBdUiUjFhmUqHvRVToQrDS2hX8KK7NPiJg9Q19mhxodpTQBuSwdvyHcIH93E67V5nfrlyOk6Gdcf_XmvEvVIxaCI_Jechc5RZ3jJJhxsnbO9L52t4FvtpW7zfUOgsqprOv0aTy4PTcYWzkxD_FbjOl81jJ2bod4hCmTns42Tiz5Vua9n2QA5qu8cViPQzTqVNp878nlNMtneVzYiTI-5qesRJI-pw9RQ
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -404,7 +1203,7 @@ Body:
 HTTP/1.1 200 OK
 Content-Length: 314
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:31:28 GMT
+Date: Tue, 30 Apr 2024 19:55:45 GMT
 
 {
     "acceptanceType": "W",
@@ -426,7 +1225,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiRWpsSkx5ZEtvdDV5YXVNQTlhbml1dyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjkzMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5MzAsImV4cCI6MTcxNDUxMDUzMH0.V09oWEbkdAN71vSDu5YT7CMRbGuUbhYBSLn_7SA_y0zPenmNkG_rCkeu8wOroUbmfSO5IfEzZtGEUXVbcMiVpcUZKWSOgZ1UoMoGKxSAZgb01Z_ztkkQ7efBdUiUjFhmUqHvRVToQrDS2hX8KK7NPiJg9Q19mhxodpTQBuSwdvyHcIH93E67V5nfrlyOk6Gdcf_XmvEvVIxaCI_Jechc5RZ3jJJhxsnbO9L52t4FvtpW7zfUOgsqprOv0aTy4PTcYWzkxD_FbjOl81jJ2bod4hCmTns42Tiz5Vua9n2QA5qu8cViPQzTqVNp878nlNMtneVzYiTI-5qesRJI-pw9RQ
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -451,7 +1250,7 @@ Body:
 HTTP/1.1 500 Internal Server Error
 Content-Length: 57
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 13:31:31 GMT
+Date: Tue, 30 Apr 2024 19:55:48 GMT
 
 The mandate processing option already exists for this key
 Request method:	POST
@@ -483,7 +1282,979 @@ Body:
     "fuInterimAuditTypeEnum": "FULL",
     "h2hInterimAuditTypeEnum": "FULL"
 }
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiUWVueDVNZEl4ZTE0RlFXNnFkZlBzRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjk0OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5NDgsImV4cCI6MTcxNDUxMDU0OH0.BL1RAoETKeC29LLwc2EoxdX-PgMnKoqLYtA9eo5yK8_I2QIQWXtE6wdiEZMVHY6hmXZEnDWYIMQhtzQOfNCgHeK-jP1EMJjnP0DGGov4DzaCIpAs9bGfsRkjeALvGC8e82w9khQoRRQ37CbXqSP6hBCOh2B8agtMCxEkdLpVtfqopLXrU9QUpq7rYoeh_fa8tXEUS1d4Joe2shFqEQu4sE3jxOwIuLckPYvD3GELafrbhknn8kNpFZUIPIG8ApSWTph-U-q1aF-isf3Cf7NcYh5_mch1rmkS5CkBhunKFKCDgX_pxJhqcFB00B47uEHF2nFjluUAiScISxFwIB7FVQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
 HTTP/1.1 401 Unauthorized
 Content-Length: 0
 Www-Authenticate: Bearer
-Date: Tue, 30 Apr 2024 13:31:35 GMT
+Date: Tue, 30 Apr 2024 19:55:51 GMT
+HTTP/1.1 200 OK
+Content-Length: 327
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:55:54 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T19:55:54.785Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 33,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T19:55:54.785Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiUWVueDVNZEl4ZTE0RlFXNnFkZlBzRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjk0OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5NDgsImV4cCI6MTcxNDUxMDU0OH0.BL1RAoETKeC29LLwc2EoxdX-PgMnKoqLYtA9eo5yK8_I2QIQWXtE6wdiEZMVHY6hmXZEnDWYIMQhtzQOfNCgHeK-jP1EMJjnP0DGGov4DzaCIpAs9bGfsRkjeALvGC8e82w9khQoRRQ37CbXqSP6hBCOh2B8agtMCxEkdLpVtfqopLXrU9QUpq7rYoeh_fa8tXEUS1d4Joe2shFqEQu4sE3jxOwIuLckPYvD3GELafrbhknn8kNpFZUIPIG8ApSWTph-U-q1aF-isf3Cf7NcYh5_mch1rmkS5CkBhunKFKCDgX_pxJhqcFB00B47uEHF2nFjluUAiScISxFwIB7FVQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:55:58 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=19&fileName=TEST.xml&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=19
+				fileName=TEST.xml
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiUWVueDVNZEl4ZTE0RlFXNnFkZlBzRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjk0OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5NDgsImV4cCI6MTcxNDUxMDU0OH0.BL1RAoETKeC29LLwc2EoxdX-PgMnKoqLYtA9eo5yK8_I2QIQWXtE6wdiEZMVHY6hmXZEnDWYIMQhtzQOfNCgHeK-jP1EMJjnP0DGGov4DzaCIpAs9bGfsRkjeALvGC8e82w9khQoRRQ37CbXqSP6hBCOh2B8agtMCxEkdLpVtfqopLXrU9QUpq7rYoeh_fa8tXEUS1d4Joe2shFqEQu4sE3jxOwIuLckPYvD3GELafrbhknn8kNpFZUIPIG8ApSWTph-U-q1aF-isf3Cf7NcYh5_mch1rmkS5CkBhunKFKCDgX_pxJhqcFB00B47uEHF2nFjluUAiScISxFwIB7FVQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 4265
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 19:56:02 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-04-30T13:26:17.726Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 20,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:26:17.726Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 21,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 22,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:22:33.825Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 23,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:22:33.825Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:49:57.398Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 24,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:49:57.398Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:54:25.715Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 25,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:54:25.715Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:34:45.296Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 27,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:34:45.296Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:36:53.961Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 28,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:36:53.961Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 29,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:49:35.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 30,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:49:35.808Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:51:35.856Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 31,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:51:35.856Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:54:19.769Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 32,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:54:19.769Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:55:54.785Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 33,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:55:54.785Z[UTC]"
+    }
+]
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiUWVueDVNZEl4ZTE0RlFXNnFkZlBzRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjk0OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5NDgsImV4cCI6MTcxNDUxMDU0OH0.BL1RAoETKeC29LLwc2EoxdX-PgMnKoqLYtA9eo5yK8_I2QIQWXtE6wdiEZMVHY6hmXZEnDWYIMQhtzQOfNCgHeK-jP1EMJjnP0DGGov4DzaCIpAs9bGfsRkjeALvGC8e82w9khQoRRQ37CbXqSP6hBCOh2B8agtMCxEkdLpVtfqopLXrU9QUpq7rYoeh_fa8tXEUS1d4Joe2shFqEQu4sE3jxOwIuLckPYvD3GELafrbhknn8kNpFZUIPIG8ApSWTph-U-q1aF-isf3Cf7NcYh5_mch1rmkS5CkBhunKFKCDgX_pxJhqcFB00B47uEHF2nFjluUAiScISxFwIB7FVQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 19:56:05 GMT
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiUWVueDVNZEl4ZTE0RlFXNnFkZlBzRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNjk0OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDY5NDgsImV4cCI6MTcxNDUxMDU0OH0.BL1RAoETKeC29LLwc2EoxdX-PgMnKoqLYtA9eo5yK8_I2QIQWXtE6wdiEZMVHY6hmXZEnDWYIMQhtzQOfNCgHeK-jP1EMJjnP0DGGov4DzaCIpAs9bGfsRkjeALvGC8e82w9khQoRRQ37CbXqSP6hBCOh2B8agtMCxEkdLpVtfqopLXrU9QUpq7rYoeh_fa8tXEUS1d4Joe2shFqEQu4sE3jxOwIuLckPYvD3GELafrbhknn8kNpFZUIPIG8ApSWTph-U-q1aF-isf3Cf7NcYh5_mch1rmkS5CkBhunKFKCDgX_pxJhqcFB00B47uEHF2nFjluUAiScISxFwIB7FVQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 19:56:10 GMT
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiQjdVREpWNm03SEFOenlneG94Q3FjcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzE5NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDcxOTcsImV4cCI6MTcxNDUxMDc5N30.PR-HkwbX9pVrzdlW-vjL7anvFmAIPGhmK7AGrdOOf8r4u5rj_tEzs4WEA2IDqPQp8gpZjWGG7DJIjTIHHEpOQALspdtz5OPPQ29clHTZTcU_WF22SSqcGu33tM6Fa0m9XNtsIgAA4tqIL_7aFNphqYIF80FCjbtKodhAWNK1fCwhepVBB5dKJPqiZ1f-pgeu2koz9SN84GfrLN2dkd-9a7MLTWZ495mOf1AKlqf03IFT--g2giaTvriJeMWYYHL_dmjCaRVs7OUnNy2m3kdinAAW_GWRrJPdDJrMAJhAo9t9_oOv2skz5cT6qJ8DzP82TAwuDGLiCa1SG077s4dtqw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
+HTTP/1.1 200 OK
+Content-Length: 327
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 20:00:04 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T20:00:04.808Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 34,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T20:00:04.808Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiQjdVREpWNm03SEFOenlneG94Q3FjcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzE5NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDcxOTcsImV4cCI6MTcxNDUxMDc5N30.PR-HkwbX9pVrzdlW-vjL7anvFmAIPGhmK7AGrdOOf8r4u5rj_tEzs4WEA2IDqPQp8gpZjWGG7DJIjTIHHEpOQALspdtz5OPPQ29clHTZTcU_WF22SSqcGu33tM6Fa0m9XNtsIgAA4tqIL_7aFNphqYIF80FCjbtKodhAWNK1fCwhepVBB5dKJPqiZ1f-pgeu2koz9SN84GfrLN2dkd-9a7MLTWZ495mOf1AKlqf03IFT--g2giaTvriJeMWYYHL_dmjCaRVs7OUnNy2m3kdinAAW_GWRrJPdDJrMAJhAo9t9_oOv2skz5cT6qJ8DzP82TAwuDGLiCa1SG077s4dtqw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 20:00:15 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=19&fileName=TEST.xml&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=19
+				fileName=TEST.xml
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiQjdVREpWNm03SEFOenlneG94Q3FjcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzE5NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDcxOTcsImV4cCI6MTcxNDUxMDc5N30.PR-HkwbX9pVrzdlW-vjL7anvFmAIPGhmK7AGrdOOf8r4u5rj_tEzs4WEA2IDqPQp8gpZjWGG7DJIjTIHHEpOQALspdtz5OPPQ29clHTZTcU_WF22SSqcGu33tM6Fa0m9XNtsIgAA4tqIL_7aFNphqYIF80FCjbtKodhAWNK1fCwhepVBB5dKJPqiZ1f-pgeu2koz9SN84GfrLN2dkd-9a7MLTWZ495mOf1AKlqf03IFT--g2giaTvriJeMWYYHL_dmjCaRVs7OUnNy2m3kdinAAW_GWRrJPdDJrMAJhAo9t9_oOv2skz5cT6qJ8DzP82TAwuDGLiCa1SG077s4dtqw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 4593
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 20:00:23 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-04-30T13:26:17.726Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 20,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:26:17.726Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 21,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 22,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:22:33.825Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 23,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:22:33.825Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:49:57.398Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 24,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:49:57.398Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:54:25.715Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 25,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:54:25.715Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:34:45.296Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 27,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:34:45.296Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:36:53.961Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 28,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:36:53.961Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 29,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:49:35.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 30,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:49:35.808Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:51:35.856Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 31,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:51:35.856Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:54:19.769Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 32,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:54:19.769Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:55:54.785Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 33,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:55:54.785Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T20:00:04.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 34,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T20:00:04.808Z[UTC]"
+    }
+]
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiQjdVREpWNm03SEFOenlneG94Q3FjcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzE5NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDcxOTcsImV4cCI6MTcxNDUxMDc5N30.PR-HkwbX9pVrzdlW-vjL7anvFmAIPGhmK7AGrdOOf8r4u5rj_tEzs4WEA2IDqPQp8gpZjWGG7DJIjTIHHEpOQALspdtz5OPPQ29clHTZTcU_WF22SSqcGu33tM6Fa0m9XNtsIgAA4tqIL_7aFNphqYIF80FCjbtKodhAWNK1fCwhepVBB5dKJPqiZ1f-pgeu2koz9SN84GfrLN2dkd-9a7MLTWZ495mOf1AKlqf03IFT--g2giaTvriJeMWYYHL_dmjCaRVs7OUnNy2m3kdinAAW_GWRrJPdDJrMAJhAo9t9_oOv2skz5cT6qJ8DzP82TAwuDGLiCa1SG077s4dtqw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 20:00:26 GMT
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiQjdVREpWNm03SEFOenlneG94Q3FjcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzE5NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDcxOTcsImV4cCI6MTcxNDUxMDc5N30.PR-HkwbX9pVrzdlW-vjL7anvFmAIPGhmK7AGrdOOf8r4u5rj_tEzs4WEA2IDqPQp8gpZjWGG7DJIjTIHHEpOQALspdtz5OPPQ29clHTZTcU_WF22SSqcGu33tM6Fa0m9XNtsIgAA4tqIL_7aFNphqYIF80FCjbtKodhAWNK1fCwhepVBB5dKJPqiZ1f-pgeu2koz9SN84GfrLN2dkd-9a7MLTWZ495mOf1AKlqf03IFT--g2giaTvriJeMWYYHL_dmjCaRVs7OUnNy2m3kdinAAW_GWRrJPdDJrMAJhAo9t9_oOv2skz5cT6qJ8DzP82TAwuDGLiCa1SG077s4dtqw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 20:00:32 GMT
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiTzg3WFJnNlQ1RmN0MWNTeERtUWRTRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzM2NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDczNjcsImV4cCI6MTcxNDUxMDk2N30.hyZw9UCtg4JM3XcvNPwUcXIHU4T8eInWMbOFdAYnLZTvBjhfRY3Gn_k_fxTg_1G-95GndEFgtV5Hb0EA93-hDhqTVT3ILDiFniGBKFx0LV4CZQ2hAZMzRvAw1NwlzS32xXgqLQ-iJjUdT4nxrv7txXTKPt4vv_cuGRwbF9D6TspWBnb6F-2gF5J20-Z6iEF8Swnp1iccAgOtk-a941npD8zVzm8uATotAOyQ6EdkWAwKm5Zcu4WdYXeu7xtYu0QPlW7BmRh7vAtAVVEL78_fvQEtiGXAaKUxEvQIj7eDvNHPxrnz5DGiV9CXDq-O3C_i_MTOGh_wauGvCiLiVbrDEg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
+HTTP/1.1 200 OK
+Content-Length: 325
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 20:02:52 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T20:02:52.35Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 35,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T20:02:52.35Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiTzg3WFJnNlQ1RmN0MWNTeERtUWRTRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzM2NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDczNjcsImV4cCI6MTcxNDUxMDk2N30.hyZw9UCtg4JM3XcvNPwUcXIHU4T8eInWMbOFdAYnLZTvBjhfRY3Gn_k_fxTg_1G-95GndEFgtV5Hb0EA93-hDhqTVT3ILDiFniGBKFx0LV4CZQ2hAZMzRvAw1NwlzS32xXgqLQ-iJjUdT4nxrv7txXTKPt4vv_cuGRwbF9D6TspWBnb6F-2gF5J20-Z6iEF8Swnp1iccAgOtk-a941npD8zVzm8uATotAOyQ6EdkWAwKm5Zcu4WdYXeu7xtYu0QPlW7BmRh7vAtAVVEL78_fvQEtiGXAaKUxEvQIj7eDvNHPxrnz5DGiV9CXDq-O3C_i_MTOGh_wauGvCiLiVbrDEg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 20:02:56 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=19&fileName=TEST.xml&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=19
+				fileName=TEST.xml
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiTzg3WFJnNlQ1RmN0MWNTeERtUWRTRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzM2NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDczNjcsImV4cCI6MTcxNDUxMDk2N30.hyZw9UCtg4JM3XcvNPwUcXIHU4T8eInWMbOFdAYnLZTvBjhfRY3Gn_k_fxTg_1G-95GndEFgtV5Hb0EA93-hDhqTVT3ILDiFniGBKFx0LV4CZQ2hAZMzRvAw1NwlzS32xXgqLQ-iJjUdT4nxrv7txXTKPt4vv_cuGRwbF9D6TspWBnb6F-2gF5J20-Z6iEF8Swnp1iccAgOtk-a941npD8zVzm8uATotAOyQ6EdkWAwKm5Zcu4WdYXeu7xtYu0QPlW7BmRh7vAtAVVEL78_fvQEtiGXAaKUxEvQIj7eDvNHPxrnz5DGiV9CXDq-O3C_i_MTOGh_wauGvCiLiVbrDEg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 4919
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 20:02:59 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-04-30T13:26:17.726Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 20,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:26:17.726Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 21,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 22,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:22:33.825Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 23,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:22:33.825Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:49:57.398Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 24,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:49:57.398Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T17:54:25.715Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 25,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T17:54:25.715Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:34:45.296Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 27,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:34:45.296Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:36:53.961Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 28,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:36:53.961Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:47:42.605Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 29,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:47:42.605Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:49:35.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 30,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:49:35.808Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:51:35.856Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 31,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:51:35.856Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:54:19.769Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 32,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:54:19.769Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T19:55:54.785Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 33,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T19:55:54.785Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T20:00:04.808Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 34,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T20:00:04.808Z[UTC]"
+    },
+    {
+        "creationDateAndTime": "2024-04-30T20:02:52.35Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 19,
+        "failedMandateCount": 0,
+        "fileName": "TEST.xml",
+        "mandateInterchangeKey": 35,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "Test User123",
+        "whenModified": "2024-04-30T20:02:52.35Z[UTC]"
+    }
+]
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiTzg3WFJnNlQ1RmN0MWNTeERtUWRTRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzM2NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDczNjcsImV4cCI6MTcxNDUxMDk2N30.hyZw9UCtg4JM3XcvNPwUcXIHU4T8eInWMbOFdAYnLZTvBjhfRY3Gn_k_fxTg_1G-95GndEFgtV5Hb0EA93-hDhqTVT3ILDiFniGBKFx0LV4CZQ2hAZMzRvAw1NwlzS32xXgqLQ-iJjUdT4nxrv7txXTKPt4vv_cuGRwbF9D6TspWBnb6F-2gF5J20-Z6iEF8Swnp1iccAgOtk-a941npD8zVzm8uATotAOyQ6EdkWAwKm5Zcu4WdYXeu7xtYu0QPlW7BmRh7vAtAVVEL78_fvQEtiGXAaKUxEvQIj7eDvNHPxrnz5DGiV9CXDq-O3C_i_MTOGh_wauGvCiLiVbrDEg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 20:03:03 GMT
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiTzg3WFJnNlQ1RmN0MWNTeERtUWRTRiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDUwNzM2NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ1MDczNjcsImV4cCI6MTcxNDUxMDk2N30.hyZw9UCtg4JM3XcvNPwUcXIHU4T8eInWMbOFdAYnLZTvBjhfRY3Gn_k_fxTg_1G-95GndEFgtV5Hb0EA93-hDhqTVT3ILDiFniGBKFx0LV4CZQ2hAZMzRvAw1NwlzS32xXgqLQ-iJjUdT4nxrv7txXTKPt4vv_cuGRwbF9D6TspWBnb6F-2gF5J20-Z6iEF8Swnp1iccAgOtk-a941npD8zVzm8uATotAOyQ6EdkWAwKm5Zcu4WdYXeu7xtYu0QPlW7BmRh7vAtAVVEL78_fvQEtiGXAaKUxEvQIj7eDvNHPxrnz5DGiV9CXDq-O3C_i_MTOGh_wauGvCiLiVbrDEg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Tue, 30 Apr 2024 20:03:07 GMT
