@@ -4,7 +4,9 @@ public enum ResourceURL {
 	
 	generateTokenAPI("https://enterprisestssit.standardbank.co.za/as/token.oauth2"),
 	createProcessingOptionsAPI("authenticated/processing-options"),
-	GetAndUpdateProcessingOptionsAPI("authenticated/processing-options/{mandateProcessingOptionsKey}");
+	GetAndUpdateProcessingOptionsAPI("authenticated/processing-options/{mandateProcessingOptionsKey}"),
+	createMandateInterchangeAPI("authenticated/mandate-interchange"),
+	getMandateInterchangeWithKeyAPI("authenticated/mandate-interchange/{mandateInterchangeKey}");
 	
 	private String resource;
 	

@@ -1,11 +1,11 @@
-Request method:	POST
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiVVBjS2N1OUc0clNxNzdzTUtGNVYzcyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ3ODU3OSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0Nzg1NzksImV4cCI6MTcxNDQ4MjE3OX0.PHG6_MlqGY025co0t5aos9Mx8k3cI2cqTmybyNVvyStKNFkzU7rdos1F87lFobB0-XGTtKG1n2It4odoa4WM9eqX2a6mTRDQ0YcbLpD7cV3ylE9tngcpqd89MVqSJiLQ_tcICxKRQf0nYGjOAy9Ry5X133LpYrnUsYAon2RbgXwe_kRV7klbWLzNvy1mIfvuoV7IRnjCNuYEecNNT2kbVfJpNM97K1zlLlz2NM8UZ1YwElsmuw_SJFlSkePzOqZkQs35BjRCpsWQZUjvX9C8A43bfnTv24qa9woQgwXn3zhMZCXgEw5PdA2li2tU3ugB88DaCFdgtlnPzErdT_NSVQ
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -13,21 +13,22 @@ Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtI
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 12:03:05 GMT
+
 {
-    "acceptanceType": "W",
-    "fuAuditRequired": "N",
-    "fuAuthorisationRequired": "N",
-    "fuInterimAuditType": "F",
-    "h2hAuditRequired": "Y",
-    "h2hAuthorisationRequired": "N",
-    "h2hInterimAuditType": "F",
-    "mandateProcessingOptionsKey": "1005",
-    "acceptanceTypeEnum": "AS_AND_WHEN",
-    "fuInterimAuditTypeEnum": "FULL",
-    "h2hInterimAuditTypeEnum": "FULL"
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
 }
-HTTP/1.1 401 Unauthorized
-Content-Length: 0
-Www-Authenticate: Bearer
-Date: Mon, 29 Apr 2024 19:16:36 GMT

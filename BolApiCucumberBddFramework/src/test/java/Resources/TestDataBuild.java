@@ -1,5 +1,6 @@
 package Resources;
 
+import POJO.CreateMandateInterchange;
 import POJO.CreateMandateProcessingOptions;
 import POJO.UpdateMandateProcessingOptions;
 
@@ -42,5 +43,22 @@ public class TestDataBuild {
 		
 		return mandateProcessingObject;
 	}
+	
+	public CreateMandateInterchange CreateMandateInterchangePayload(String newKey)
+	{
+		CreateMandateInterchange mandateProcessingObject = new CreateMandateInterchange();
+		
+		mandateProcessingObject.setCustomerId("BOL Customer");
+		mandateProcessingObject.setCustomerKey(newKey);
+		mandateProcessingObject.setFailedMandateCount(0);
+		mandateProcessingObject.setFileName("TEST.xml");
+		mandateProcessingObject.setStatus("T");
+		mandateProcessingObject.setSubmissionChannel("File Upload");
+		mandateProcessingObject.setTotalMandateFieldCount(0);
+		mandateProcessingObject.setUploadedUsername("Test User123");
+		
+		return mandateProcessingObject;
+	}
+		
 
 }

@@ -24,7 +24,7 @@ Scenario Outline: Verify that user can retrieve the processing options after suc
 	And "mandateProcessingOptionsKey" in response body should be same as "<path parameter>"
 	Examples:
   | path parameter 	|
-  | 1029  				|
+  | 1029  					|
 
 @MandateProcessingOptions	
 Scenario Outline: Verify that user can update the mandate processing option
