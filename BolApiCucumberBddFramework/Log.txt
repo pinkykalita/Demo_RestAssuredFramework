@@ -1,3 +1,80 @@
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "acceptanceType": "W",
+    "fuAuditRequired": "N",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "mandateProcessingOptionsKey": "1005",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hInterimAuditTypeEnum": "FULL"
+}
+HTTP/1.1 401 Unauthorized
+Content-Length: 0
+Www-Authenticate: Bearer
+Date: Tue, 30 Apr 2024 13:26:48 GMT
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiZFg2MVA2SDZJeU13QjEwbmk0dFViUSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4MzczMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3MzAsImV4cCI6MTcxNDQ4NzMzMH0.WF5sWzg7FPmHVG5M3_uuWhjfb5ea1WzphXoqCYZxSA_yCgtq3_TfEDH0MwRjz9ZIE9qGTPtDFBAGXjM4EH-afZPZTwOVGSfvxggwcSwrzspLGGYLHiSeBkmk-ClzZRzwvAG1YE83qlCvQmiFjwaI5QQyrSVpRyLx7x10dIfSym7JxDCUbfFtkZf6qzA9gYowrkAdG-7vRcfHbKhMUbuZKVC8Mnbdbit-Mz-HGJ2-dNCdgn-Q44yO0fea_7rEo0sb_YD67bblclq60EfKP5WSTlo5hPgMoQxisWQQL28jmMLvLGXwPGtacadikAwILMTRR7jMrG76psTqwErZEerukQ
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
+HTTP/1.1 200 OK
+Content-Length: 327
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:28:55 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T13:28:55.587Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 21,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T13:28:55.587Z[UTC]"
+}
 Request method:	GET
 Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
 Proxy:			<none>
@@ -5,7 +82,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	mandateInterchangeKey=12
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiVVBjS2N1OUc0clNxNzdzTUtGNVYzcyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ3ODU3OSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0Nzg1NzksImV4cCI6MTcxNDQ4MjE3OX0.PHG6_MlqGY025co0t5aos9Mx8k3cI2cqTmybyNVvyStKNFkzU7rdos1F87lFobB0-XGTtKG1n2It4odoa4WM9eqX2a6mTRDQ0YcbLpD7cV3ylE9tngcpqd89MVqSJiLQ_tcICxKRQf0nYGjOAy9Ry5X133LpYrnUsYAon2RbgXwe_kRV7klbWLzNvy1mIfvuoV7IRnjCNuYEecNNT2kbVfJpNM97K1zlLlz2NM8UZ1YwElsmuw_SJFlSkePzOqZkQs35BjRCpsWQZUjvX9C8A43bfnTv24qa9woQgwXn3zhMZCXgEw5PdA2li2tU3ugB88DaCFdgtlnPzErdT_NSVQ
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiZFg2MVA2SDZJeU13QjEwbmk0dFViUSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4MzczMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3MzAsImV4cCI6MTcxNDQ4NzMzMH0.WF5sWzg7FPmHVG5M3_uuWhjfb5ea1WzphXoqCYZxSA_yCgtq3_TfEDH0MwRjz9ZIE9qGTPtDFBAGXjM4EH-afZPZTwOVGSfvxggwcSwrzspLGGYLHiSeBkmk-ClzZRzwvAG1YE83qlCvQmiFjwaI5QQyrSVpRyLx7x10dIfSym7JxDCUbfFtkZf6qzA9gYowrkAdG-7vRcfHbKhMUbuZKVC8Mnbdbit-Mz-HGJ2-dNCdgn-Q44yO0fea_7rEo0sb_YD67bblclq60EfKP5WSTlo5hPgMoQxisWQQL28jmMLvLGXwPGtacadikAwILMTRR7jMrG76psTqwErZEerukQ
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -17,7 +94,7 @@ Body:			<none>
 HTTP/1.1 200 OK
 Content-Length: 324
 Content-Type: application/json
-Date: Tue, 30 Apr 2024 12:03:05 GMT
+Date: Tue, 30 Apr 2024 13:29:06 GMT
 
 {
     "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
@@ -32,3 +109,381 @@ Date: Tue, 30 Apr 2024 12:03:05 GMT
     "uploadedUsername": "Test User",
     "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
 }
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiV3B0NEJCVzcwdUJpSGpRZUhDY0xOZSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzc0OSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3NDksImV4cCI6MTcxNDQ4NzM0OX0.Wn_okCGoJMGRjAUpmGKSZU2Tu998NOgwI7ah-UcOMkUmakRNt3osRsER4YuGazcjoFfCwrc_WFY7VTuv8d09nMZp9uDDmCHbWjXvoSYGqiZLrFTU9BrXxyrlfAu03Nd2viinBpUqtauOjVaTp9lo49sh3CAkeOy40cAoQdFEC2ZB_WOljM85jxARg3McX1hBIWKlJEMMk8DDAEXilRdFx8xoTxQl7rJ7HZx4DUcaPu5CQDIyyybED9i5FxSdv2A8SC1Juu6DU9GEKLjGK5pN4v-4s-FDchGXBeDbL59UuEDpvwDiCZgM3GlPExegQLKRU_rbH7Hg_WqjR1v1ajGuYA
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "acceptanceType": "W",
+    "fuAuditRequired": "N",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "mandateProcessingOptionsKey": "1046",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hInterimAuditTypeEnum": "FULL"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Length: 57
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:29:16 GMT
+
+The mandate processing option already exists for this key
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options/1029
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateProcessingOptionsKey=1029
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiV3B0NEJCVzcwdUJpSGpRZUhDY0xOZSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzc0OSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM3NDksImV4cCI6MTcxNDQ4NzM0OX0.Wn_okCGoJMGRjAUpmGKSZU2Tu998NOgwI7ah-UcOMkUmakRNt3osRsER4YuGazcjoFfCwrc_WFY7VTuv8d09nMZp9uDDmCHbWjXvoSYGqiZLrFTU9BrXxyrlfAu03Nd2viinBpUqtauOjVaTp9lo49sh3CAkeOy40cAoQdFEC2ZB_WOljM85jxARg3McX1hBIWKlJEMMk8DDAEXilRdFx8xoTxQl7rJ7HZx4DUcaPu5CQDIyyybED9i5FxSdv2A8SC1Juu6DU9GEKLjGK5pN4v-4s-FDchGXBeDbL59UuEDpvwDiCZgM3GlPExegQLKRU_rbH7Hg_WqjR1v1ajGuYA
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 314
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:29:23 GMT
+
+{
+    "acceptanceType": "W",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuAuditRequired": "Y",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "h2hInterimAuditTypeEnum": "FULL",
+    "mandateProcessingOptionsKey": 1029
+}
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYUM0eUI0c21abExRUzg4bk1yYTJHcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg0MSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NDEsImV4cCI6MTcxNDQ4NzQ0MX0.Ib9BmhuzSHhOyeNtylthzvhUehFs9KWW5BcRW9Y4Hb2P955cCdCBIN9c2crFOaf7Re8kOt_zyIY1zZLy5vD3fR5y43aQjO40pxJW4Xlt9uXeHIc5f7NPB-eQsJffQJdIaFRs5YWL5ZvIw2UD6hOVeuZi3ObOQWRXYiIDUH--_kieCBf2UvJUI6i7GVkVlqfIVZnyh-oG547kcU4gndDFtRppEAF84SL1euctEAPWW6k3i8KjF7LVxIWwloSNnOQAPNlkjge4S0ew6ppfkhAiF4IlTwKlwqrBR3u9ljbPufGHeXt2LL_sYx5_U0cgzS4MG1WW3JgJJpEY6I-gQgSLsg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "customerId": "BOL Customer",
+    "customerKey": "19",
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
+HTTP/1.1 200 OK
+Content-Length: 327
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:30:49 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T13:30:49.975Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 22,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-04-30T13:30:49.975Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiYUM0eUI0c21abExRUzg4bk1yYTJHcSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg0MSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NDEsImV4cCI6MTcxNDQ4NzQ0MX0.Ib9BmhuzSHhOyeNtylthzvhUehFs9KWW5BcRW9Y4Hb2P955cCdCBIN9c2crFOaf7Re8kOt_zyIY1zZLy5vD3fR5y43aQjO40pxJW4Xlt9uXeHIc5f7NPB-eQsJffQJdIaFRs5YWL5ZvIw2UD6hOVeuZi3ObOQWRXYiIDUH--_kieCBf2UvJUI6i7GVkVlqfIVZnyh-oG547kcU4gndDFtRppEAF84SL1euctEAPWW6k3i8KjF7LVxIWwloSNnOQAPNlkjge4S0ew6ppfkhAiF4IlTwKlwqrBR3u9ljbPufGHeXt2LL_sYx5_U0cgzS4MG1WW3JgJJpEY6I-gQgSLsg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 324
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:30:57 GMT
+
+{
+    "creationDateAndTime": "2024-04-30T09:50:55.535Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 19,
+    "failedMandateCount": 0,
+    "fileName": "TEST.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User",
+    "whenModified": "2024-04-30T09:50:55.535Z[UTC]"
+}
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "acceptanceType": "W",
+    "fuAuditRequired": "N",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "mandateProcessingOptionsKey": "1046",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hInterimAuditTypeEnum": "FULL"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Length: 57
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:31:06 GMT
+
+The mandate processing option already exists for this key
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options/1029
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateProcessingOptionsKey=1029
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 314
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:31:09 GMT
+
+{
+    "acceptanceType": "W",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuAuditRequired": "Y",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "h2hInterimAuditTypeEnum": "FULL",
+    "mandateProcessingOptionsKey": 1029
+}
+Request method:	PUT
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options/1029
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateProcessingOptionsKey=1029
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "acceptanceType": "W",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuAuditRequired": "Y",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "h2hInterimAuditTypeEnum": "FULL",
+    "mandateProcessingOptionsKey": "1029"
+}
+HTTP/1.1 200 OK
+Content-Length: 314
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:31:17 GMT
+
+{
+    "acceptanceType": "W",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuAuditRequired": "Y",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "h2hInterimAuditTypeEnum": "FULL",
+    "mandateProcessingOptionsKey": 1029
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options/1029
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateProcessingOptionsKey=1029
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "acceptanceType": "W",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuAuditRequired": "Y",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "h2hInterimAuditTypeEnum": "FULL",
+    "mandateProcessingOptionsKey": "1029"
+}
+HTTP/1.1 200 OK
+Content-Length: 314
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:31:28 GMT
+
+{
+    "acceptanceType": "W",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuAuditRequired": "Y",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "h2hInterimAuditTypeEnum": "FULL",
+    "mandateProcessingOptionsKey": 1029
+}
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiOFA1Tkpsc3RNTFNQd1lROHVqOEIxbiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDQ4Mzg2MiwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ0ODM4NjIsImV4cCI6MTcxNDQ4NzQ2Mn0.DnRYAVQmeZuBWkqV4CB3bByzO0iHNZIBkKST3Yatmgttm0Rtwln66Gy01MTQdfaYNdPEA2GRndqP0pWuePmqqjKou5XL5QHY0BozNGsRTx0AuCkDRkzC-TwoVxzbYKxoQgXFVmK1y007giC3MpKn9UkZe5ISBPV2f94EyxAt2LOqLKWD54osqDvRKTilEzVyo0IO907ILekeUsnFAKcqe9OzpE6Upon1nAheCS3BgA3nb7VnPzogp-MfO_m3I92FiqYIeGgvDAiTilnCsuh2qtRD7KXryGJ93IJVrUYrl3pOOGPyuVdHp0r5UvVbOJPku4b6ol4Z0XHktha48DOm_A
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "acceptanceType": "W",
+    "fuAuditRequired": "N",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "mandateProcessingOptionsKey": "100025",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hInterimAuditTypeEnum": "FULL"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Length: 57
+Content-Type: application/json
+Date: Tue, 30 Apr 2024 13:31:31 GMT
+
+The mandate processing option already exists for this key
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/processing-options
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "acceptanceType": "W",
+    "fuAuditRequired": "N",
+    "fuAuthorisationRequired": "N",
+    "fuInterimAuditType": "F",
+    "h2hAuditRequired": "Y",
+    "h2hAuthorisationRequired": "N",
+    "h2hInterimAuditType": "F",
+    "mandateProcessingOptionsKey": "1005",
+    "acceptanceTypeEnum": "AS_AND_WHEN",
+    "fuInterimAuditTypeEnum": "FULL",
+    "h2hInterimAuditTypeEnum": "FULL"
+}
+HTTP/1.1 401 Unauthorized
+Content-Length: 0
+Www-Authenticate: Bearer
+Date: Tue, 30 Apr 2024 13:31:35 GMT

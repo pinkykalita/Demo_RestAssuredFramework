@@ -118,7 +118,6 @@ public class MandatesAPIStepDefinitions extends Utils{
 	public void user_sends_request_to(String method, String resource)
 	{
 		resourceAPI = ResourceURL.valueOf(resource);
-		System.out.println("resourceAPI "+reuestResponse);
 		
 		switch (method.toUpperCase()) {
         case "GET":
@@ -192,6 +191,7 @@ public class MandatesAPIStepDefinitions extends Utils{
 	@Then("the response should return {string}")
 	public void the_response_should_return(String keyValue)
 	{
+		
 		mandateInterchangeKey = getJsonPath(response,keyValue);
 		System.out.println("mandateInterchangeKey returned in response = "+mandateInterchangeKey);
 	}

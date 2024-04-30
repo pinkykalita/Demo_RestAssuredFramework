@@ -45,8 +45,8 @@ public class Utils {
 		String accessToken = GenerateToken.getAccessToken();
 		if (requestSpec == null)
 		{
-			//PrintStream log = new PrintStream(new FileOutputStream("Log.txt",true));
-			PrintStream log = new PrintStream(new FileOutputStream("Log.txt"));
+			PrintStream log = new PrintStream(new FileOutputStream("Log.txt",true));
+			//PrintStream log = new PrintStream(new FileOutputStream("Log.txt"));
 			
 			requestSpec = new RequestSpecBuilder()
 					.setBaseUri(getGlobalValues("DevEnv"))
