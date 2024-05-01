@@ -7,7 +7,9 @@ public enum ResourceURL {
 	GetAndUpdateProcessingOptionsAPI("authenticated/processing-options/{mandateProcessingOptionsKey}"),
 	createMandateInterchangeAPI("authenticated/mandate-interchange"),
 	getMandateInterchangeWithKeyAPI("authenticated/mandate-interchange/{mandateInterchangeKey}"),
-	getMandateInterchangeWithQueryParamsAPI("authenticated/mandate-interchange");
+	getMandateInterchangeWithQueryParamsAPI("authenticated/mandate-interchange"),
+	updateMandateInterchangeAPI("authenticated/mandate-interchange/{mandateInterchangeKey}");
+	
 	
 	private String resource;
 	

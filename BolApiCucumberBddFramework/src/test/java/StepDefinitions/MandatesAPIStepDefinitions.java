@@ -11,6 +11,7 @@ import POJO.CreateMandateInterchange;
 
 import POJO.CreateMandateProcessingOptions;
 import POJO.GenerateToken;
+import POJO.UpdateMandateInterchange;
 import Resources.ResourceURL;
 import Resources.TestDataBuild;
 import Resources.Utils;
@@ -45,6 +46,7 @@ public class MandatesAPIStepDefinitions extends Utils{
 	TestDataBuild data = new TestDataBuild();
 	CreateMandateProcessingOptions processingOptionsPayload = new CreateMandateProcessingOptions();
 	CreateMandateInterchange interchangePayload = new CreateMandateInterchange();
+	UpdateMandateInterchange updateinterchangePayload = new UpdateMandateInterchange();
 
 	
 	/*generate access token*/
@@ -200,21 +202,40 @@ public class MandatesAPIStepDefinitions extends Utils{
 	
 	/*get Mandate Interchange with query parameters*/
 	@Given("request prepared with query parameters {string},{string},{string}")
-	public void request_prepared_with_query_parameters(String customerkey, String filename, String uploadedusername) throws IOException 
+	public void request_prepared_with_query_parameters(String keyvalue1, String keyvalue2, String keyvalue3) throws IOException 
 	{
 		req1 = given().spec(requestSpecifications())
-				.queryParam("customerKey", customerkey)
-				.queryParam("fileName", filename)
-				.queryParam("uploadedUsername", uploadedusername);
+				.queryParam("customerKey", keyvalue1)
+				.queryParam("fileName", keyvalue2)
+				.queryParam("uploadedUsername", keyvalue3);
+	}
+	
+	
+	/*update Mandate Interchange*/
+	@Given("a request with {string} and payload to update {string},{string}")
+	public void a_request_with_and_payload_to_update(String key, String keyvalue1, String keyvalue2) throws IOException 
+	{
+		
+		req1 = given().spec(requestSpecifications()).pathParam("mandateInterchangeKey", key)
+				.body(data.UpdateMandateInterchangePayload(key,keyvalue1,keyvalue2 ));
 	}
 	
 	/*No mandate interchange data found*/
 	@Given("request prepared with query parameters {string},{string}")
-	public void request_prepared_with_query_parameters(String customerkey, String uploadedusername) throws IOException 
+	public void request_prepared_with_query_parameters(String keyvalue1, String keyvalue2) throws IOException 
 	{
 		req1 = given().spec(requestSpecifications())
-				.queryParam("customerKey", customerkey)
-				.queryParam("uploadedUsername", uploadedusername);
+				.queryParam("customerKey", keyvalue1)
+				.queryParam("uploadedUsername", keyvalue2);
     }
+	
+	/*500 status code for mandate interchange API*/
+	@Given("request prepared with query parameters {string}")
+	public void request_prepared_with_query_parameters(String keyValue) throws IOException 
+	{
+		req1 = given().spec(requestSpecifications())
+				.queryParam("toDate", keyValue);
+	    
+	}
 
 }

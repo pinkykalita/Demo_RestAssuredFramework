@@ -2,6 +2,7 @@ package Resources;
 
 import POJO.CreateMandateInterchange;
 import POJO.CreateMandateProcessingOptions;
+import POJO.UpdateMandateInterchange;
 import POJO.UpdateMandateProcessingOptions;
 
 public class TestDataBuild {
@@ -46,19 +47,39 @@ public class TestDataBuild {
 	
 	public CreateMandateInterchange CreateMandateInterchangePayload(String newKey)
 	{
-		CreateMandateInterchange mandateProcessingObject = new CreateMandateInterchange();
+		CreateMandateInterchange mandateInterchangeObject = new CreateMandateInterchange();
 		
-		mandateProcessingObject.setCustomerId("BOL Customer");
-		mandateProcessingObject.setCustomerKey(newKey);
-		mandateProcessingObject.setFailedMandateCount(0);
-		mandateProcessingObject.setFileName("TEST.xml");
-		mandateProcessingObject.setStatus("T");
-		mandateProcessingObject.setSubmissionChannel("File Upload");
-		mandateProcessingObject.setTotalMandateFieldCount(0);
-		mandateProcessingObject.setUploadedUsername("Test User123");
+		mandateInterchangeObject.setCustomerId("BOL Customer");
+		mandateInterchangeObject.setCustomerKey(newKey);
+		mandateInterchangeObject.setFailedMandateCount(0);
+		mandateInterchangeObject.setFileName("TEST.xml");
+		mandateInterchangeObject.setStatus("T");
+		mandateInterchangeObject.setSubmissionChannel("File Upload");
+		mandateInterchangeObject.setTotalMandateFieldCount(0);
+		mandateInterchangeObject.setUploadedUsername("Test User123");
 		
-		return mandateProcessingObject;
+		return mandateInterchangeObject;
 	}
+	
+	public UpdateMandateInterchange UpdateMandateInterchangePayload(String key, String filename, String uploadedUsername)
+	{
+		UpdateMandateInterchange mandateInterchangeObject = new UpdateMandateInterchange();
+		
+		mandateInterchangeObject.setCreationDateAndTime("2024-03-18T08:04:03.768Z[UTC]");
+		mandateInterchangeObject.setCustomerId("BOL Customer");
+		mandateInterchangeObject.setCustomerKey(123456);
+		mandateInterchangeObject.setFailedMandateCount(0);
+		mandateInterchangeObject.setFileName(filename);
+		mandateInterchangeObject.setMandateInterchangeKey(key);
+		mandateInterchangeObject.setStatus("T");
+		mandateInterchangeObject.setSubmissionChannel("File Upload");
+		mandateInterchangeObject.setTotalMandateFieldCount(0);
+		mandateInterchangeObject.setUploadedUsername(uploadedUsername);
+		mandateInterchangeObject.setWhenModified("2024-03-18T08:04:03.768Z[UTC]");
+		
+		return mandateInterchangeObject;
+	}
+
 		
 
 }
