@@ -3,28 +3,23 @@ package POJO;
 import java.sql.Date;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class CreateMandateBatch {
 	
+		private String action;	
 		private String authoriseStatus;
 	    private String bankGroupId;
 	    private boolean canAuthorise;
-	    
-	    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
-	    private Date creationDateAndTime;
-	    
+	    private Date creationDateAndTime; 
 	    private int customerId;
 	    private String customerUserKey;
-	    private String entityStatus;
 	    private List<POJO.mandateInstructionList> mandateInstructionList;
 	    private int mandateInterchangeKey;
 	    private String messageIdentification;
 	    private int version;
-
-	
-	
-		private String action;
+	     
+	    
+	    
 	    public String getAction() {
 			return action;
 		}
@@ -66,12 +61,6 @@ public class CreateMandateBatch {
 		}
 		public void setCustomerUserKey(String customerUserKey) {
 			this.customerUserKey = customerUserKey;
-		}
-		public String getEntityStatus() {
-			return entityStatus;
-		}
-		public void setEntityStatus(String entityStatus) {
-			this.entityStatus = entityStatus;
 		}
 		public List<mandateInstructionList> getMandateInstructionList() {
 			return mandateInstructionList;

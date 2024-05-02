@@ -238,4 +238,12 @@ public class MandatesAPIStepDefinitions extends Utils{
 	    
 	}
 
+	
+	/*upload mandate file*/
+	@Given("user has request with access token and {string}")
+	public void user_has_request_with_access_token_and(String ID) throws IOException 
+	{
+		request = given().spec(requestSpecifications())
+				.body(data.uploadMandateFilePayload(ID));
+	}
 }

@@ -1,9 +1,16 @@
 package Resources;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Properties;
+
 import POJO.CreateMandateInterchange;
 import POJO.CreateMandateProcessingOptions;
 import POJO.UpdateMandateInterchange;
 import POJO.UpdateMandateProcessingOptions;
+import POJO.UploadMandateFile;
 
 public class TestDataBuild {
 	
@@ -80,6 +87,26 @@ public class TestDataBuild {
 		return mandateInterchangeObject;
 	}
 
+	public UploadMandateFile uploadMandateFilePayload(String ID) throws IOException
+	{
+		UploadMandateFile fileUploadObject = new UploadMandateFile();
+		//FileInputStream file = new FileInputStream("C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile");
+		String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile";
+		String payload = readFileAsString(filePath);
 		
-
+		fileUploadObject.setMandateInterchangeId(ID);
+		fileUploadObject.setPayload(payload);
+		fileUploadObject.setMandateMessageType("I");
+		fileUploadObject.setExternalReference01("ref1");
+		fileUploadObject.setExternalReference02("ref2");
+		fileUploadObject.setMessageName("ABC");
+		fileUploadObject.setTargetPartnerId("09876");
+		
+		return fileUploadObject;
+	}
+	
+	public static String readFileAsString(String filePath) throws IOException 
+	{
+        return new String(Files.readAllBytes(Paths.get(filePath)));
+    }
 }

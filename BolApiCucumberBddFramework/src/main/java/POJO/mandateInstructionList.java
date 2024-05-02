@@ -2,20 +2,17 @@ package POJO;
 
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class mandateInstructionList {
 	
+	private String action;
 	private String adjustmentCategory;
     private String authenticationType;
     private String clientReference;
     private String collectionDay;
     private String contractReference;
     private String countryCode;
-    
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Date creationDateAndTime;
-    
     private String creditorAbbreviatedShortName;
     private int creditorAccountNumber;
     private int creditorBankBranch;
@@ -45,10 +42,7 @@ public class mandateInstructionList {
     private String installmentOccurrence;
     private String instructedAgent;
     private String instructingAgent;
-    
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Date mandateInitiationDate;
-    
     private int mandateInstrumentKey;
     private String mandateRequestTransactionId;
     private double maxCollectionAmount;
@@ -60,11 +54,9 @@ public class mandateInstructionList {
     private String trackingIndicator;
     private String ultimateCreditorName;
     private int version;
-    
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Date whenModified;
 	
-    private String action;
+    
     
 	
 	public String getAction() {

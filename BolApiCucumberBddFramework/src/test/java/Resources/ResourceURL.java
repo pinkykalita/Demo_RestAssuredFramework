@@ -8,7 +8,8 @@ public enum ResourceURL {
 	createMandateInterchangeAPI("authenticated/mandate-interchange"),
 	getMandateInterchangeWithKeyAPI("authenticated/mandate-interchange/{mandateInterchangeKey}"),
 	getMandateInterchangeWithQueryParamsAPI("authenticated/mandate-interchange"),
-	updateMandateInterchangeAPI("authenticated/mandate-interchange/{mandateInterchangeKey}");
+	updateMandateInterchangeAPI("authenticated/mandate-interchange/{mandateInterchangeKey}"),
+	UploadMandateFileAPI("authenticated/upload-mandate-file");
 	
 	
 	private String resource;
