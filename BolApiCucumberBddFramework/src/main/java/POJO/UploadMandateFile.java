@@ -3,7 +3,7 @@ package POJO;
 public class UploadMandateFile {
 	
 	private String payload;
-	private String mandateInterchangeId;
+	private int mandateInterchangeId;
 	private String mandateMessageType;
 	private String externalReference01;
 	private String externalReference02;
@@ -41,11 +41,11 @@ public class UploadMandateFile {
 	public void setTargetPartnerId(String targetPartnerId) {
 		this.targetPartnerId = targetPartnerId;
 	}
-	public String getMandateInterchangeId() {
+	public int getMandateInterchangeId() {
 		return mandateInterchangeId;
 	}
-	public void setMandateInterchangeId(String mandateInterchangeId) {
-		this.mandateInterchangeId = mandateInterchangeId;
+	public void setMandateInterchangeId(int i) {
+		this.mandateInterchangeId = i;
 	}
 	public String getPayload() {
 		return payload;

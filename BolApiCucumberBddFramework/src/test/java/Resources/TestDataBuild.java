@@ -6,11 +6,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Properties;
 
+import POJO.CreateMandateBatch;
 import POJO.CreateMandateInterchange;
 import POJO.CreateMandateProcessingOptions;
 import POJO.UpdateMandateInterchange;
 import POJO.UpdateMandateProcessingOptions;
 import POJO.UploadMandateFile;
+import POJO.mandateInstructionList;
 
 public class TestDataBuild {
 	
@@ -87,14 +89,14 @@ public class TestDataBuild {
 		return mandateInterchangeObject;
 	}
 
-	public UploadMandateFile uploadMandateFilePayload(String ID) throws IOException
+	public UploadMandateFile uploadMandateFilePayload() throws IOException
 	{
 		UploadMandateFile fileUploadObject = new UploadMandateFile();
 		//FileInputStream file = new FileInputStream("C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile");
 		String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile";
 		String payload = readFileAsString(filePath);
 		
-		fileUploadObject.setMandateInterchangeId(ID);
+		fileUploadObject.setMandateInterchangeId(10);
 		fileUploadObject.setPayload(payload);
 		fileUploadObject.setMandateMessageType("I");
 		fileUploadObject.setExternalReference01("ref1");
@@ -109,4 +111,80 @@ public class TestDataBuild {
 	{
         return new String(Files.readAllBytes(Paths.get(filePath)));
     }
+	
+	public CreateMandateBatch mandateBatchPayload()
+	{
+		CreateMandateBatch mandateBatchObject = new CreateMandateBatch();
+		mandateInstructionList instructionListObject = new mandateInstructionList();
+		
+		mandateBatchObject.setAction("I");
+		mandateBatchObject.setAuthoriseStatus("ACT");
+		mandateBatchObject.setBankGroupId("Standard Bank Group");
+		mandateBatchObject.setCanAuthorise(false);
+		mandateBatchObject.setCreationDateAndTime("2024-04-16T07:06:00Z[UTC]");
+		mandateBatchObject.setCustomerId(373731);
+		mandateBatchObject.setCustomerUserKey("513632");
+		mandateBatchObject.setMandateInterchangeKey(3);
+		mandateBatchObject.setVersion(0);
+		
+		
+		return mandateBatchObject;
+	}
+	
+	public mandateInstructionList mandateInstructionListPayload()
+	{
+		mandateInstructionList instructionListObject = new mandateInstructionList();
+		
+		instructionListObject.setAction("I");
+		instructionListObject.setAdjustmentCategory("N");
+		instructionListObject.setAuthenticationType("REAL TIME");
+		instructionListObject.setClientReference("PerfTest2");
+		instructionListObject.setCollectionDay("07");
+		instructionListObject.setContractReference("SBZA1811302709");
+		instructionListObject.setCountryCode("ZA");
+		instructionListObject.setCreationDateAndTime("2018-11-30T08:43:53Z[UTC]");
+		instructionListObject.setCreditorAbbreviatedShortName("Vinot001");
+		instructionListObject.setCreditorAccountNumber("001299751");
+		instructionListObject.setCreditorBankBranch("051001");
+		instructionListObject.setCreditorEmailDetails("junzismail@gmail.com");
+		instructionListObject.setCreditorName("BOL Customer");
+		instructionListObject.setCreditorSchemeId(1);
+		instructionListObject.setCreditorTelephoneDetails("+27-118765434");
+		instructionListObject.setDateAdjustmentRuleIndicator("Y");
+		instructionListObject.setDebitValueType("FIXED");
+		instructionListObject.setDebtorAccountName("Testing SITONE");
+		instructionListObject.setDebtorAccountNumber("10005296372");
+		instructionListObject.setDebtorAccountType("CACC");
+		instructionListObject.setDebtorAuthenticationRequired("0227");
+		instructionListObject.setDebtorBankBranch("051001");
+		instructionListObject.setDebtorBankName("STANDARD BANK");
+		instructionListObject.setDebtorBicCode("SBZAZAJJ");
+		instructionListObject.setDebtorEmailDetails("ravi@test.com");
+		instructionListObject.setDebtorIdentification("8007086600092");
+		instructionListObject.setDebtorIdentificationType("I");
+		instructionListObject.setDebtorName("Testing SITONE");
+		instructionListObject.setDebtorTelephoneDetails("+27-616481422");
+		instructionListObject.setEntryClass("Vinot001");
+		instructionListObject.setFrequency("MNTH");
+		instructionListObject.setInitiatingParty("Junaid");
+		instructionListObject.setInstallmentAmount(11.47);
+		instructionListObject.setItinstallmentAmountCurrencyCurrency("ZAR");
+		instructionListObject.setInstallmentOccurrence("RCUR");
+		instructionListObject.setInstructedAgent("210000");
+		instructionListObject.setInstructedAgent("210001");
+		instructionListObject.setMandateInitiationDate("2024-04-16T07:06:00Z[UTC]");
+		instructionListObject.setMandateInstrumentKey(101);
+		instructionListObject.setMaxCollectionAmount(15);
+		instructionListObject.setMaxCollectionAmountCurrency("ZAR");
+		instructionListObject.setRequestTransmissionNumber(1);
+		instructionListObject.setStatus("PEN");
+		instructionListObject.setSubmissionMechanism("Host to Host");
+		instructionListObject.setTrackingIndicator("T");
+		instructionListObject.setUltimateCreditorName("R");
+		instructionListObject.setVersion(0);
+		instructionListObject.setWhenModified("2024-04-16T07:06:00Z[UTC]");
+		
+		return instructionListObject;
+	}
+	
 }

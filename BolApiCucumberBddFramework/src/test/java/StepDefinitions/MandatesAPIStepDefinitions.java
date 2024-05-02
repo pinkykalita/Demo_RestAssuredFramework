@@ -240,10 +240,27 @@ public class MandatesAPIStepDefinitions extends Utils{
 
 	
 	/*upload mandate file*/
-	@Given("user has request with access token and {string}")
-	public void user_has_request_with_access_token_and(String ID) throws IOException 
+	@Given("user has request payload available")
+	public void user_has_request_payload_available() throws IOException
 	{
 		request = given().spec(requestSpecifications())
-				.body(data.uploadMandateFilePayload(ID));
+				.body(data.uploadMandateFilePayload());
 	}
+	
+	
+	/*create Mandate Batch*/
+	@Given("user has request Payload with access token")
+	public void user_has_request_payload_with_access_token() throws IOException 
+	{
+		request = given().spec(requestSpecifications())
+	    		.body(data.mandateBatchPayload());
+	    
+	}
+	@Then("the response should contain a valid {string}")
+	public void the_response_should_contain_a_valid(String keyValue)
+	{
+		String mandateBatchKey = getJsonPath(response,keyValue);
+		System.out.println("mandateBatchKey= "+mandateBatchKey );
+	}
+	
 }

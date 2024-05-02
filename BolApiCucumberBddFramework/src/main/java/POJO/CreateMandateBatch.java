@@ -1,6 +1,7 @@
 package POJO;
 
-import java.sql.Date;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -10,7 +11,7 @@ public class CreateMandateBatch {
 		private String authoriseStatus;
 	    private String bankGroupId;
 	    private boolean canAuthorise;
-	    private Date creationDateAndTime; 
+	    private String creationDateAndTime; 
 	    private int customerId;
 	    private String customerUserKey;
 	    private List<POJO.mandateInstructionList> mandateInstructionList;
@@ -44,10 +45,10 @@ public class CreateMandateBatch {
 		public void setCanAuthorise(boolean canAuthorise) {
 			this.canAuthorise = canAuthorise;
 		}
-		public Date getCreationDateAndTime() {
+		public String getCreationDateAndTime() {
 			return creationDateAndTime;
 		}
-		public void setCreationDateAndTime(Date creationDateAndTime) {
+		public void setCreationDateAndTime(String creationDateAndTime) {
 			this.creationDateAndTime = creationDateAndTime;
 		}
 		public int getCustomerId() {
@@ -62,12 +63,19 @@ public class CreateMandateBatch {
 		public void setCustomerUserKey(String customerUserKey) {
 			this.customerUserKey = customerUserKey;
 		}
+		
+		
+		public CreateMandateBatch() {
+	        this.mandateInstructionList = new ArrayList<>();
+	    }
 		public List<mandateInstructionList> getMandateInstructionList() {
 			return mandateInstructionList;
 		}
 		public void setMandateInstructionList(List<POJO.mandateInstructionList> mandateInstructionList) {
 			this.mandateInstructionList = mandateInstructionList;
 		}
+		
+		
 		public int getMandateInterchangeKey() {
 			return mandateInterchangeKey;
 		}

@@ -1,6 +1,5 @@
 package POJO;
 
-import java.util.Date;
 
 
 public class mandateInstructionList {
@@ -12,10 +11,10 @@ public class mandateInstructionList {
     private String collectionDay;
     private String contractReference;
     private String countryCode;
-    private Date creationDateAndTime;
+    private String creationDateAndTime;
     private String creditorAbbreviatedShortName;
-    private int creditorAccountNumber;
-    private int creditorBankBranch;
+    private String creditorAccountNumber;
+    private String creditorBankBranch;
     private String creditorEmailDetails;
     private String creditorName;
     private int creditorSchemeId;
@@ -42,7 +41,7 @@ public class mandateInstructionList {
     private String installmentOccurrence;
     private String instructedAgent;
     private String instructingAgent;
-    private Date mandateInitiationDate;
+    private String mandateInitiationDate;
     private int mandateInstrumentKey;
     private String mandateRequestTransactionId;
     private double maxCollectionAmount;
@@ -54,7 +53,7 @@ public class mandateInstructionList {
     private String trackingIndicator;
     private String ultimateCreditorName;
     private int version;
-    private Date whenModified;
+    private String whenModified;
 	
     
     
@@ -115,11 +114,11 @@ public class mandateInstructionList {
 		this.countryCode = countryCode;
 	}
 
-	public Date getCreationDateAndTime() {
+	public String getCreationDateAndTime() {
 		return creationDateAndTime;
 	}
 
-	public void setCreationDateAndTime(Date creationDateAndTime) {
+	public void setCreationDateAndTime(String creationDateAndTime) {
 		this.creationDateAndTime = creationDateAndTime;
 	}
 
@@ -131,19 +130,19 @@ public class mandateInstructionList {
 		this.creditorAbbreviatedShortName = creditorAbbreviatedShortName;
 	}
 
-	public int getCreditorAccountNumber() {
+	public String getCreditorAccountNumber() {
 		return creditorAccountNumber;
 	}
 
-	public void setCreditorAccountNumber(int creditorAccountNumber) {
+	public void setCreditorAccountNumber(String creditorAccountNumber) {
 		this.creditorAccountNumber = creditorAccountNumber;
 	}
 
-	public int getCreditorBankBranch() {
+	public String getCreditorBankBranch() {
 		return creditorBankBranch;
 	}
 
-	public void setCreditorBankBranch(int creditorBankBranch) {
+	public void setCreditorBankBranch(String creditorBankBranch) {
 		this.creditorBankBranch = creditorBankBranch;
 	}
 
@@ -355,11 +354,11 @@ public class mandateInstructionList {
 		this.instructingAgent = instructingAgent;
 	}
 
-	public Date getMandateInitiationDate() {
+	public String getMandateInitiationDate() {
 		return mandateInitiationDate;
 	}
 
-	public void setMandateInitiationDate(Date mandateInitiationDate) {
+	public void setMandateInitiationDate(String mandateInitiationDate) {
 		this.mandateInitiationDate = mandateInitiationDate;
 	}
 
@@ -451,11 +450,11 @@ public class mandateInstructionList {
 		this.version = version;
 	}
 
-	public Date getWhenModified() {
+	public String getWhenModified() {
 		return whenModified;
 	}
 
-	public void setWhenModified(Date whenModified) {
+	public void setWhenModified(String whenModified) {
 		this.whenModified = whenModified;
 	}
 
