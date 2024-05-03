@@ -10,7 +10,8 @@ public enum ResourceURL {
 	getMandateInterchangeWithQueryParamsAPI("authenticated/mandate-interchange"),
 	updateMandateInterchangeAPI("authenticated/mandate-interchange/{mandateInterchangeKey}"),
 	UploadMandateFileAPI("authenticated/upload-mandate-file"),
-	CreateMandateBatchAPI("authenticated/mandate-batch/create");
+	CreateMandateBatchAPI("authenticated/mandate-batch/create"),
+	getMandateBatchAPI("authenticated/mandate-batch/{mandateBatchKey}");
 	
 	
 	private String resource;

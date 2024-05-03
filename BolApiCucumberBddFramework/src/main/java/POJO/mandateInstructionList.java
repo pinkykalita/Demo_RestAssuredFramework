@@ -1,8 +1,10 @@
 package POJO;
 
+import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
-public class mandateInstructionList {
+public class MandateInstructionList {
 	
 	private String action;
 	private String adjustmentCategory;
@@ -11,7 +13,10 @@ public class mandateInstructionList {
     private String collectionDay;
     private String contractReference;
     private String countryCode;
-    private String creationDateAndTime;
+    
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Date creationDateAndTime;
+    
     private String creditorAbbreviatedShortName;
     private String creditorAccountNumber;
     private String creditorBankBranch;
@@ -37,27 +42,27 @@ public class mandateInstructionList {
     private String frequency;
     private String initiatingParty;
     private double installmentAmount;
-    private String itinstallmentAmountCurrencyCurrency;
+    private String installmentAmountCurrency;
     private String installmentOccurrence;
     private String instructedAgent;
     private String instructingAgent;
-    private String mandateInitiationDate;
+    
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Date mandateInitiationDate;   
+    
     private int mandateInstrumentKey;
-    private String mandateRequestTransactionId;
     private double maxCollectionAmount;
     private String maxCollectionAmountCurrency;
-    private String messageIdentification;
     private int requestTransmissionNumber;
     private String status;
     private String submissionMechanism;
     private String trackingIndicator;
     private String ultimateCreditorName;
     private int version;
-    private String whenModified;
-	
     
-    
-	
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+    private Date whenModified;
+
 	public String getAction() {
 		return action;
 	}
@@ -114,11 +119,11 @@ public class mandateInstructionList {
 		this.countryCode = countryCode;
 	}
 
-	public String getCreationDateAndTime() {
+	public Date getCreationDateAndTime() {
 		return creationDateAndTime;
 	}
 
-	public void setCreationDateAndTime(String creationDateAndTime) {
+	public void setCreationDateAndTime(Date creationDateAndTime) {
 		this.creationDateAndTime = creationDateAndTime;
 	}
 
@@ -322,12 +327,12 @@ public class mandateInstructionList {
 		this.installmentAmount = installmentAmount;
 	}
 
-	public String getItinstallmentAmountCurrencyCurrency() {
-		return itinstallmentAmountCurrencyCurrency;
+	public String getInstallmentAmountCurrency() {
+		return installmentAmountCurrency;
 	}
 
-	public void setItinstallmentAmountCurrencyCurrency(String itinstallmentAmountCurrencyCurrency) {
-		this.itinstallmentAmountCurrencyCurrency = itinstallmentAmountCurrencyCurrency;
+	public void setInstallmentAmountCurrency(String installmentAmountCurrency) {
+		this.installmentAmountCurrency = installmentAmountCurrency;
 	}
 
 	public String getInstallmentOccurrence() {
@@ -354,11 +359,11 @@ public class mandateInstructionList {
 		this.instructingAgent = instructingAgent;
 	}
 
-	public String getMandateInitiationDate() {
+	public Date getMandateInitiationDate() {
 		return mandateInitiationDate;
 	}
 
-	public void setMandateInitiationDate(String mandateInitiationDate) {
+	public void setMandateInitiationDate(Date mandateInitiationDate) {
 		this.mandateInitiationDate = mandateInitiationDate;
 	}
 
@@ -368,14 +373,6 @@ public class mandateInstructionList {
 
 	public void setMandateInstrumentKey(int mandateInstrumentKey) {
 		this.mandateInstrumentKey = mandateInstrumentKey;
-	}
-
-	public String getMandateRequestTransactionId() {
-		return mandateRequestTransactionId;
-	}
-
-	public void setMandateRequestTransactionId(String mandateRequestTransactionId) {
-		this.mandateRequestTransactionId = mandateRequestTransactionId;
 	}
 
 	public double getMaxCollectionAmount() {
@@ -392,14 +389,6 @@ public class mandateInstructionList {
 
 	public void setMaxCollectionAmountCurrency(String maxCollectionAmountCurrency) {
 		this.maxCollectionAmountCurrency = maxCollectionAmountCurrency;
-	}
-
-	public String getMessageIdentification() {
-		return messageIdentification;
-	}
-
-	public void setMessageIdentification(String messageIdentification) {
-		this.messageIdentification = messageIdentification;
 	}
 
 	public int getRequestTransmissionNumber() {
@@ -450,13 +439,16 @@ public class mandateInstructionList {
 		this.version = version;
 	}
 
-	public String getWhenModified() {
+	public Date getWhenModified() {
 		return whenModified;
 	}
 
-	public void setWhenModified(String whenModified) {
+	public void setWhenModified(Date whenModified) {
 		this.whenModified = whenModified;
 	}
-
+	
+    
+    
+	
 	
 }

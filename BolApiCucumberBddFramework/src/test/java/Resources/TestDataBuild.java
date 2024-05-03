@@ -1,18 +1,22 @@
 package Resources;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Properties;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import POJO.CreateMandateBatch;
 import POJO.CreateMandateInterchange;
 import POJO.CreateMandateProcessingOptions;
+import POJO.MandateInstructionList;
 import POJO.UpdateMandateInterchange;
 import POJO.UpdateMandateProcessingOptions;
 import POJO.UploadMandateFile;
-import POJO.mandateInstructionList;
+
+
 
 public class TestDataBuild {
 	
@@ -112,28 +116,24 @@ public class TestDataBuild {
         return new String(Files.readAllBytes(Paths.get(filePath)));
     }
 	
-	public CreateMandateBatch mandateBatchPayload()
+	
+	public CreateMandateBatch mandateBatchPayload() throws ParseException
 	{
 		CreateMandateBatch mandateBatchObject = new CreateMandateBatch();
-		mandateInstructionList instructionListObject = new mandateInstructionList();
+		List<MandateInstructionList> instructionList = new ArrayList<>();
+		MandateInstructionList instructionListObject = new MandateInstructionList();
+		
 		
 		mandateBatchObject.setAction("I");
 		mandateBatchObject.setAuthoriseStatus("ACT");
 		mandateBatchObject.setBankGroupId("Standard Bank Group");
 		mandateBatchObject.setCanAuthorise(false);
-		mandateBatchObject.setCreationDateAndTime("2024-04-16T07:06:00Z[UTC]");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
+		mandateBatchObject.setCreationDateAndTime(creationDateAndTime);
 		mandateBatchObject.setCustomerId(373731);
 		mandateBatchObject.setCustomerUserKey("513632");
-		mandateBatchObject.setMandateInterchangeKey(3);
-		mandateBatchObject.setVersion(0);
-		
-		
-		return mandateBatchObject;
-	}
-	
-	public mandateInstructionList mandateInstructionListPayload()
-	{
-		mandateInstructionList instructionListObject = new mandateInstructionList();
+		//List<mandateInstructionList> instructionList = new ArrayList<>();
+	    
 		
 		instructionListObject.setAction("I");
 		instructionListObject.setAdjustmentCategory("N");
@@ -142,7 +142,8 @@ public class TestDataBuild {
 		instructionListObject.setCollectionDay("07");
 		instructionListObject.setContractReference("SBZA1811302709");
 		instructionListObject.setCountryCode("ZA");
-		instructionListObject.setCreationDateAndTime("2018-11-30T08:43:53Z[UTC]");
+		Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
+		instructionListObject.setCreationDateAndTime(date);
 		instructionListObject.setCreditorAbbreviatedShortName("Vinot001");
 		instructionListObject.setCreditorAccountNumber("001299751");
 		instructionListObject.setCreditorBankBranch("051001");
@@ -167,14 +168,15 @@ public class TestDataBuild {
 		instructionListObject.setEntryClass("Vinot001");
 		instructionListObject.setFrequency("MNTH");
 		instructionListObject.setInitiatingParty("Junaid");
-		instructionListObject.setInstallmentAmount(11.47);
-		instructionListObject.setItinstallmentAmountCurrencyCurrency("ZAR");
+		instructionListObject.setInstallmentAmount(11.45);
+		instructionListObject.setInstallmentAmountCurrency("ZAR");
 		instructionListObject.setInstallmentOccurrence("RCUR");
 		instructionListObject.setInstructedAgent("210000");
-		instructionListObject.setInstructedAgent("210001");
-		instructionListObject.setMandateInitiationDate("2024-04-16T07:06:00Z[UTC]");
+		instructionListObject.setInstructingAgent("210001");;
+		Date mandateInitiationDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
+		instructionListObject.setMandateInitiationDate(mandateInitiationDate);
 		instructionListObject.setMandateInstrumentKey(101);
-		instructionListObject.setMaxCollectionAmount(15);
+		instructionListObject.setMaxCollectionAmount(15.0);
 		instructionListObject.setMaxCollectionAmountCurrency("ZAR");
 		instructionListObject.setRequestTransmissionNumber(1);
 		instructionListObject.setStatus("PEN");
@@ -182,9 +184,18 @@ public class TestDataBuild {
 		instructionListObject.setTrackingIndicator("T");
 		instructionListObject.setUltimateCreditorName("R");
 		instructionListObject.setVersion(0);
-		instructionListObject.setWhenModified("2024-04-16T07:06:00Z[UTC]");
+		Date whenModifiedDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
+		instructionListObject.setWhenModified(whenModifiedDate);
 		
-		return instructionListObject;
+		mandateBatchObject.setMandateInterchangeKey(3);
+		mandateBatchObject.setVersion(0);
+		
+		
+		instructionList.add(instructionListObject);
+		mandateBatchObject.setMandateInstructionList(instructionList);
+		
+		return mandateBatchObject;
 	}
+	
 	
 }

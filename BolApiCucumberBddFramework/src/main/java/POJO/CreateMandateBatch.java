@@ -1,9 +1,9 @@
 package POJO;
 
-
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class CreateMandateBatch {
 	
@@ -11,13 +11,14 @@ public class CreateMandateBatch {
 		private String authoriseStatus;
 	    private String bankGroupId;
 	    private boolean canAuthorise;
-	    private String creationDateAndTime; 
+	    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+	    private Date creationDateAndTime; 
 	    private int customerId;
 	    private String customerUserKey;
-	    private List<POJO.mandateInstructionList> mandateInstructionList;
+	    private List<MandateInstructionList> mandateInstructionList;
 	    private int mandateInterchangeKey;
 	    private String messageIdentification;
-	    private int version;
+		private int version;
 	     
 	    
 	    
@@ -45,11 +46,12 @@ public class CreateMandateBatch {
 		public void setCanAuthorise(boolean canAuthorise) {
 			this.canAuthorise = canAuthorise;
 		}
-		public String getCreationDateAndTime() {
+		
+		public Date getCreationDateAndTime() {
 			return creationDateAndTime;
 		}
-		public void setCreationDateAndTime(String creationDateAndTime) {
-			this.creationDateAndTime = creationDateAndTime;
+		public void setCreationDateAndTime(Date creationDateAndTime2) {
+			this.creationDateAndTime = creationDateAndTime2;
 		}
 		public int getCustomerId() {
 			return customerId;
@@ -63,19 +65,12 @@ public class CreateMandateBatch {
 		public void setCustomerUserKey(String customerUserKey) {
 			this.customerUserKey = customerUserKey;
 		}
-		
-		
-		public CreateMandateBatch() {
-	        this.mandateInstructionList = new ArrayList<>();
-	    }
-		public List<mandateInstructionList> getMandateInstructionList() {
+		public List<MandateInstructionList> getMandateInstructionList() {
 			return mandateInstructionList;
 		}
-		public void setMandateInstructionList(List<POJO.mandateInstructionList> mandateInstructionList) {
+		public void setMandateInstructionList(List<MandateInstructionList> mandateInstructionList) {
 			this.mandateInstructionList = mandateInstructionList;
 		}
-		
-		
 		public int getMandateInterchangeKey() {
 			return mandateInterchangeKey;
 		}

@@ -9,7 +9,7 @@ public class AuthorizeMandate {
 	private String authoriseStatus;
     private String bankGroupId;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
-    private String creationDateAndTime;
+    private Date creationDateAndTime;
     private long customerId;
     private String customerUserKey;
     private String entityStatus;
@@ -19,7 +19,7 @@ public class AuthorizeMandate {
     private String status;
     private int version;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
-    private String whenModified;
+    private Date whenModified;
 	private String action;
 	
 	
@@ -41,11 +41,15 @@ public class AuthorizeMandate {
 	public void setBankGroupId(String bankGroupId) {
 		this.bankGroupId = bankGroupId;
 	}
-	public String getCreationDateAndTime() {
+	
+	public Date getCreationDateAndTime() {
 		return creationDateAndTime;
 	}
-	public void setCreationDateAndTime(String creationDateAndTime) {
+	public void setCreationDateAndTime(Date creationDateAndTime) {
 		this.creationDateAndTime = creationDateAndTime;
+	}
+	public void setWhenModified(Date whenModified) {
+		this.whenModified = whenModified;
 	}
 	public long getCustomerId() {
 		return customerId;
@@ -95,13 +99,10 @@ public class AuthorizeMandate {
 	public void setVersion(int version) {
 		this.version = version;
 	}
-	public String getWhenModified() {
+	public Date getWhenModified() {
 		return whenModified;
 	}
-	public void setWhenModified(String whenModified) {
-		this.whenModified = whenModified;
-	}
-	  
+	
 	
 
     

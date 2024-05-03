@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 import POJO.CreateMandateInterchange;
 
@@ -250,17 +251,25 @@ public class MandatesAPIStepDefinitions extends Utils{
 	
 	/*create Mandate Batch*/
 	@Given("user has request Payload with access token")
-	public void user_has_request_payload_with_access_token() throws IOException 
+	public void user_has_request_payload_with_access_token() throws IOException, ParseException 
 	{
 		request = given().spec(requestSpecifications())
 	    		.body(data.mandateBatchPayload());
-	    
 	}
 	@Then("the response should contain a valid {string}")
 	public void the_response_should_contain_a_valid(String keyValue)
 	{
 		String mandateBatchKey = getJsonPath(response,keyValue);
 		System.out.println("mandateBatchKey= "+mandateBatchKey );
+	}
+	
+	
+	/*Get mandate batch*/
+	@Given("request with path parameter {string}")
+	public void request_with_path_parameter(String key) throws IOException 
+	{
+		req1 = given().spec(requestSpecifications())
+				.pathParam("mandateBatchKey", key);
 	}
 	
 }
