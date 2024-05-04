@@ -254,7 +254,7 @@ public class MandatesAPIStepDefinitions extends Utils{
 	public void user_has_request_payload_with_access_token() throws IOException, ParseException 
 	{
 		request = given().spec(requestSpecifications())
-	    		.body(data.mandateBatchPayload());
+	    		.body(data.createmandateBatchPayload());
 	}
 	@Then("the response should contain a valid {string}")
 	public void the_response_should_contain_a_valid(String keyValue)
@@ -264,12 +264,40 @@ public class MandatesAPIStepDefinitions extends Utils{
 	}
 	
 	
+	
 	/*Get mandate batch*/
 	@Given("request with path parameter {string}")
 	public void request_with_path_parameter(String key) throws IOException 
 	{
 		req1 = given().spec(requestSpecifications())
-				.pathParam("mandateBatchKey", key);
+				.pathParam("mandateBatchKey",key);
 	}
 	
+	
+	
+	/*cancel mandate batch*/
+	@Given("request payload with path parameter {string}")
+	public void request_payload_with_path_parameter(String key) throws IOException, ParseException 
+	{
+		req1 = given().spec(requestSpecifications()).pathParam("mandateBatchKey",key)
+				.body(data.cancelmandateBatchPayload(key));
+	}
+	@Then("return {string} statuscode on {string} request with same path parameter {string}")
+	public void return_statuscode_on_request_with_same_path_parameter(String string, String string2, String string3) 
+	{
+	    
+		
+	}
+	
+	
+	/*update mandate batch*/
+
+@Given("update payload with path parameter {string}")
+public void update_payload_with_path_parameter(String key) throws IOException, ParseException 
+{
+	req1 = given().spec(requestSpecifications()).pathParam("mandateBatchKey",key)
+			.body(data.updatemandateBatchPayload(key));
+}
+	
+
 }

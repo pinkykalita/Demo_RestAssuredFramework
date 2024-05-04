@@ -1,11 +1,11 @@
-Request method:	POST
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-batch/create
+Request method:	PUT
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-batch/update/12
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR1JWMXVKQVJqbFpLdWhqckRJSzduNCIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDcwODY0NSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ3MDg2NDUsImV4cCI6MTcxNDcxMjI0NX0.OYezwLZNL5eQeIgNXs81jjex6ALUHN79XQWlgLLxuEI7kduYAZK81OLxeqm_QGyZzVOgDdgTh_FS_OCJgZ0Eewztmh6-pnilZWDd4QXBHfZmEF7xl4PBO606TRa4xKM7vUwvpagV7R7W-kGYO90xP3ysKEvIUft4F80Nor5h-FnfBHDGvzSGOJvjFYg-xMUQwDoqmSSasx43NsAnvt3hOVS1K0QFeDfZZAxni-rb8qxNqOgqPRlJlcFHM4mrMU7qOAzUosxczuwegVt37Hq59prXIGbBSrHCtZrFckfvRjuevQJ1nq2GkXYb3ttnoAenMhSmOOnoxqUDOmM5L2TnXw
+Path params:	mandateBatchKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiakVnRjRzS3hGT1hNdGNPeGp4OW9OZiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDgzMjM5OCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ4MzIzOTgsImV4cCI6MTcxNDgzNTk5OH0.BOPID5N31ahVLC3ZWflXSvlwsFD65RjS3ObC7AfZCuFNFcVwVk42gGOVzOQwEzxk-7GunjCdlX9rN7N72vkYkittSAow1GUwv2qcMqgrJQZrl6vdU0RzzHC7Tql6hLKBinfaJtlqEmFhhpnW4m6akHwrG8jk4Wbal31DLVY-QtEKKpTinJPIlYVIZjvdAKLUsKh0yTWlkZ2WgzlM3ABD_GbrljIwz0tC6aOL_fmcz9P0Lqt5qhd_-7b1-YN8u7jkUorMfPVIEYUz-bxrrk2USmw_zNAc4bhL5EmhSMycvbu-2YHrlSEWxJcNhK1yYYg-VOGFnEY5KH8ATBm0pZk6pA
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -15,6 +15,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
+    "acceptedCount": 0,
     "action": "I",
     "authoriseStatus": "ACT",
     "bankGroupId": "Standard Bank Group",
@@ -22,401 +23,87 @@ Body:
     "creationDateAndTime": "2024-04-16T01:36:00Z",
     "customerId": 373731,
     "customerUserKey": "513632",
-    "mandateInstructionList": [
-        {
-            "action": "I",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "PerfTest2",
-            "collectionDay": "07",
-            "contractReference": "SBZA1811302709",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-16T01:36:00Z",
-            "creditorAbbreviatedShortName": "Vinot001",
-            "creditorAccountNumber": "001299751",
-            "creditorBankBranch": "051001",
-            "creditorEmailDetails": "junzismail@gmail.com",
-            "creditorName": "BOL Customer",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-118765434",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "FIXED",
-            "debtorAccountName": "Testing SITONE",
-            "debtorAccountNumber": "10005296372",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "051001",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ravi@test.com",
-            "debtorIdentification": "8007086600092",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-616481422",
-            "entryClass": "Vinot001",
-            "frequency": "MNTH",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 11.45,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateInitiationDate": "2024-04-16T01:36:00Z",
-            "mandateInstrumentKey": 101,
-            "maxCollectionAmount": 15.0,
-            "maxCollectionAmountCurrency": "ZAR",
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "version": 0,
-            "whenModified": "2024-04-16T01:36:00Z"
-        }
-    ],
-    "mandateInterchangeKey": 3,
-    "messageIdentification": null,
-    "version": 0
-}
-HTTP/1.1 200 OK
-Content-Length: 2086
-Content-Type: application/json
-Date: Fri, 03 May 2024 03:57:32 GMT
-
-{
-    "acceptedCount": 0,
-    "authoriseStatus": "ACT",
-    "bankGroupId": "Standard Bank Group",
-    "canAuthorise": false,
-    "creationDateAndTime": "2024-04-16T01:36:00Z[UTC]",
-    "customerId": 373731,
     "cutOffRequired": false,
     "entityStatus": "RC",
-    "errorList": [
-        
-    ],
+    "errorList": null,
     "failedCount": 0,
-    "mandateBatchKey": 10,
+    "mandateBatchKey": "12",
     "mandateInstructionList": [
         {
-            "action": "I",
+            "action": "Z",
             "adjustmentCategory": "N",
             "authenticationType": "REAL TIME",
-            "clientReference": "PerfTest2",
-            "collectionDay": "07",
-            "contractReference": "SBZA1811302709",
+            "clientReference": "ClntRef",
+            "collectionDay": "3",
+            "contractReference": "Nifnb11jan24_3",
             "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-16T01:36:00Z[UTC]",
-            "creditorAbbreviatedShortName": "Vinot001",
+            "creationDateAndTime": "2024-04-16T01:36:00Z",
+            "creditorAbbreviatedShortName": "AC Col",
             "creditorAccountNumber": "051001",
             "creditorBankBranch": "051001",
             "creditorBicCode": "SBZAZAJJ",
-            "creditorEmailDetails": "junzismail@gmail.com",
-            "creditorName": "BOL Customer",
+            "creditorEmailDetails": "testabc123@outlook.com",
+            "creditorName": "Standard Bank HTH",
             "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-118765434",
+            "creditorTelephoneDetails": "+27-821234567",
             "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "FIXED",
-            "debtorAccountName": "Testing SITONE",
+            "debitValueType": "VARIABLE",
+            "debtorAccountName": "pinky kalita",
             "debtorAccountNumber": "10005296372",
             "debtorAccountType": "CACC",
             "debtorAuthenticationRequired": "0227",
             "debtorBankBranch": "051001",
             "debtorBankName": "STANDARD BANK",
             "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ravi@test.com",
-            "debtorIdentification": "8007086600092",
+            "debtorEmailDetails": "ismail@gmail.com",
+            "debtorIdentification": "6507170138083",
             "debtorIdentificationType": "I",
             "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-616481422",
+            "debtorTelephoneDetails": "+27-0786774545",
             "entryClass": "Vinot001",
-            "errorList": [
-                
-            ],
-            "firstCollectionDateChanged": false,
-            "frequency": "MNTH",
+            "errorList": null,
+            "frequency": "WEEK",
             "initiatingParty": "Junaid",
-            "installmentAmount": 11.45,
+            "installmentAmount": 60.0,
             "installmentAmountCurrency": "ZAR",
             "installmentOccurrence": "RCUR",
             "instructedAgent": "210000",
             "instructingAgent": "210001",
-            "mandateBatchKey": 10,
-            "mandateInitiationDate": "2024-04-16T01:36:00Z[UTC]",
-            "mandateInstructionKey": 10,
+            "mandateBatchKey": "12",
+            "mandateInitiationDate": "2024-04-16T01:36:00Z",
+            "mandateInstructionKey": 6,
             "mandateInstrumentKey": 101,
-            "mandateRequestTransactionId": "00012024-05-03",
-            "messageIdentification": "100/MANIN/00210001/20240503/000000",
-            "newMandateRequired": false,
+            "mandateKey": 6,
+            "mandateReferenceNumber": "0003202401110004394946",
+            "mandateRequestTransactionId": "00012024-04-15000000028",
+            "messageIdentification": "100/MANIN/00210001/20240502/000000",
+            "originalMrti": "00012024-04-15000000028",
             "requestTransmissionNumber": 1,
-            "status": "PEN",
+            "status": "ACC",
             "submissionMechanism": "Host to Host",
             "suspended": false,
             "trackingIndicator": "T",
             "ultimateCreditorName": "R",
-            "version": 0,
-            "whenModified": "2024-04-16T01:36:00Z[UTC]"
-        }
-    ],
-    "mandateInterchangeKey": 3,
-    "pendingCount": 0,
-    "status": "SENT_TO_GPP",
-    "totalCount": 0,
-    "version": 0
-}
-Request method:	POST
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-batch/create
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiZms2RGF1MWRJb2JTdXB3a2RHUWp4NCIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDcwOTQxOSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ3MDk0MTksImV4cCI6MTcxNDcxMzAxOX0.CIt89slcCw0JjJHzTwVjJsGJnxe-71mLeOmm0SXfnmI2K0JW2JhEn-RiiCGWtX8i74Gl9XVslOLk-Oz_2PNHmF8rlsPt-6KpZhfen8VJxYT8flq_KJ4P8HJIW8bR_FhhbZhIfYAPPBDZfP0wws6X9DVf5HyVmqeSqbeRlVENOEj3QEz0bnBnr-NE_DxLsp9mkMd5urhHUKZutWQeG-G0BEbRRYmQaQ1v3ngo5tkcYHE9wsaSaDINb7T3meupdN5CBwTGSPokA-eu-mvxKyCJaveAg63m435T9UTR-KOGwgmyThFKx1iolJeQahzYrKzBWoO-xP38tVuCxcypct7xfg
-				User-Agent=PostmanRuntime/7.37.0
-				Accept=*/*
-				Accept-Encoding=gzip, deflate, br
-				Connection=keep-alive
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "action": "I",
-    "authoriseStatus": "ACT",
-    "bankGroupId": "Standard Bank Group",
-    "canAuthorise": false,
-    "creationDateAndTime": "2024-04-16T01:36:00Z",
-    "customerId": 373731,
-    "customerUserKey": "513632",
-    "mandateInstructionList": [
-        {
-            "action": "I",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "PerfTest2",
-            "collectionDay": "07",
-            "contractReference": "SBZA1811302709",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-16T01:36:00Z",
-            "creditorAbbreviatedShortName": "Vinot001",
-            "creditorAccountNumber": "001299751",
-            "creditorBankBranch": "051001",
-            "creditorEmailDetails": "junzismail@gmail.com",
-            "creditorName": "BOL Customer",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-118765434",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "FIXED",
-            "debtorAccountName": "Testing SITONE",
-            "debtorAccountNumber": "10005296372",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "051001",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ravi@test.com",
-            "debtorIdentification": "8007086600092",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-616481422",
-            "entryClass": "Vinot001",
-            "frequency": "MNTH",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 11.45,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateInitiationDate": "2024-04-16T01:36:00Z",
-            "mandateInstrumentKey": 101,
-            "maxCollectionAmount": 15.0,
-            "maxCollectionAmountCurrency": "ZAR",
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
+            "ultimateDebtorName": "Test",
             "version": 0,
             "whenModified": "2024-04-16T01:36:00Z"
         }
     ],
     "mandateInterchangeKey": 3,
-    "messageIdentification": null,
-    "version": 0
-}
-HTTP/1.1 200 OK
-Content-Length: 2086
-Content-Type: application/json
-Date: Fri, 03 May 2024 04:10:25 GMT
-
-{
-    "acceptedCount": 0,
-    "authoriseStatus": "ACT",
-    "bankGroupId": "Standard Bank Group",
-    "canAuthorise": false,
-    "creationDateAndTime": "2024-04-16T01:36:00Z[UTC]",
-    "customerId": 373731,
-    "cutOffRequired": false,
-    "entityStatus": "RC",
-    "errorList": [
-        
-    ],
-    "failedCount": 0,
-    "mandateBatchKey": 11,
-    "mandateInstructionList": [
-        {
-            "action": "I",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "PerfTest2",
-            "collectionDay": "07",
-            "contractReference": "SBZA1811302709",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-16T01:36:00Z[UTC]",
-            "creditorAbbreviatedShortName": "Vinot001",
-            "creditorAccountNumber": "051001",
-            "creditorBankBranch": "051001",
-            "creditorBicCode": "SBZAZAJJ",
-            "creditorEmailDetails": "junzismail@gmail.com",
-            "creditorName": "BOL Customer",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-118765434",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "FIXED",
-            "debtorAccountName": "Testing SITONE",
-            "debtorAccountNumber": "10005296372",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "051001",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ravi@test.com",
-            "debtorIdentification": "8007086600092",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-616481422",
-            "entryClass": "Vinot001",
-            "errorList": [
-                
-            ],
-            "firstCollectionDateChanged": false,
-            "frequency": "MNTH",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 11.45,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateBatchKey": 11,
-            "mandateInitiationDate": "2024-04-16T01:36:00Z[UTC]",
-            "mandateInstructionKey": 11,
-            "mandateInstrumentKey": 101,
-            "mandateRequestTransactionId": "00012024-05-03",
-            "messageIdentification": "100/MANIN/00210001/20240503/000000",
-            "newMandateRequired": false,
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "suspended": false,
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "version": 0,
-            "whenModified": "2024-04-16T01:36:00Z[UTC]"
-        }
-    ],
-    "mandateInterchangeKey": 3,
     "pendingCount": 0,
-    "status": "SENT_TO_GPP",
+    "status": "FUP",
     "totalCount": 0,
-    "version": 0
-}
-Request method:	POST
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-batch/create
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiTTUwV1k2dE1mUklId2FPQXY4eGhKRSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDcwOTUyOCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ3MDk1MjgsImV4cCI6MTcxNDcxMzEyOH0.TuMKHU0eYmIvuf2Sbyv_IRQAmscB3dU8wV7inGaG2Ei4ht6IOX-I1imJQJ28mcq5G6RMWfzhEm67r4hipBDjhYvRlmMjUYNkj7kNGHnRd5dbJdHM7M3hjAOeNXEs2sbQAjnxx_REwZw2UMe1NQ2QNRkIGVp9I3O-EG3gVx4S9y0FM9DqGn8sBXNx38z22ntaf7Zosbav-hv7-PPlLwOLK24iQgQuXgstw3sbhlg8FrkE6v-eQHC_zCfMw5PqknAknZoKHxMk2UnCnk3SpGX8wHefm3wE15ItP5JBleZEh-98etXeeODFRLNBTjIK9Xk82vNMxU0ByOL8SaRD_fiu5w
-				User-Agent=PostmanRuntime/7.37.0
-				Accept=*/*
-				Accept-Encoding=gzip, deflate, br
-				Connection=keep-alive
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "action": "I",
-    "authoriseStatus": "ACT",
-    "bankGroupId": "Standard Bank Group",
-    "canAuthorise": false,
-    "creationDateAndTime": "2024-04-16T01:36:00Z",
-    "customerId": 373731,
-    "customerUserKey": "513632",
-    "mandateInstructionList": [
-        {
-            "action": "I",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "PerfTest2",
-            "collectionDay": "07",
-            "contractReference": "SBZA1811302709",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-16T01:36:00Z",
-            "creditorAbbreviatedShortName": "Vinot001",
-            "creditorAccountNumber": "001299751",
-            "creditorBankBranch": "051001",
-            "creditorEmailDetails": "junzismail@gmail.com",
-            "creditorName": "BOL Customer",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-118765434",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "FIXED",
-            "debtorAccountName": "Testing SITONE",
-            "debtorAccountNumber": "10005296372",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "051001",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ravi@test.com",
-            "debtorIdentification": "8007086600092",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-616481422",
-            "entryClass": "Vinot001",
-            "frequency": "MNTH",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 11.45,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateInitiationDate": "2024-04-16T01:36:00Z",
-            "mandateInstrumentKey": 101,
-            "maxCollectionAmount": 15.0,
-            "maxCollectionAmountCurrency": "ZAR",
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "version": 0,
-            "whenModified": "2024-04-16T01:36:00Z"
-        }
-    ],
-    "mandateInterchangeKey": 3,
-    "messageIdentification": null,
-    "version": 0
+    "version": 0,
+    "whenModified": "2024-04-16T01:36:00Z"
 }
 HTTP/1.1 200 OK
-Content-Length: 2086
+Content-Length: 3963
 Content-Type: application/json
-Date: Fri, 03 May 2024 04:12:14 GMT
+Date: Sat, 04 May 2024 14:20:04 GMT
 
 {
     "acceptedCount": 0,
+    "action": "A",
     "authoriseStatus": "ACT",
     "bankGroupId": "Standard Bank Group",
     "canAuthorise": false,
@@ -477,7 +164,7 @@ Date: Fri, 03 May 2024 04:12:14 GMT
             "mandateInitiationDate": "2024-04-16T01:36:00Z[UTC]",
             "mandateInstructionKey": 12,
             "mandateInstrumentKey": 101,
-            "mandateRequestTransactionId": "00012024-05-03",
+            "mandateRequestTransactionId": "00012024-05-03000000012",
             "messageIdentification": "100/MANIN/00210001/20240503/000000",
             "newMandateRequired": false,
             "requestTransmissionNumber": 1,
@@ -488,6 +175,69 @@ Date: Fri, 03 May 2024 04:12:14 GMT
             "ultimateCreditorName": "R",
             "version": 0,
             "whenModified": "2024-04-16T01:36:00Z[UTC]"
+        },
+        {
+            "action": "Z",
+            "adjustmentCategory": "N",
+            "authenticationType": "REAL TIME",
+            "clientReference": "ClntRef",
+            "collectionDay": "3",
+            "contractReference": "Nifnb11jan24_3",
+            "countryCode": "ZA",
+            "creationDateAndTime": "2024-04-16T01:36:00Z[UTC]",
+            "creditorAbbreviatedShortName": "AC Col",
+            "creditorAccountNumber": "051001",
+            "creditorBankBranch": "051001",
+            "creditorBicCode": "SBZAZAJJ",
+            "creditorEmailDetails": "testabc123@outlook.com",
+            "creditorName": "Standard Bank HTH",
+            "creditorSchemeId": 1,
+            "creditorTelephoneDetails": "+27-821234567",
+            "dateAdjustmentRuleIndicator": "Y",
+            "debitValueType": "VARIABLE",
+            "debtorAccountName": "pinky kalita",
+            "debtorAccountNumber": "10005296372",
+            "debtorAccountType": "CACC",
+            "debtorAuthenticationRequired": "0227",
+            "debtorBankBranch": "051001",
+            "debtorBankName": "STANDARD BANK",
+            "debtorBicCode": "SBZAZAJJ",
+            "debtorEmailDetails": "ismail@gmail.com",
+            "debtorIdentification": "6507170138083",
+            "debtorIdentificationType": "I",
+            "debtorName": "Testing SITONE",
+            "debtorTelephoneDetails": "+27-0786774545",
+            "entryClass": "Vinot001",
+            "errorList": [
+                
+            ],
+            "firstCollectionDateChanged": false,
+            "frequency": "WEEK",
+            "initiatingParty": "Junaid",
+            "installmentAmount": 60.0,
+            "installmentAmountCurrency": "ZAR",
+            "installmentOccurrence": "RCUR",
+            "instructedAgent": "210000",
+            "instructingAgent": "210001",
+            "mandateBatchKey": 12,
+            "mandateInitiationDate": "2024-04-16T01:36:00Z[UTC]",
+            "mandateInstructionKey": 66,
+            "mandateInstrumentKey": 101,
+            "mandateKey": 6,
+            "mandateReferenceNumber": "0003202401110004394946",
+            "mandateRequestTransactionId": "00012024-04-15000000028",
+            "messageIdentification": "100/00210001/20240504 14:20:/000000",
+            "newMandateRequired": false,
+            "originalMrti": "00012024-04-15000000028",
+            "requestTransmissionNumber": 1,
+            "status": "ACC",
+            "submissionMechanism": "Host to Host",
+            "suspended": false,
+            "trackingIndicator": "T",
+            "ultimateCreditorName": "R",
+            "ultimateDebtorName": "Test",
+            "version": 0,
+            "whenModified": "2024-05-04T14:20:03.205Z[UTC]"
         }
     ],
     "mandateInterchangeKey": 3,

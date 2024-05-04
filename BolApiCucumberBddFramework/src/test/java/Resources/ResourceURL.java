@@ -11,7 +11,9 @@ public enum ResourceURL {
 	updateMandateInterchangeAPI("authenticated/mandate-interchange/{mandateInterchangeKey}"),
 	UploadMandateFileAPI("authenticated/upload-mandate-file"),
 	CreateMandateBatchAPI("authenticated/mandate-batch/create"),
-	getMandateBatchAPI("authenticated/mandate-batch/{mandateBatchKey}");
+	getMandateBatchAPI("authenticated/mandate-batch/{mandateBatchKey}"),
+	cancelMandateBatchAPI("authenticated/mandate-batch/cancel/{mandateBatchKey}"),
+	updateMandateBatchAPI("authenticated/mandate-batch/update/{mandateBatchKey}");
 	
 	
 	private String resource;
