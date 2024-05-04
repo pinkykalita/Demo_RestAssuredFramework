@@ -354,7 +354,7 @@ public class TestDataBuild {
 		updateinstructionListObject.setCreditorAccountNumber("051001");
 		updateinstructionListObject.setCreditorBankBranch("051001");
 		updateinstructionListObject.setCreditorBicCode("SBZAZAJJ");
-		updateinstructionListObject.setCreditorEmailDetails("testabc123@outlook.com");
+		updateinstructionListObject.setCreditorEmailDetails("newupdatedemail123@outlook.com");
 		updateinstructionListObject.setCreditorName("Standard Bank HTH");
 		updateinstructionListObject.setCreditorSchemeId(1);
 		updateinstructionListObject.setCreditorTelephoneDetails("+27-821234567");

@@ -33,8 +33,9 @@ Scenario Outline: Verify Update Mandate Batch
 	Given update payload with path parameter "<mandatebatchkey>"
   When user sends "PUT" request to "updateMandateBatchAPI"
   Then the response status code should be "200" 
+  And the response should contain the updated value 
   Examples:
   | mandatebatchkey |		
-  | 12								|	
+  | 12							|	
   
   

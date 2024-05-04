@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.ArrayList;
 
 import POJO.CreateMandateInterchange;
 
@@ -21,6 +22,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.filter.session.SessionFilter;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -298,6 +300,29 @@ public void update_payload_with_path_parameter(String key) throws IOException, P
 	req1 = given().spec(requestSpecifications()).pathParam("mandateBatchKey",key)
 			.body(data.updatemandateBatchPayload(key));
 }
+@Then("the response should contain the updated value")
+public void the_response_should_contain_the_updated_value() 
+{
+	String updatedName = "newupdatedemail123@outlook.com";
 	
-
+	JsonPath jsonPath = new JsonPath(response);
+	Object updateList = jsonPath.get("mandateInstructionList.creditorEmailDetails");
+	ArrayList<String> names = (ArrayList<String>) updateList;
+    //String[] names = jsonPath.get("mandateInstructionList.creditorEmailDetails");
+	boolean isUpdated = false;
+    for (String name : names) {
+         if (name.equals(updatedName)) {
+             isUpdated = true;
+             break;
+         }
+    }
+    if (isUpdated)
+    {
+   	 System.out.println("Response contains the updated value: " + updatedName);
+    }
+     else {
+                System.out.println("Response does not contain the updated value: " + updatedName);
+            }
 }
+}
+
