@@ -1,6 +1,6 @@
 Feature: Validating Mandate Interchange API
 
- 
+@MandateInterchange
 Scenario Outline: Verify that Mandate Interchange are successfully created using Create Mandate Intercahnege API
 	Given user has request Payload with access token and "<customerkey>" 
   When user sends a POST request to "createMandateInterchangeAPI"
@@ -8,9 +8,9 @@ Scenario Outline: Verify that Mandate Interchange are successfully created using
   And "customerKey" in response body should be same as "<customerkey>"
   Examples:
   | customerkey	|
-  | 19  				|
+  | 195  				|
 
-
+@MandateInterchange
 Scenario Outline: Verify that user can retrieve the Mandate Interchange using mandateInterchangeKey
 	Given request prepared with "<interchange key>"
 	When user sends "GET" request to "getMandateInterchangeWithKeyAPI"
@@ -20,23 +20,18 @@ Scenario Outline: Verify that user can retrieve the Mandate Interchange using ma
   | interchange key |
   | 12							|  	
  
-
+@MandateInterchange
 Scenario Outline: Verify that user can retrieve the Mandate Interchange with query parameters
 	Given request prepared with query parameters "<customerkey>","<filename>","<uploadedusername>"
 	When user sends "GET" request to "getMandateInterchangeWithQueryParamsAPI"
 	Then the response status code should be "200"
-	And "customerkey" in response body should be same as "<customerkey>"
-	And "fileName" in response body should be same as "<filename>"
-	And "uploadedUsername" in response body should be same as "<uploadedusername>"
-#	And "fromDate" in response body should be same as "<fromdate>"
-#	And "status" in response body should be same as "<Status>"
-#	And "toDate" in response body should be same as "<todate>"
+	And response should return only the data that contains "<customerkey>" and "<filename>" and "<uploadedusername>" 
 	Examples:
   | customerkey |	filename	|	uploadedusername	|	fromdate		|	Status	|	todate			|
-  | 19					|	TEST.xml	|	Test User123			|	2023-06-01	|	T				|	2024-12-04	|
+  | 123456			|	pk.xml	  |	pinky							|	2023-06-01	|	T				|	2024-12-04	|
   
  
-@MandateInterchange  
+@MandateInterchange
 Scenario Outline: Verify that Mandate Interchange is successfully updated using PUT request to updateMandateInterchangeAPI 
 	Given a request with "<interchange key>" and payload to update "<filename>","<uploadedusername>" 
   When user sends "PUT" request to "updateMandateInterchangeAPI"
@@ -48,8 +43,9 @@ Scenario Outline: Verify that Mandate Interchange is successfully updated using 
   | interchange key | filename				|	uploadedusername	|
   | 12							| TestingPUT.xml	|	Pinky Kalita			|
  
- 
- Scenario Outline: Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithQueryParamsAPI when no data found
+
+@MandateInterchange
+Scenario Outline: Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithQueryParamsAPI when no data found
 	Given request prepared with query parameters "<customerkey>","<uploadedusername>"
 	When user sends "GET" request to "getMandateInterchangeWithQueryParamsAPI"
 	Then the response status code should be "404"
@@ -57,8 +53,8 @@ Scenario Outline: Verify that Mandate Interchange is successfully updated using 
   | customerkey |	uploadedusername	|
   | 12					|	Test User123			| 
   
-  
- Scenario Outline: Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithKeyAPI when no data found
+@MandateInterchange
+Scenario Outline: Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithKeyAPI when no data found
 	Given request prepared with "<interchange key>"
 	When user sends "GET" request to "getMandateInterchangeWithKeyAPI"
 	Then the response status code should be "404"
@@ -66,11 +62,20 @@ Scenario Outline: Verify that Mandate Interchange is successfully updated using 
   | interchange key |
   | 12454						|
   
- 
- Scenario Outline: Verify that GET request to getMandateInterchangeWithQueryParamsAPI with incorrect query params returns 500 statuscode 
+@MandateInterchange
+Scenario Outline: Verify that GET request to getMandateInterchangeWithQueryParamsAPI with incorrect query params returns 500 statuscode 
 	Given request prepared with query parameters "<Status>"
 	When user sends "GET" request to "getMandateInterchangeWithQueryParamsAPI"
 	Then the response status code should be "500"
 	Examples:
   | Status			|	todate					|
   | T						|	2022-03-10			|
+ 
+@skip 
+ Scenario Outline: Verify that 403 statuscode 
+	Given request prepared with "<interchange key>"
+	When user sends "GET" request to "getMandateInterchangeWithKeyAPI"
+	Then the response status code should be "403"
+	Examples:
+  | interchange key |
+  | 					| 

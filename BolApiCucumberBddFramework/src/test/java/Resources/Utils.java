@@ -68,7 +68,8 @@ public class Utils {
 	public static String getGlobalValues(String key) throws IOException {
 		
 		Properties properties = new Properties();
-		FileInputStream propertiesfile = new FileInputStream("C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\Global.properties");
+		//FileInputStream propertiesfile = new FileInputStream("C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\Global.properties");
+		FileInputStream propertiesfile = new FileInputStream("src\\test\\java\\Resources\\Global.properties");
 		properties.load(propertiesfile);
 		return (String) properties.get(key);
 	}

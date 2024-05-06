@@ -1,0 +1,16 @@
+POJO\CancelBatchInstructionList.class
+POJO\CancelMandateBatch.class
+POJO\DeclineBatch.class
+POJO\UploadMandateFile.class
+POJO\CreateMandateInterchange.class
+POJO\UpdateMandateBatch.class
+POJO\AuthorizeMultipleMandate.class
+POJO\CreateMandateBatch.class
+POJO\GenerateToken.class
+POJO\UpdateMandateInterchange.class
+POJO\UpdateMandateProcessingOptions.class
+POJO\updateBatchInstructionList.class
+POJO\CreateMandateProcessingOptions.class
+POJO\MandateInstructionList.class
+POJO\AuthorizeMandate.class
+POJO\ErrorList.class

@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 
+import org.junit.Assert;
+
 import POJO.CreateMandateInterchange;
 
 //import org.testng.Assert;
@@ -43,6 +45,7 @@ public class MandatesAPIStepDefinitions extends Utils{
 	Object mandateprocessingoptionsKey;
 	ResourceURL resourceAPI;
 	String mandateInterchangeKey;
+	
 	
 	
 	
@@ -212,7 +215,17 @@ public class MandatesAPIStepDefinitions extends Utils{
 				.queryParam("fileName", keyvalue2)
 				.queryParam("uploadedUsername", keyvalue3);
 	}
-	
+	@Then("response should return only the data that contains {string} and {string} and {string}")
+	public void response_should_return_only_the_data_that_contains_and_and(String customerkey, String filename, String uploadedusername) 
+	{	
+		String string1 = getJsonPath(response, "customerKey");
+		String string2 = getJsonPath(response, "fileName");
+		String string3 = getJsonPath(response, "uploadedUsername");
+		assertEquals(string1.replaceAll("\\[|\\]", ""), customerkey);
+		assertEquals(string2.replaceAll("\\[|\\]", ""), filename);
+		assertEquals(string3.replaceAll("\\[|\\]", ""), uploadedusername);
+	}
+
 	
 	/*update Mandate Interchange*/
 	@Given("a request with {string} and payload to update {string},{string}")
@@ -242,7 +255,7 @@ public class MandatesAPIStepDefinitions extends Utils{
 	}
 
 	
-	/*upload mandate file*/
+	/*upload mandate file 200 status*/
 	@Given("user has request payload available")
 	public void user_has_request_payload_available() throws IOException
 	{
@@ -250,6 +263,29 @@ public class MandatesAPIStepDefinitions extends Utils{
 				.body(data.uploadMandateFilePayload());
 	}
 	
+	/*upload mandate file 204 status*/
+	@Given("user has no content in request payload")
+	public void user_has_no_content_in_request_payload() throws IOException 
+	{
+		request = given().spec(requestSpecifications())
+				.body(data.uploadMandateFile204Payload());
+	}
+	
+	/*upload mandate file 403 status*/
+	@Given("user has request payload available that is not allowed")
+	public void user_has_request_payload_available_that_is_not_allowed() throws IOException
+	{
+		request = given().spec(requestSpecifications())
+				.body(data.uploadMandateFile403Payload());
+	}
+	
+	/*upload mandate file 500 status*/
+	@Given("user has request payload available with invalid data")
+	public void user_has_request_payload_available_with_invalid_data() throws IOException 
+	{
+		request = given().spec(requestSpecifications())
+				.body(data.uploadMandateFile500Payload());
+	}
 	
 	/*create Mandate Batch*/
 	@Given("user has request Payload with access token")
@@ -266,7 +302,6 @@ public class MandatesAPIStepDefinitions extends Utils{
 	}
 	
 	
-	
 	/*Get mandate batch*/
 	@Given("request with path parameter {string}")
 	public void request_with_path_parameter(String key) throws IOException 
@@ -276,7 +311,6 @@ public class MandatesAPIStepDefinitions extends Utils{
 	}
 	
 	
-	
 	/*cancel mandate batch*/
 	@Given("request payload with path parameter {string}")
 	public void request_payload_with_path_parameter(String key) throws IOException, ParseException 
@@ -284,34 +318,34 @@ public class MandatesAPIStepDefinitions extends Utils{
 		req1 = given().spec(requestSpecifications()).pathParam("mandateBatchKey",key)
 				.body(data.cancelmandateBatchPayload(key));
 	}
-	@Then("return {string} statuscode on {string} request with same path parameter {string}")
-	public void return_statuscode_on_request_with_same_path_parameter(String string, String string2, String string3) 
+	@Then("{string} request with path parameter {string} to {string} should return {string} ststus code")
+	public void request_with_path_parameter_to_should_return_ststus_code(String method, String key, String resource, String expectedStatusCode) throws IOException 
 	{
-	    
-		
+		request_with_path_parameter(key);
+		user_sends_request_to(method, resource);
+		the_response_status_code_should_be(expectedStatusCode);
 	}
-	
+		
 	
 	/*update mandate batch*/
-
-@Given("update payload with path parameter {string}")
-public void update_payload_with_path_parameter(String key) throws IOException, ParseException 
-{
-	req1 = given().spec(requestSpecifications()).pathParam("mandateBatchKey",key)
+	@Given("update payload with path parameter {string}")
+	public void update_payload_with_path_parameter(String key) throws IOException, ParseException 
+	{
+		req1 = given().spec(requestSpecifications()).pathParam("mandateBatchKey",key)
 			.body(data.updatemandateBatchPayload(key));
-}
-@Then("the response should contain the updated value")
-public void the_response_should_contain_the_updated_value() 
-{
-	String updatedName = "newupdatedemail123@outlook.com";
-	
-	JsonPath jsonPath = new JsonPath(response);
-	Object updateList = jsonPath.get("mandateInstructionList.creditorEmailDetails");
-	ArrayList<String> names = (ArrayList<String>) updateList;
-    //String[] names = jsonPath.get("mandateInstructionList.creditorEmailDetails");
-	boolean isUpdated = false;
-    for (String name : names) {
-         if (name.equals(updatedName)) {
+	}
+	@Then("the response should contain the updated value")
+	public void the_response_should_contain_the_updated_value() 
+	{
+		String updatedName = "newupdatedemail123@outlook.com";
+		
+		JsonPath jsonPath = new JsonPath(response);
+		Object updateList = jsonPath.get("mandateInstructionList.creditorEmailDetails");	
+		ArrayList<String> names = (ArrayList<String>) updateList;
+	   
+		boolean isUpdated = false;
+	    for (String name : names) {
+	         if (name.equals(updatedName)) {
              isUpdated = true;
              break;
          }

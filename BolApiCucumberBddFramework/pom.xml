@@ -12,6 +12,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
+                    
+                    <properties>
+            <property>
+                <name>cucumber.options</name>
+                <value>--tags ~@skip</value>
+            </property>
+        </properties>
+                    
                 </configuration>
             </plugin>
             <plugin>
@@ -30,6 +38,9 @@
                             <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
                             <skip>false</skip>
                             <!-- output directory for the generated report -->
+                            
+                            <skipTags>@skip</skipTags>
+                            
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <!-- optional, defaults to outputDirectory if not specified -->
                             <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>

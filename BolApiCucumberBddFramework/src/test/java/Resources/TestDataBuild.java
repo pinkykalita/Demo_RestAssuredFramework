@@ -102,8 +102,10 @@ public class TestDataBuild {
 	public UploadMandateFile uploadMandateFilePayload() throws IOException
 	{
 		UploadMandateFile fileUploadObject = new UploadMandateFile();
-		//FileInputStream file = new FileInputStream("C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile");
-		String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile";
+		
+		//String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile";
+		String filePath = "src\\test\\java\\Resources\\uploadMandateFile";
+
 		String payload = readFileAsString(filePath);
 		
 		fileUploadObject.setMandateInterchangeId(10);
@@ -121,6 +123,66 @@ public class TestDataBuild {
 	{
         return new String(Files.readAllBytes(Paths.get(filePath)));
     }
+	
+	public UploadMandateFile uploadMandateFile204Payload() throws IOException
+	{
+		UploadMandateFile fileUploadObject = new UploadMandateFile();
+		
+		String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile204";
+		//String filePath = "src\\test\\java\\Resources\\uploadMandateFile204";
+
+		String payload = readFileAsString(filePath);
+		
+		fileUploadObject.setMandateInterchangeId(11);
+		fileUploadObject.setPayload(payload);
+		fileUploadObject.setMandateMessageType("I");
+		fileUploadObject.setExternalReference01("ref1");
+		fileUploadObject.setExternalReference02("ref2");
+		fileUploadObject.setMessageName("ABC");
+		fileUploadObject.setTargetPartnerId("09877");
+		
+		return fileUploadObject;
+	}
+	
+	public UploadMandateFile uploadMandateFile403Payload() throws IOException
+	{
+		UploadMandateFile fileUploadObject = new UploadMandateFile();
+		
+		//String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile403";
+		String filePath = "src\\test\\java\\Resources\\uploadMandateFile403";
+
+		String payload = readFileAsString(filePath);
+		
+		fileUploadObject.setMandateInterchangeId(11);
+		fileUploadObject.setPayload(payload);
+		fileUploadObject.setMandateMessageType("I");
+		fileUploadObject.setExternalReference01("ref1");
+		fileUploadObject.setExternalReference02("ref2");
+		fileUploadObject.setMessageName("ABC");
+		fileUploadObject.setTargetPartnerId("09877");
+		
+		return fileUploadObject;
+	}
+	
+	public UploadMandateFile uploadMandateFile500Payload() throws IOException
+	{
+		UploadMandateFile fileUploadObject = new UploadMandateFile();
+		
+		//String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile500";
+		String filePath = "src\\test\\java\\Resources\\uploadMandateFile500";
+
+		String payload = readFileAsString(filePath);
+		
+		fileUploadObject.setMandateInterchangeId(11);
+		fileUploadObject.setPayload(payload);
+		fileUploadObject.setMandateMessageType("I");
+		fileUploadObject.setExternalReference01("ref1");
+		fileUploadObject.setExternalReference02("ref2");
+		fileUploadObject.setMessageName("ABC");
+		fileUploadObject.setTargetPartnerId("09877");
+		
+		return fileUploadObject;
+	}
 	
 	
 	public CreateMandateBatch createmandateBatchPayload() throws ParseException
