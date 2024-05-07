@@ -27,7 +27,7 @@ Scenario Outline: Verify 401 statuscode
   | mandatebatchkey |
   | 					| 
 
- @skip 
+@uploadMandateFile
  Scenario Outline: Verify 500 statuscode 
 	Given user has request payload available with invalid data
 	When user sends a POST request to "UploadMandateFileAPI"

@@ -13,7 +13,14 @@ public enum ResourceURL {
 	CreateMandateBatchAPI("authenticated/mandate-batch/create"),
 	getMandateBatchAPI("authenticated/mandate-batch/{mandateBatchKey}"),
 	cancelMandateBatchAPI("authenticated/mandate-batch/cancel/{mandateBatchKey}"),
-	updateMandateBatchAPI("authenticated/mandate-batch/update/{mandateBatchKey}");
+	updateMandateBatchAPI("authenticated/mandate-batch/update/{mandateBatchKey}"),
+	singleMandateBatchAuthoriseAPI("authenticated/mandate-batch/authorise"),
+	multipleMandateBatchAuthoriseAPI("authenticated/mandate-batch/authorise-multiple"),
+	singleMandateBatchAuditAPI("authenticated/mandate-batch/audit"),
+	multipleMandateBatchAuditAPI("authenticated/mandate-batch/audit-multiple"),
+	singleMandateBatchDeclineAPI("authenticated/mandate-batch/decline"),
+	multipleMandateBatchDeclineAPI("authenticated/mandate-batch/decline-multiple");
+	
 	
 	
 	private String resource;

@@ -128,8 +128,8 @@ public class TestDataBuild {
 	{
 		UploadMandateFile fileUploadObject = new UploadMandateFile();
 		
-		String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile204";
-		//String filePath = "src\\test\\java\\Resources\\uploadMandateFile204";
+		//String filePath = "C:\\Users\\bbdnet10211\\eclipse-workspace\\BOLAPIFramework\\src\\test\\java\\Resources\\uploadMandateFile204";
+		String filePath = "src\\test\\java\\Resources\\uploadMandateFile204";
 
 		String payload = readFileAsString(filePath);
 		

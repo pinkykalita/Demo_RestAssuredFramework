@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Cucumber.Options.TestRunner" time="26.4" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Cucumber.Options.TestRunner" time="117.657" tests="27" errors="1" skipped="0" failures="8">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire5111021872994757000\surefirebooter-20240506154324424_3.jar C:\Users\bbdnet10211\AppData\Local\Temp\surefire5111021872994757000 2024-05-06T15-43-24_331-jvmRun1 surefire-20240506154324424_1tmp surefire_0-20240506154324424_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire15483910481961817106\surefirebooter-20240506155631378_3.jar C:\Users\bbdnet10211\AppData\Local\Temp\surefire15483910481961817106 2024-05-06T15-56-31_284-jvmRun1 surefire-20240506155631378_1tmp surefire_0-20240506155631378_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\bbdnet10211\eclipse-workspace\BOLAPIFramework\target\test-classes;C:\Users\bbdnet10211\eclipse-workspace\BOLAPIFramework\target\classes;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\rest-assured\5.4.0\rest-assured-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\groovy\groovy\4.0.16\groovy-4.0.16.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\groovy\groovy-xml\4.0.16\groovy-xml-4.0.16.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\bbdnet10211\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\bbdnet10211\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\bbdnet10211\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\json-path\5.4.0\json-path-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\groovy\groovy-json\4.0.16\groovy-json-4.0.16.jar;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\rest-assured-common\5.4.0\rest-assured-common-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\io\rest-assured\xml-path\5.4.0\xml-path-5.4.0.jar;C:\Users\bbdnet10211\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-java\7.17.0\cucumber-java-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-core\7.17.0\cucumber-core-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-gherkin\7.17.0\cucumber-gherkin-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.17.0\cucumber-gherkin-messages-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\testng-xml-formatter\0.1.0\testng-xml-formatter-0.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\query\12.1.2\query-12.1.2.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\datatable\7.17.0\datatable-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-plugin\7.17.0\cucumber-plugin-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\docstring\7.17.0\docstring-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\html-formatter\21.3.1\html-formatter-21.3.1.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\junit-xml-formatter\0.4.0\junit-xml-formatter-0.4.0.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\bbdnet10211\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bbdnet10211\.m2\repository\io\cucumber\cucumber-junit\7.17.0\cucumber-junit-7.17.0.jar;C:\Users\bbdnet10211\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\bbdnet10211\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\bbdnet10211\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.0\jackson-databind-2.17.0.jar;C:\Users\bbdnet10211\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.0\jackson-annotations-2.17.0.jar;C:\Users\bbdnet10211\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.0\jackson-core-2.17.0.jar;C:\Users\bbdnet10211\.m2\repository\net\bytebuddy\byte-buddy\1.14.9\byte-buddy-1.14.9.jar;C:\Users\bbdnet10211\.m2\repository\org\codehaus\groovy\groovy\3.0.21\groovy-3.0.21.jar;C:\Users\bbdnet10211\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\bbdnet10211\.m2\repository\com\github\scribejava\scribejava-apis\2.5.3\scribejava-apis-2.5.3.jar;C:\Users\bbdnet10211\.m2\repository\com\github\scribejava\scribejava-core\2.5.3\scribejava-core-2.5.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire5111021872994757000\surefirebooter-20240506154324424_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\bbdnet10211\AppData\Local\Temp\surefire15483910481961817106\surefirebooter-20240506155631378_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -58,16 +58,200 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Verify that Mandate Interchange are successfully created using Create Mandate Intercahnege API" classname="Validating Mandate Interchange API" time="7.827">
-    <system-out><![CDATA[accessToken = eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR3dQOGp5ZWw2Wm1nYmxDTXNTM1BRMSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDk5MDM2MCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ5OTAzNjAsImV4cCI6MTcxNDk5Mzk2MH0.NMxixkNLkr9JV7izCQDW9iGLe52EIaQzd_5qXF_kJ1nmt0zuNG876EyjNPbp-gV3LyWHakK4yECdn8rzBa1QB17d-Bg0iTOuiF19mI_Uq5kn-FgTLJAOplNqW2DZBEMXuVuFo44eh_syUi9KiCdBsLOLApohd5yHa4AxYIt0t0fJ_udgrynvMy7G2xCws6v7hfDR2byf1X9HrgVNXMcxyBaZrAwgpyayMy8obUYLrbudr8c_gcPGfzX1N7UdQTh7xpbk2msqL87M_58qN91ExARmYi1MLucLLCiktu8LgQ53iuRSG_lgU5VsHj8rmWOGUxQnA8YoeOzekE76sY147Q
+  <testcase name="Verify create Mandate Batch" classname="Validating Mandate Batch API" time="9.581">
+    <system-out><![CDATA[accessToken = eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiVHNrYmFRNTZCcnMxSGlxa0o4TDJWcCIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDk5MTE0NywiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ5OTExNDcsImV4cCI6MTcxNDk5NDc0N30.In7raJtOy3IHSoPpuQgZGTqNFO00tpQdb7jbJCOc7oEowuvCuBUEX7JjQsf5OYMmYFtTQKL7WeJ1zHK1HBM-QvUykxq2-S2igqNH1Df256dJ4VU5YIUtQw1dS2uxkcKO1p9GOjsL2Xu_fURJD7OddpMy8i1S3hwJ-liD9yYXV2MUK2yArjy36SNPEL0sajQjEx_k3N_VgMc2JF-76Ku5cfLCbgZukQg6_XWZJ7pR6qvm903M5-WHO5Ie4RQIM6rKagXskaZCBcISknXAYE8io_Une2uzWFXxbXHkhbny_a2GMBI0mgdbzX2qugOE7Cb9T7FtdYyc7P9pzq87dChq4Q
+
+
+mandateBatchKey= 71
+]]></system-out>
+  </testcase>
+  <testcase name="Verify get Mandate Batch" classname="Validating Mandate Batch API" time="5.42"/>
+  <testcase name="Verify Update Mandate Batch" classname="Validating Mandate Batch API" time="16.696">
+    <system-out><![CDATA[Response contains the updated value: newupdatedemail123@outlook.com
+]]></system-out>
+  </testcase>
+  <testcase name="Verify 404 statuscode" classname="Validating Mandate Batch API" time="3.129"/>
+  <testcase name="Verify Cancel Mandate Batch" classname="Validating Mandate Batch API" time="3.377">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <500>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "200"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/MandateBatch.feature:45)
+]]></failure>
+  </testcase>
+  <testcase name="Verify 403 statuscode" classname="Validating Mandate Batch API" time="4.208">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;403&gt; but was &lt;405&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <405>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "403"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/MandateBatch.feature:55)
+]]></failure>
+  </testcase>
+  <testcase name="Verify 401 statuscode" classname="Validating Mandate Batch API" time="2.763">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;401&gt; but was &lt;405&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <405>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "401"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/MandateBatch.feature:64)
+]]></failure>
+  </testcase>
+  <testcase name="Verify 500 statuscode" classname="Validating Mandate Batch API" time="3.67">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;500&gt; but was &lt;405&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <405>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "500"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/MandateBatch.feature:73)
+]]></failure>
+  </testcase>
+  <testcase name="Verify that Mandate Interchange are successfully created using Create Mandate Intercahnege API" classname="Validating Mandate Interchange API" time="2.568"/>
+  <testcase name="Verify that user can retrieve the Mandate Interchange using mandateInterchangeKey" classname="Validating Mandate Interchange API" time="3.659"/>
+  <testcase name="Verify that user can retrieve the Mandate Interchange with query parameters" classname="Validating Mandate Interchange API" time="3.6"/>
+  <testcase name="Verify that Mandate Interchange is successfully updated using PUT request to updateMandateInterchangeAPI" classname="Validating Mandate Interchange API" time="3.075"/>
+  <testcase name="Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithQueryParamsAPI when no data found" classname="Validating Mandate Interchange API" time="2.844"/>
+  <testcase name="Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithKeyAPI when no data found" classname="Validating Mandate Interchange API" time="2.918"/>
+  <testcase name="Verify that GET request to getMandateInterchangeWithQueryParamsAPI with incorrect query params returns 500 statuscode" classname="Validating Mandate Interchange API" time="2.908"/>
+  <testcase name="Verify that 403 statuscode" classname="Validating Mandate Interchange API" time="4.245">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;403&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "403"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/MandateInterchange.feature:78)
+]]></failure>
+  </testcase>
+  <testcase name="Verify that access token is successfully generated using Generate Access Token API" classname="Validating Processing Options Mandate" time="2.961">
+    <system-out><![CDATA[accessToken = eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiV3BrMFY4TGJoT3ExRThJV29OdjdDUiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNDk5MTIyMCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTQ5OTEyMjAsImV4cCI6MTcxNDk5NDgyMH0.BQpbB_nT7Gs1c5s_IzfsQNvi954chd3gMbJ1Be9pwduX-g-rCkgTPOA0jxrcdaEddewZDNDroQ1O6EsptFsx_qJlGsWcOMB60F7bxpPs8mUcqmRXL1fxLrFakwrQMJCYcYmcvUk-OVq4n2bkoFxsqBHd5-LnoWVaqYh2hsUvkEisak_VSeuRPI_k2XBQkWJFCWwKkPlSlvafpjkWneuCk42DCgSBmKkZP_itLC574tqmIpWXgcXlA0prCfbP15TtIENTy3Jh7z8Qw7RAk0o6mfYXRtTR1noUebxKWziJuQRr6qCCUeMWor5ZShYTZ-s7XOHTn7HkyBNkTps0pKdoXQ
 
 
 ]]></system-out>
   </testcase>
-  <testcase name="Verify that user can retrieve the Mandate Interchange using mandateInterchangeKey" classname="Validating Mandate Interchange API" time="3.164"/>
-  <testcase name="Verify that user can retrieve the Mandate Interchange with query parameters" classname="Validating Mandate Interchange API" time="3.142"/>
-  <testcase name="Verify that Mandate Interchange is successfully updated using PUT request to updateMandateInterchangeAPI" classname="Validating Mandate Interchange API" time="2.65"/>
-  <testcase name="Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithQueryParamsAPI when no data found" classname="Validating Mandate Interchange API" time="3.295"/>
-  <testcase name="Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithKeyAPI when no data found" classname="Validating Mandate Interchange API" time="2.837"/>
-  <testcase name="Verify that GET request to getMandateInterchangeWithQueryParamsAPI with incorrect query params returns 500 statuscode" classname="Validating Mandate Interchange API" time="3.025"/>
+  <testcase name="Verify that Mandate Processing Options are successfully created using Processing Options API" classname="Validating Processing Options Mandate" time="3.046"/>
+  <testcase name="Verify that user can retrieve the processing options after successful creation" classname="Validating Processing Options Mandate" time="2.889"/>
+  <testcase name="Verify that user can update the mandate processing option" classname="Validating Processing Options Mandate" time="5.384">
+    <system-out><![CDATA[Y in response is same as the update value  Y
+]]></system-out>
+  </testcase>
+  <testcase name="Verify the error is displayed when creating a mandate processing options with existing key" classname="Validating Processing Options Mandate" time="3.416"/>
+  <testcase name="Verify that error is displayed when creating mandates without bearer token" classname="Validating Processing Options Mandate" time="3.084"/>
+  <testcase name="Verify Upload Mandate File API" classname="Validating Upload Mandate File API" time="7.054">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "200"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/UploadMandateFile.feature:7)
+]]></failure>
+  </testcase>
+  <testcase name="Verify 204 statuscode" classname="Validating Upload Mandate File API" time="3.476">
+    <error message="Unsupported status code: 204" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: Unsupported status code: 204
+	at Resources.Utils.responseSpecifications(Utils.java:96)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "204"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/UploadMandateFile.feature:13)
+]]></error>
+  </testcase>
+  <testcase name="Verify 403 statuscode" classname="Validating Upload Mandate File API" time="3.197">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;403&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <401>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "403"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/UploadMandateFile.feature:19)
+]]></failure>
+  </testcase>
+  <testcase name="Verify 401 statuscode" classname="Validating Upload Mandate File API" time="4.222"/>
+  <testcase name="Verify 500 statuscode" classname="Validating Upload Mandate File API" time="3.819">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;500&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at StepDefinitions.MandatesAPIStepDefinitions.the_response_status_code_should_be(MandatesAPIStepDefinitions.java:99)
+	at ✽.the response status code should be "500"(file:///C:/Users/bbdnet10211/eclipse-workspace/BOLAPIFramework/src/test/java/Feaures/UploadMandateFile.feature:34)
+]]></failure>
+  </testcase>
 </testsuite>

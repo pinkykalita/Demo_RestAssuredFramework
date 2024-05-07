@@ -20,10 +20,7 @@ public class MandateInstructionList {
     private String creditorAbbreviatedShortName;
     private String creditorAccountNumber;
     private String creditorBankBranch;
-    
-   
-
-	private String creditorEmailDetails;
+ 	private String creditorEmailDetails;
     private String creditorName;
     private int creditorSchemeId;
     private String creditorTelephoneDetails;
@@ -66,6 +63,8 @@ public class MandateInstructionList {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
     private Date whenModified;
 
+    
+    
 	public String getAction() {
 		return action;
 	}

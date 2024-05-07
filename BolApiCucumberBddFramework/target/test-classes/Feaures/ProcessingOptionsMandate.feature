@@ -14,7 +14,7 @@ Scenario Outline: Verify that Mandate Processing Options are successfully create
   And  "mandateProcessingOptionsKey" in response body should be same as "<newKey>"
   Examples:
   | newKey |
-  | 1046  |
+  | 1051  |
 
 @MandateProcessingOptions 
 Scenario Outline: Verify that user can retrieve the processing options after successful creation

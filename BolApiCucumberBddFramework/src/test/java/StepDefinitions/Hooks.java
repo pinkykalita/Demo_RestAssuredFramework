@@ -7,7 +7,7 @@ import io.cucumber.java.Before;
 public class Hooks {
 	
 	@Before
-	public void beforScenario() throws IOException
+	public void beforeScenario() throws IOException
 	{
 		if(MandatesAPIStepDefinitions.accessToken==null)
 		{
