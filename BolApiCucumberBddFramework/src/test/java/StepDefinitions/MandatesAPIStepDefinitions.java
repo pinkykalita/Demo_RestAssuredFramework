@@ -48,7 +48,6 @@ public class MandatesAPIStepDefinitions extends Utils{
 	
 	
 	
-	
 	TestDataBuild data = new TestDataBuild();
 	CreateMandateProcessingOptions processingOptionsPayload = new CreateMandateProcessingOptions();
 	CreateMandateInterchange interchangePayload = new CreateMandateInterchange();
@@ -350,13 +349,64 @@ public class MandatesAPIStepDefinitions extends Utils{
              break;
          }
     }
-    if (isUpdated)
-    {
-   	 System.out.println("Response contains the updated value: " + updatedName);
-    }
-     else {
+	    if (isUpdated)
+	    {
+	    	System.out.println("Response contains the updated value: " + updatedName);
+	    }
+	    else {
                 System.out.println("Response does not contain the updated value: " + updatedName);
             }
-}
+	}
+	
+	
+	/*Authorization of single mandate batch*/
+	@Given("user has single mandate batch payload available")
+	public void user_has_single_mandate_batch_payload_available() throws IOException, ParseException 
+	{
+		request = given().spec(requestSpecifications())
+	    		.body(data.authoriseSingleleMandateBatchPayload());
+	}
+	
+	
+	/*Authorization of multiple mandate batch*/
+	@Given("user has multiple mandate batch payload available")
+	public void user_has_multiple_mandate_batch_payload_available() throws IOException, ParseException 
+	{
+		request = given().spec(requestSpecifications())
+	    		.body(data.authoriseMultipleMandateBatchPayload());
+	}
+	
+	
+	/*Authorize mandate batch: 403 statuscode*/
+	@Given("user has mandate batch payload available")
+	public void user_has_mandate_batch_payload_available() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	
+	/*Authorize mandate batch: 401 statuscode*/
+	@Given("user has mandate batch payload available that is not allowed")
+	public void user_has_mandate_batch_payload_available_that_is_not_allowed() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	
+	/*Authorize mandate batch: 500 statuscode*/ 
+	@Given("user has mandate batch payload available with incorrect data")
+	public void user_has_mandate_batch_payload_available_with_incorrect_data() throws IOException, ParseException 
+	{
+		request = given().spec(requestSpecifications())
+	    		.body(data.MandateBatch500codePayload());
+	}
+	@Then("the response body should contain {string}")
+	public void the_response_body_should_contain(String errorMessage) 
+	{
+		 assertTrue(response.contains(errorMessage));
+		 System.out.println(response);
+	}
+
+
 }
 

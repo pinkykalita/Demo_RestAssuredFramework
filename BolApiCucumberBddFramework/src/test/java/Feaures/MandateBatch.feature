@@ -16,7 +16,7 @@ Scenario Outline: Verify get Mandate Batch
   And "mandateBatchKey" in response body should be same as "<mandatebatchkey>"
   Examples:
   | mandatebatchkey |
-  | 6								|
+  | 82							|
   
 @MandateBatch    
 Scenario Outline: Verify Update Mandate Batch
@@ -26,7 +26,7 @@ Scenario Outline: Verify Update Mandate Batch
   And the response should contain the updated value 
   Examples:
   | mandatebatchkey |		
-  | 12							|	
+  | 82							|	
   
 @MandateBatch
 Scenario Outline: Verify 404 statuscode 

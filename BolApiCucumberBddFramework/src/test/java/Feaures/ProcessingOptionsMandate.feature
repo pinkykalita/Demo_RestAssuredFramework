@@ -14,7 +14,7 @@ Scenario Outline: Verify that Mandate Processing Options are successfully create
   And  "mandateProcessingOptionsKey" in response body should be same as "<newKey>"
   Examples:
   | newKey |
-  | 1051  |
+  | 1052  |
 
 @MandateProcessingOptions 
 Scenario Outline: Verify that user can retrieve the processing options after successful creation
@@ -52,7 +52,6 @@ Scenario Outline: Verify that error is displayed when creating mandates without 
 	Given user has request Payload with "<newKey>"
 	When user sends a POST request without bearer token to "createProcessingOptionsAPI"
 	Then the response status code should be "401"
-	#And the response body should indicate "<errorMessage>"
 	Examples:
   | newKey 	|	errorMessage	|
   | 1005  	|	Unauthorized	|

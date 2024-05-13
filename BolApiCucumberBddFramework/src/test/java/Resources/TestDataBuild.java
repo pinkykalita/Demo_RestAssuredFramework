@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import POJO.AuthorizeMandate;
 import POJO.CancelBatchInstructionList;
 import POJO.CancelMandateBatch;
 import POJO.CreateMandateBatch;
@@ -388,7 +389,7 @@ public class TestDataBuild {
 		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
 		mandateBatchObject.setCreationDateAndTime(creationDateAndTime);
 		mandateBatchObject.setCustomerId(373731);
-		mandateBatchObject.setCustomerUserKey("513632");
+		mandateBatchObject.setCustomerUserKey("373731");
 		mandateBatchObject.setCutOffRequired(false);
 		mandateBatchObject.setEntityStatus("RC");
 		mandateBatchObject.setErrorList(null);
@@ -429,7 +430,7 @@ public class TestDataBuild {
 		updateinstructionListObject.setDebtorBankBranch("051001");
 		updateinstructionListObject.setDebtorBankName("STANDARD BANK");
 		updateinstructionListObject.setDebtorBicCode("SBZAZAJJ");
-		updateinstructionListObject.setDebtorEmailDetails("ismail@gmail.com");
+		updateinstructionListObject.setDebtorEmailDetails("pinky@gmail.com");
 		updateinstructionListObject.setDebtorIdentification("6507170138083");
 		updateinstructionListObject.setDebtorIdentificationType("I");
 		updateinstructionListObject.setDebtorName("Testing SITONE");
@@ -437,7 +438,7 @@ public class TestDataBuild {
 		updateinstructionListObject.setEntryClass("Vinot001");
 		updateinstructionListObject.setErrorList(null);
 		updateinstructionListObject.setFrequency("WEEK");
-		updateinstructionListObject.setInitiatingParty("Junaid");
+		updateinstructionListObject.setInitiatingParty("TestUser123");
 		updateinstructionListObject.setInstallmentAmount(60.00);
 		updateinstructionListObject.setInstallmentAmountCurrency("ZAR");
 		updateinstructionListObject.setInstallmentOccurrence("RCUR");
@@ -459,7 +460,7 @@ public class TestDataBuild {
 		updateinstructionListObject.setSuspended(false);
 		updateinstructionListObject.setTrackingIndicator("T");
 		updateinstructionListObject.setUltimateCreditorName("R");
-		updateinstructionListObject.setUltimateDebtorName("Test");
+		updateinstructionListObject.setUltimateDebtorName("TestUser456");
 		updateinstructionListObject.setVersion(0);
 		Date whenModifiedDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
 		updateinstructionListObject.setWhenModified(whenModifiedDate);
@@ -470,6 +471,96 @@ public class TestDataBuild {
 		
 		return mandateBatchObject;
 		
+	}
+	
+	
+	public AuthorizeMandate authoriseSingleleMandateBatchPayload() throws ParseException
+	{
+		AuthorizeMandate authorizeMandateObj = new AuthorizeMandate();
+		
+		authorizeMandateObj.setAction("I");
+		authorizeMandateObj.setAuthoriseStatus("ACT");
+		authorizeMandateObj.setBankGroupId("Standard Bank Group");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-29T22:00:00Z[UTC]");
+		authorizeMandateObj.setCreationDateAndTime(creationDateAndTime);
+		authorizeMandateObj.setCustomerId(373731);
+		authorizeMandateObj.setCustomerUserKey("513632");
+		authorizeMandateObj.setEntityStatus("AUTHORISATION_COMPLETE");
+		authorizeMandateObj.setMandateBatchKey(82);
+		authorizeMandateObj.setMandateInterchangeKey(5539);
+		authorizeMandateObj.setMessageIdentification("100/MANIN/00210001/20181130/SBSAI2");
+		authorizeMandateObj.setVersion(0);
+		Date whenModifiedDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-30T08:44:38Z[UTC]");
+		authorizeMandateObj.setWhenModified(whenModifiedDate);
+		
+		return authorizeMandateObj;
+	}
+	
+	public List<AuthorizeMandate> authoriseMultipleMandateBatchPayload() throws ParseException
+	{
+		List<AuthorizeMandate> authorizeMandateList = new ArrayList<>();
+		
+		AuthorizeMandate authorizeMandateObj1 = new AuthorizeMandate();
+
+		authorizeMandateObj1.setAction("I");
+		authorizeMandateObj1.setAuthoriseStatus("ACT");
+		authorizeMandateObj1.setBankGroupId("Standard Bank Group");
+		Date creationDateAndTime1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-29T22:00:00Z[UTC]");
+		authorizeMandateObj1.setCreationDateAndTime(creationDateAndTime1);
+		authorizeMandateObj1.setCustomerId(373731);
+		authorizeMandateObj1.setCustomerUserKey("513632");
+		authorizeMandateObj1.setMandateBatchKey(11);
+		authorizeMandateObj1.setMandateInterchangeKey(5539);
+		authorizeMandateObj1.setMessageIdentification("100/MANIN/00210001/20181130/SBSAI2");
+		authorizeMandateObj1.setVersion(0);
+		Date whenModifiedDate1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-30T08:44:38Z[UTC]");
+		authorizeMandateObj1.setWhenModified(whenModifiedDate1);
+		
+		authorizeMandateList.add(authorizeMandateObj1);
+		
+		
+		AuthorizeMandate authorizeMandateObj2 = new AuthorizeMandate();
+		
+		authorizeMandateObj2.setAction("I");
+		authorizeMandateObj2.setAuthoriseStatus("ACT");
+		authorizeMandateObj2.setBankGroupId("Standard Bank Group");
+		Date creationDateAndTime2 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-29T22:00:00Z[UTC]");
+		authorizeMandateObj2.setCreationDateAndTime(creationDateAndTime2);
+		authorizeMandateObj2.setCustomerId(373731);
+		authorizeMandateObj2.setCustomerUserKey("513632");
+		authorizeMandateObj2.setMandateBatchKey(10);
+		authorizeMandateObj2.setMandateInterchangeKey(5539);
+		authorizeMandateObj2.setMessageIdentification("100/MANIN/00210001/20181130/SBSAI2");
+		authorizeMandateObj2.setVersion(0);
+		Date whenModifiedDate2 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-30T08:44:38Z[UTC]");
+		authorizeMandateObj2.setWhenModified(whenModifiedDate2);
+		
+		authorizeMandateList.add(authorizeMandateObj2);
+		
+		return authorizeMandateList;
+			
+	}
+	
+	public AuthorizeMandate MandateBatch500codePayload() throws ParseException
+	{
+		AuthorizeMandate authorizeMandateObj = new AuthorizeMandate();
+		
+		authorizeMandateObj.setAction("I");
+		authorizeMandateObj.setAuthoriseStatus("ACT");
+		authorizeMandateObj.setBankGroupId("Standard Bank Group");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-29T22:00:00Z[UTC]");
+		authorizeMandateObj.setCreationDateAndTime(creationDateAndTime);
+		authorizeMandateObj.setCustomerId(373731);
+		authorizeMandateObj.setCustomerUserKey("513632");
+		authorizeMandateObj.setEntityStatus("AUTHORISATION_COMPLETE");
+		authorizeMandateObj.setMandateBatchKey(14);
+		authorizeMandateObj.setMandateInterchangeKey(5539);
+		authorizeMandateObj.setMessageIdentification("100/MANIN/00210001/20181130/SBSAI2");
+		authorizeMandateObj.setVersion(0);
+		Date whenModifiedDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2018-11-30T08:44:38Z[UTC]");
+		authorizeMandateObj.setWhenModified(whenModifiedDate);
+		
+		return authorizeMandateObj;
 	}
 	
 }

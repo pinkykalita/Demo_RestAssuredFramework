@@ -4,8 +4,8 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/Feaures",plugin = "json:target/jsonReports/JsonTestReport.json",glue = {"StepDefinitions"},tags = "@MandateProcessingOptions")
+@CucumberOptions(features = "src/test/java/Feaures",plugin = "json:target/jsonReports/JsonTestReport.json",glue = {"StepDefinitions"},tags = "@AuthoriseBatch")
 public class TestRunner {
 
 }
-//tags = "@uploadMandateFile"
+//tags = "@MandateBatch"
