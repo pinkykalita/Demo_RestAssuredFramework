@@ -1,6 +1,6 @@
 Feature: Validating Mandate Batch API
 
-@MandateBatch
+
 Scenario: Verify create Mandate Batch
 	Given user has request Payload with access token 
   When user sends a POST request to "CreateMandateBatchAPI"
@@ -8,7 +8,7 @@ Scenario: Verify create Mandate Batch
   And the response should contain a valid "mandateBatchKey"
   
   
-@MandateBatch
+
 Scenario Outline: Verify get Mandate Batch
 	Given request with path parameter "<mandatebatchkey>"
   When user sends "GET" request to "getMandateBatchAPI"
@@ -17,6 +17,9 @@ Scenario Outline: Verify get Mandate Batch
   Examples:
   | mandatebatchkey |
   | 82							|
+  |	10							|
+  |	11							|
+  |	12							|
   
 @MandateBatch    
 Scenario Outline: Verify Update Mandate Batch
@@ -26,9 +29,9 @@ Scenario Outline: Verify Update Mandate Batch
   And the response should contain the updated value 
   Examples:
   | mandatebatchkey |		
-  | 82							|	
+  | 11							|	
   
-@MandateBatch
+
 Scenario Outline: Verify 404 statuscode 
 	Given request with path parameter "<mandatebatchkey>"
 	When user sends "GET" request to "getMandateBatchAPI"
@@ -38,7 +41,7 @@ Scenario Outline: Verify 404 statuscode
   | 	4654564				| 
   
   
-@skip  
+
 Scenario Outline: Verify Cancel Mandate Batch
 	Given request payload with path parameter "<mandatebatchkey>"
   When user sends "PUT" request to "cancelMandateBatchAPI"

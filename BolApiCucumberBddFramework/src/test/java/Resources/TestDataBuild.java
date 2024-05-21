@@ -201,8 +201,7 @@ public class TestDataBuild {
 		mandateBatchObject.setCreationDateAndTime(creationDateAndTime);
 		mandateBatchObject.setCustomerId(373731);
 		mandateBatchObject.setCustomerUserKey("513632");
-		mandateBatchObject.setMandateInterchangeKey(3);
-		mandateBatchObject.setVersion(0);
+		
 	    
 	
 		instructionListObject.setAction("I");
@@ -238,7 +237,7 @@ public class TestDataBuild {
 		instructionListObject.setEntryClass("Vinot001");
 		instructionListObject.setFrequency("MNTH");
 		instructionListObject.setInitiatingParty("Junaid");
-		instructionListObject.setInstallmentAmount(11.45);
+		instructionListObject.setInstallmentAmount(11.47);
 		instructionListObject.setInstallmentAmountCurrency("ZAR");
 		instructionListObject.setInstallmentOccurrence("RCUR");
 		instructionListObject.setInstructedAgent("210000");
@@ -246,7 +245,7 @@ public class TestDataBuild {
 		Date mandateInitiationDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
 		instructionListObject.setMandateInitiationDate(mandateInitiationDate);
 		instructionListObject.setMandateInstrumentKey(101);
-		instructionListObject.setMaxCollectionAmount(15.0);
+		instructionListObject.setMaxCollectionAmount(15);
 		instructionListObject.setMaxCollectionAmountCurrency("ZAR");
 		instructionListObject.setRequestTransmissionNumber(1);
 		instructionListObject.setStatus("PEN");
@@ -258,6 +257,10 @@ public class TestDataBuild {
 		instructionListObject.setWhenModified(whenModifiedDate);
 	
 	
+		mandateBatchObject.setMandateInterchangeKey(3);
+		mandateBatchObject.setVersion(0);
+		
+		
 		instructionList.add(instructionListObject);
 		mandateBatchObject.setMandateInstructionList(instructionList);
 		
@@ -389,20 +392,13 @@ public class TestDataBuild {
 		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
 		mandateBatchObject.setCreationDateAndTime(creationDateAndTime);
 		mandateBatchObject.setCustomerId(373731);
-		mandateBatchObject.setCustomerUserKey("373731");
+		mandateBatchObject.setCustomerUserKey("513632");
 		mandateBatchObject.setCutOffRequired(false);
 		mandateBatchObject.setEntityStatus("RC");
-		mandateBatchObject.setErrorList(null);
+		//mandateBatchObject.setErrorList(null);
 		mandateBatchObject.setFailedCount(0);
 		mandateBatchObject.setMandateBatchKey(key);
-		mandateBatchObject.setMandateInterchangeKey(3);
-		mandateBatchObject.setPendingCount(0);
-		mandateBatchObject.setStatus("FUP");
-		mandateBatchObject.setTotalCount(0);
-		mandateBatchObject.setVersion(0);
-		Date whenmodified = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
-		mandateBatchObject.setWhenModified(whenmodified);
-		
+			
 		
 		updateinstructionListObject.setAction("Z");
 		updateinstructionListObject.setAdjustmentCategory("N");
@@ -423,11 +419,11 @@ public class TestDataBuild {
 		updateinstructionListObject.setCreditorTelephoneDetails("+27-821234567");
 		updateinstructionListObject.setDateAdjustmentRuleIndicator("Y");
 		updateinstructionListObject.setDebitValueType("VARIABLE");
-		updateinstructionListObject.setDebtorAccountName("pinky kalita");
-		updateinstructionListObject.setDebtorAccountNumber("10005296372");
+		updateinstructionListObject.setDebtorAccountName("Dhananjay");
+		updateinstructionListObject.setDebtorAccountNumber("250655");
 		updateinstructionListObject.setDebtorAccountType("CACC");
 		updateinstructionListObject.setDebtorAuthenticationRequired("0227");
-		updateinstructionListObject.setDebtorBankBranch("051001");
+		updateinstructionListObject.setDebtorBankBranch("250655");
 		updateinstructionListObject.setDebtorBankName("STANDARD BANK");
 		updateinstructionListObject.setDebtorBicCode("SBZAZAJJ");
 		updateinstructionListObject.setDebtorEmailDetails("pinky@gmail.com");
@@ -447,7 +443,7 @@ public class TestDataBuild {
 		updateinstructionListObject.setMandateBatchKey(key);
 		Date mandateInitiationDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
 		updateinstructionListObject.setMandateInitiationDate(mandateInitiationDate);
-		updateinstructionListObject.setMandateInstructionKey(6);
+		updateinstructionListObject.setMandateInstructionKey(10);
 		updateinstructionListObject.setMandateInstrumentKey(101);
 		updateinstructionListObject.setMandateKey(6);
 		updateinstructionListObject.setMandateReferenceNumber("0003202401110004394946");
@@ -465,6 +461,13 @@ public class TestDataBuild {
 		Date whenModifiedDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
 		updateinstructionListObject.setWhenModified(whenModifiedDate);
 
+		mandateBatchObject.setMandateInterchangeKey(3);
+		mandateBatchObject.setPendingCount(0);
+		mandateBatchObject.setStatus("FUP");
+		mandateBatchObject.setTotalCount(0);
+		mandateBatchObject.setVersion(0);
+		Date whenmodified = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-04-16T07:06:00Z[UTC]");
+		mandateBatchObject.setWhenModified(whenmodified);
 		
 		updatelinstructionList.add(updateinstructionListObject);
 		mandateBatchObject.setMandateInstructionList(updatelinstructionList);
