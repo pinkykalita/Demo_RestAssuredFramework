@@ -20,6 +20,8 @@ Scenario Outline: Verify get Mandate Batch
   |	10							|
   |	11							|
   |	12							|
+  |	21							|
+  |	23							|
   
 @MandateBatch    
 Scenario Outline: Verify Update Mandate Batch
@@ -49,7 +51,7 @@ Scenario Outline: Verify Cancel Mandate Batch
  	And "GET" request with path parameter "<mandatebatchkey>" to "getMandateBatchAPI" should return "404" ststus code
   Examples:
   | mandatebatchkey |
-  | 6							|
+  | 23							|
 
 @skip  
 Scenario Outline: Verify 403 statuscode 

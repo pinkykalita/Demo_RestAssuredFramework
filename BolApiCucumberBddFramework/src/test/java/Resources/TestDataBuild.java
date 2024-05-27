@@ -69,14 +69,16 @@ public class TestDataBuild {
 	{
 		CreateMandateInterchange mandateInterchangeObject = new CreateMandateInterchange();
 		
+		mandateInterchangeObject.setCreationDateAndTime("2024-03-18T08:04:03.768Z[UTC]");
 		mandateInterchangeObject.setCustomerId("BOL Customer");
 		mandateInterchangeObject.setCustomerKey(newKey);
 		mandateInterchangeObject.setFailedMandateCount(0);
-		mandateInterchangeObject.setFileName("TEST.xml");
+		mandateInterchangeObject.setFileName("Test23May24.xml");
 		mandateInterchangeObject.setStatus("T");
 		mandateInterchangeObject.setSubmissionChannel("File Upload");
 		mandateInterchangeObject.setTotalMandateFieldCount(0);
 		mandateInterchangeObject.setUploadedUsername("Test User123");
+		mandateInterchangeObject.setWhenModified("2024-03-18T08:04:03.768Z[UTC]");
 		
 		return mandateInterchangeObject;
 	}

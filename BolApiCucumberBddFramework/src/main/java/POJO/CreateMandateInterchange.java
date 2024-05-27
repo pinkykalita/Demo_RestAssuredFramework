@@ -2,7 +2,9 @@ package POJO;
 
 public class CreateMandateInterchange {
 	
-	 private String customerId; 
+	private String creationDateAndTime; 
+	private String whenModified;
+	private String customerId; 
 	 private String customerKey;
 	 private int failedMandateCount;
 	 private String fileName;
@@ -60,7 +62,18 @@ public class CreateMandateInterchange {
 	public void setFailedMandateCount(int failedMandateCount) {
 		this.failedMandateCount = failedMandateCount;
 	}
-	
+	public String getCreationDateAndTime() {
+		return creationDateAndTime;
+	}
+	public void setCreationDateAndTime(String creationDateAndTime) {
+		this.creationDateAndTime = creationDateAndTime;
+	}
+	public String getWhenModified() {
+		return whenModified;
+	}
+	public void setWhenModified(String whenModified) {
+		this.whenModified = whenModified;
+	}
 	 
 	 
 	 

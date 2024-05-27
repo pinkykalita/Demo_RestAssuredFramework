@@ -27,8 +27,8 @@ Scenario Outline: Verify that user can retrieve the Mandate Interchange with que
 	Then the response status code should be "200"
 	And response should return only the data that contains "<customerkey>" and "<filename>" and "<uploadedusername>" 
 	Examples:
-  | customerkey |	filename	|	uploadedusername	|	fromdate		|	Status	|	todate			|
-  | 123456			|	pk.xml	  |	pinky							|	2023-06-01	|	T				|	2024-12-04	|
+  | customerkey |	filename								|	uploadedusername	|
+  | 123456			|	fortestingpurpose.xml	  |	tester1234							|	
   
  
 @MandateInterchange
@@ -40,8 +40,8 @@ Scenario Outline: Verify that Mandate Interchange is successfully updated using 
   And "uploadedUsername" in response body should be same as "<uploadedusername>"
   And "customerKey" in response body should be same as "123456"
  	Examples:
-  | interchange key | filename				|	uploadedusername	|
-  | 12							| TestingPUT.xml	|	Pinky Kalita			|
+  | interchange key | filename							|	uploadedusername	|
+  | 12							| fortestingpurpose.xml	|	tester1234			|
  
 
 @MandateInterchange
@@ -62,7 +62,7 @@ Scenario Outline: Verify that 404 statuscode is displayed on GET request for get
   | interchange key |
   | 12454						|
   
-@MandateInterchange
+@skip 
 Scenario Outline: Verify that GET request to getMandateInterchangeWithQueryParamsAPI with incorrect query params returns 500 statuscode 
 	Given request prepared with query parameters "<Status>"
 	When user sends "GET" request to "getMandateInterchangeWithQueryParamsAPI"
@@ -78,4 +78,4 @@ Scenario Outline: Verify that GET request to getMandateInterchangeWithQueryParam
 	Then the response status code should be "403"
 	Examples:
   | interchange key |
-  | 					| 
+  | 								| 

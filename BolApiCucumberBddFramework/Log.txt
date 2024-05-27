@@ -1,11 +1,11 @@
-Request method:	PUT
-Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-batch/update/11
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	mandateBatchKey=11
-Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoidDR3eGxBRUlHY1hwdVZ6dzF6NFlydSIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjI3NzQ2NCwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTYyNzc0NjQsImV4cCI6MTcxNjI4MTA2NH0.WILKPusTdvZ88BbSPLC1jCwNRz4njsFDDJKk-I05K8RTaJCIYZekYs2289TFjjopFd63it52iKCAUqlqg6gkkU8m4ulqw-mLAapK8MxIJmH6lFwkln0nVOxtiUmM1U3J6PL34Ou7cFffZttGQSyyTf-UB1txCuLEoa8gS_69Yz5_dxZM-TmyrARtDh6YdhaxAdfsJZBQoQEQdY2B9gj9EfMK2NY_knEzMXUN1JNRXglSX1JTLvFCeyywsmKH69djWNJPWHSM4fSVotbVCVKtVeDqxLygNfZugDdIpYrVMRaN_oEogZSpu8QuMF2CSKpoy4Rr9ocYRe-MQIvFna7x3w
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiNmxqMDlKU3N5c3NTRWZvaWxmMWFmbyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NDQxNSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODQ0MTUsImV4cCI6MTcxNjc4ODAxNX0.HDEsNXzcpqc0bmpTTlg3F-7f4g3a4xtEkcJTzl5bDnZeNaOr34v1jAyhhVj0LK_xTMrYq8JhW9zjD-kMU4arQ4QEVY3aWtHDm2GKCzcOg9F-bCrsDTQtStf-o8oR98tgy3vfISjC_5AWewNyOZFeH2D8P0a0vavzWVpeP7fwIZ0AemADaM1qzPeIzSsFuxnTtpO0v1YzduOlhZZDF4c_FwbEahGLPjcuYXMIYEB6VCVLSPdLxEtoJR8Ihq9I50sIubKY7-nPxcVLuHJcJTauIvQKbuTCekLxT_mO2UqDCe5YNgo45YxyMkx056ESp5bFyL2bOKAger9ELbKB-jFddw
 				User-Agent=PostmanRuntime/7.37.0
 				Accept=*/*
 				Accept-Encoding=gzip, deflate, br
@@ -15,418 +15,405 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "acceptedCount": 0,
-    "action": "I",
-    "authoriseStatus": "ACT",
-    "bankGroupId": "Standard Bank Group",
-    "canAuthorise": false,
-    "creationDateAndTime": "2024-04-16T01:36:00Z",
-    "customerId": 373731,
-    "customerUserKey": "513632",
-    "cutOffRequired": false,
-    "entityStatus": "RC",
-    "errorList": null,
-    "failedCount": 0,
-    "mandateBatchKey": "11",
-    "mandateInstructionList": [
-        {
-            "action": "Z",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "ClntRef",
-            "collectionDay": "3",
-            "contractReference": "Nifnb11jan24_3",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-16T01:36:00Z",
-            "creditorAbbreviatedShortName": "AC Col",
-            "creditorAccountNumber": "051001",
-            "creditorBankBranch": "051001",
-            "creditorBicCode": "SBZAZAJJ",
-            "creditorEmailDetails": "newupdatedemail123@outlook.com",
-            "creditorName": "Standard Bank HTH",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-821234567",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "VARIABLE",
-            "debtorAccountName": "Dhananjay",
-            "debtorAccountNumber": "250655",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "250655",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "pinky@gmail.com",
-            "debtorIdentification": "6507170138083",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-0786774545",
-            "entryClass": "Vinot001",
-            "errorList": null,
-            "frequency": "WEEK",
-            "initiatingParty": "TestUser123",
-            "installmentAmount": 60.0,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateBatchKey": "11",
-            "mandateInitiationDate": "2024-04-16T01:36:00Z",
-            "mandateInstructionKey": 10,
-            "mandateInstrumentKey": 101,
-            "mandateKey": 6,
-            "mandateReferenceNumber": "0003202401110004394946",
-            "mandateRequestTransactionId": "00012024-04-15000000028",
-            "messageIdentification": "100/MANIN/00210001/20240502/000000",
-            "originalMrti": "00012024-04-15000000028",
-            "requestTransmissionNumber": 1,
-            "status": "ACC",
-            "submissionMechanism": "Host to Host",
-            "suspended": false,
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "ultimateDebtorName": "TestUser456",
-            "version": 0,
-            "whenModified": "2024-04-16T01:36:00Z"
-        }
-    ],
-    "mandateInterchangeKey": 3,
-    "pendingCount": 0,
-    "status": "FUP",
-    "totalCount": 0,
-    "version": 0,
-    "whenModified": "2024-04-16T01:36:00Z"
+    "customerId": "BOL Customer",
+    "customerKey": "195",
+    "failedMandateCount": 0,
+    "fileName": "Test23May24.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
 }
-HTTP/1.1 200 OK
+HTTP/1.1 400 Bad Request
+Content-Length: 445
 Content-Type: application/json
-Date: Tue, 21 May 2024 07:44:35 GMT
-Transfer-Encoding: chunked
+Validation-Exception: true
+Date: Mon, 27 May 2024 04:33:43 GMT
 
 {
-    "acceptedCount": 0,
-    "action": "A",
-    "authoriseStatus": "ACT",
-    "bankGroupId": "Standard Bank Group",
-    "canAuthorise": false,
-    "creationDateAndTime": "2024-04-16T01:36:00Z[UTC]",
-    "customerId": 373731,
-    "customerUserKey": "513632",
-    "cutOffRequired": false,
-    "entityStatus": "SENT_TO_GPP",
-    "errorList": [
+    "classViolations": [
         
     ],
-    "failedCount": 0,
-    "mandateBatchKey": 11,
-    "mandateInstructionList": [
+    "parameterViolations": [
         {
-            "action": "I",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "PerfTest2",
-            "collectionDay": "07",
-            "contractReference": "SBZA1811302709",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-16T01:36:00Z[UTC]",
-            "creditorAbbreviatedShortName": "Vinot001",
-            "creditorAccountNumber": "051001",
-            "creditorBankBranch": "051001",
-            "creditorBicCode": "SBZAZAJJ",
-            "creditorEmailDetails": "junzismail@gmail.com",
-            "creditorName": "BOL Customer",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-118765434",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "FIXED",
-            "debtorAccountName": "Testing SITONE",
-            "debtorAccountNumber": "10005296372",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "051001",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ravi@test.com",
-            "debtorIdentification": "8007086600092",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-616481422",
-            "entryClass": "Vinot001",
-            "errorList": [
-                
-            ],
-            "firstCollectionDateChanged": false,
-            "frequency": "MNTH",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 11.45,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateBatchKey": 11,
-            "mandateInitiationDate": "2024-04-16T01:36:00Z[UTC]",
-            "mandateInstructionKey": 11,
-            "mandateInstrumentKey": 101,
-            "mandateRequestTransactionId": "00012024-05-21000000011",
-            "messageIdentification": "100/MANIN/00210001/20240503/000000",
-            "newMandateRequired": false,
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "suspended": false,
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "version": 0,
-            "whenModified": "2024-04-16T01:36:00Z[UTC]"
+            "constraintType": "PARAMETER",
+            "message": "creationDateAndTime should not be null or empty",
+            "path": "createMandateInterchange.mandateInterchangeDomain.creationDateAndTime",
+            "value": ""
         },
         {
-            "action": "Z",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "ClntRef",
-            "collectionDay": "3",
-            "contractReference": "Nifnb11jan24_3",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-15T11:53:51.627Z[UTC]",
-            "creditorAbbreviatedShortName": "AC Col",
-            "creditorAccountNumber": "051001",
-            "creditorBankBranch": "051001",
-            "creditorBicCode": "SBZAZAJJ",
-            "creditorEmailDetails": "RCUR",
-            "creditorName": "Standard Bank HTH",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-821234567",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "VARIABLE",
-            "debtorAccountName": "Dhananjay",
-            "debtorAccountNumber": "250655",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "250655",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ismail@gmail.com",
-            "debtorIdentification": "6507170138083",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-0786774545",
-            "entryClass": "Vinot001",
-            "errorList": [
-                
-            ],
-            "firstCollectionDateChanged": false,
-            "frequency": "WEEK",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 60.00,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateBatchKey": 11,
-            "mandateInitiationDate": "2024-01-10T22:00:00Z[UTC]",
-            "mandateInstructionKey": 14,
-            "mandateInstrumentKey": 101,
-            "mandateKey": 4,
-            "mandateReferenceNumber": "0003202401110004394946",
-            "mandateRequestTransactionId": "00012024-05-21000000014",
-            "messageIdentification": "100/00210001/20240503 04:46:/000000",
-            "newMandateRequired": false,
-            "originalMrti": "00012024-04-15000000028",
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "suspended": false,
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "ultimateDebtorName": "Test",
-            "version": 0,
-            "whenModified": "2024-04-15T11:53:51.661Z[UTC]"
-        },
-        {
-            "action": "Z",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "ClntRef",
-            "collectionDay": "3",
-            "contractReference": "Nifnb11jan24_3",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-05-21T07:36:38.45Z[UTC]",
-            "creditorAbbreviatedShortName": "AC Col",
-            "creditorAccountNumber": "051001",
-            "creditorBankBranch": "051001",
-            "creditorEmailDetails": "RCUR",
-            "creditorName": "Standard Bank HTH",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-821234567",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "VARIABLE",
-            "debtorAccountName": "Dhananjay",
-            "debtorAccountNumber": "250655",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "250655",
-            "debtorBankName": "STANDARD BANK",
-            "debtorEmailDetails": "ismail@gmail.com",
-            "debtorIdentification": "6507170138083",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-0786774545",
-            "entryClass": "Vinot001",
-            "errorList": [
-                
-            ],
-            "firstCollectionDateChanged": false,
-            "frequency": "WEEK",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 60.00,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateBatchKey": 11,
-            "mandateInitiationDate": "2024-01-10T22:00:00Z[UTC]",
-            "mandateInstructionKey": 134,
-            "mandateInstrumentKey": 101,
-            "mandateKey": 4,
-            "mandateReferenceNumber": "0003202401110004394946",
-            "mandateRequestTransactionId": "00012024-05-21000000134",
-            "messageIdentification": "100/00210001/20240521 07:36:/000000",
-            "newMandateRequired": false,
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "suspended": false,
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "ultimateDebtorName": "Test",
-            "version": 0,
-            "whenModified": "2024-05-21T07:36:38.476Z[UTC]"
-        },
-        {
-            "action": "Z",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "ClntRef",
-            "collectionDay": "3",
-            "contractReference": "Nifnb11jan24_3",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-05-21T07:44:31.375Z[UTC]",
-            "creditorAbbreviatedShortName": "AC Col",
-            "creditorAccountNumber": "051001",
-            "creditorBankBranch": "051001",
-            "creditorBicCode": "SBZAZAJJ",
-            "creditorEmailDetails": "newupdatedemail123@outlook.com",
-            "creditorName": "Standard Bank HTH",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-821234567",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "VARIABLE",
-            "debtorAccountName": "Dhananjay",
-            "debtorAccountNumber": "250655",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "250655",
-            "debtorBankName": "STANDARD BANK",
-            "debtorEmailDetails": "pinky@gmail.com",
-            "debtorIdentification": "6507170138083",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-0786774545",
-            "entryClass": "Vinot001",
-            "errorList": [
-                
-            ],
-            "firstCollectionDateChanged": false,
-            "frequency": "WEEK",
-            "initiatingParty": "TestUser123",
-            "installmentAmount": 60.0,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateBatchKey": 11,
-            "mandateInitiationDate": "2024-04-16T01:36:00Z[UTC]",
-            "mandateInstructionKey": 10,
-            "mandateInstrumentKey": 101,
-            "mandateKey": 6,
-            "mandateReferenceNumber": "0003202401110004394946",
-            "messageIdentification": "100/00210001/20240521 07:44:/000000",
-            "newMandateRequired": false,
-            "requestTransmissionNumber": 1,
-            "status": "ACC",
-            "submissionMechanism": "Host to Host",
-            "suspended": false,
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "ultimateDebtorName": "TestUser456",
-            "version": 0,
-            "whenModified": "2024-05-21T07:44:31.396Z[UTC]"
-        },
-        {
-            "action": "Z",
-            "adjustmentCategory": "N",
-            "authenticationType": "REAL TIME",
-            "clientReference": "ClntRef",
-            "collectionDay": "3",
-            "contractReference": "Nifnb11jan24_3",
-            "countryCode": "ZA",
-            "creationDateAndTime": "2024-04-15T11:53:51.627Z[UTC]",
-            "creditorAbbreviatedShortName": "AC Col",
-            "creditorAccountNumber": "051001",
-            "creditorBankBranch": "051001",
-            "creditorBicCode": "SBZAZAJJ",
-            "creditorEmailDetails": "RCUR",
-            "creditorName": "Standard Bank HTH",
-            "creditorSchemeId": 1,
-            "creditorTelephoneDetails": "+27-821234567",
-            "dateAdjustmentRuleIndicator": "Y",
-            "debitValueType": "VARIABLE",
-            "debtorAccountName": "Dhananjay",
-            "debtorAccountNumber": "250655",
-            "debtorAccountType": "CACC",
-            "debtorAuthenticationRequired": "0227",
-            "debtorBankBranch": "250655",
-            "debtorBankName": "STANDARD BANK",
-            "debtorBicCode": "SBZAZAJJ",
-            "debtorEmailDetails": "ismail@gmail.com",
-            "debtorIdentification": "6507170138083",
-            "debtorIdentificationType": "I",
-            "debtorName": "Testing SITONE",
-            "debtorTelephoneDetails": "+27-0786774545",
-            "entryClass": "Vinot001",
-            "errorList": [
-                
-            ],
-            "firstCollectionDateChanged": false,
-            "frequency": "WEEK",
-            "initiatingParty": "Junaid",
-            "installmentAmount": 60.00,
-            "installmentAmountCurrency": "ZAR",
-            "installmentOccurrence": "RCUR",
-            "instructedAgent": "210000",
-            "instructingAgent": "210001",
-            "mandateBatchKey": 11,
-            "mandateInitiationDate": "2024-01-10T22:00:00Z[UTC]",
-            "mandateInstructionKey": 13,
-            "mandateInstrumentKey": 101,
-            "mandateKey": 4,
-            "mandateReferenceNumber": "0003202401110004394946",
-            "mandateRequestTransactionId": "00012024-05-21000000013",
-            "messageIdentification": "100/00210001/20240503 04:45:/000000",
-            "newMandateRequired": false,
-            "originalMrti": "00012024-04-15000000028",
-            "requestTransmissionNumber": 1,
-            "status": "PEN",
-            "submissionMechanism": "Host to Host",
-            "suspended": false,
-            "trackingIndicator": "T",
-            "ultimateCreditorName": "R",
-            "ultimateDebtorName": "Test",
-            "version": 0,
-            "whenModified": "2024-04-15T11:53:51.661Z[UTC]"
+            "constraintType": "PARAMETER",
+            "message": "whenModified should not be null or empty",
+            "path": "createMandateInterchange.mandateInterchangeDomain.whenModified",
+            "value": ""
         }
     ],
-    "mandateInterchangeKey": 3,
-    "pendingCount": 0,
-    "status": "PEN",
-    "totalCount": 0,
-    "version": 0
+    "propertyViolations": [
+        
+    ],
+    "returnValueViolations": [
+        
+    ]
 }
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiNmxqMDlKU3N5c3NTRWZvaWxmMWFmbyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NDQxNSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODQ0MTUsImV4cCI6MTcxNjc4ODAxNX0.HDEsNXzcpqc0bmpTTlg3F-7f4g3a4xtEkcJTzl5bDnZeNaOr34v1jAyhhVj0LK_xTMrYq8JhW9zjD-kMU4arQ4QEVY3aWtHDm2GKCzcOg9F-bCrsDTQtStf-o8oR98tgy3vfISjC_5AWewNyOZFeH2D8P0a0vavzWVpeP7fwIZ0AemADaM1qzPeIzSsFuxnTtpO0v1YzduOlhZZDF4c_FwbEahGLPjcuYXMIYEB6VCVLSPdLxEtoJR8Ihq9I50sIubKY7-nPxcVLuHJcJTauIvQKbuTCekLxT_mO2UqDCe5YNgo45YxyMkx056ESp5bFyL2bOKAger9ELbKB-jFddw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 342
+Content-Type: application/json
+Date: Mon, 27 May 2024 04:33:49 GMT
+
+{
+    "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 123456,
+    "failedMandateCount": 0,
+    "fileName": "fortestingpurpose.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "tester1234",
+    "whenModified": "2024-03-18T08:04:03.768Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=123456&fileName=fortestingpurpose.xml&uploadedUsername=tester1234
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=123456
+				fileName=fortestingpurpose.xml
+				uploadedUsername=tester1234
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiNmxqMDlKU3N5c3NTRWZvaWxmMWFmbyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NDQxNSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODQ0MTUsImV4cCI6MTcxNjc4ODAxNX0.HDEsNXzcpqc0bmpTTlg3F-7f4g3a4xtEkcJTzl5bDnZeNaOr34v1jAyhhVj0LK_xTMrYq8JhW9zjD-kMU4arQ4QEVY3aWtHDm2GKCzcOg9F-bCrsDTQtStf-o8oR98tgy3vfISjC_5AWewNyOZFeH2D8P0a0vavzWVpeP7fwIZ0AemADaM1qzPeIzSsFuxnTtpO0v1YzduOlhZZDF4c_FwbEahGLPjcuYXMIYEB6VCVLSPdLxEtoJR8Ihq9I50sIubKY7-nPxcVLuHJcJTauIvQKbuTCekLxT_mO2UqDCe5YNgo45YxyMkx056ESp5bFyL2bOKAger9ELbKB-jFddw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 344
+Content-Type: application/json
+Date: Mon, 27 May 2024 04:33:54 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 123456,
+        "failedMandateCount": 0,
+        "fileName": "fortestingpurpose.xml",
+        "mandateInterchangeKey": 12,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "tester1234",
+        "whenModified": "2024-03-18T08:04:03.768Z[UTC]"
+    }
+]
+Request method:	PUT
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiNmxqMDlKU3N5c3NTRWZvaWxmMWFmbyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NDQxNSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODQ0MTUsImV4cCI6MTcxNjc4ODAxNX0.HDEsNXzcpqc0bmpTTlg3F-7f4g3a4xtEkcJTzl5bDnZeNaOr34v1jAyhhVj0LK_xTMrYq8JhW9zjD-kMU4arQ4QEVY3aWtHDm2GKCzcOg9F-bCrsDTQtStf-o8oR98tgy3vfISjC_5AWewNyOZFeH2D8P0a0vavzWVpeP7fwIZ0AemADaM1qzPeIzSsFuxnTtpO0v1YzduOlhZZDF4c_FwbEahGLPjcuYXMIYEB6VCVLSPdLxEtoJR8Ihq9I50sIubKY7-nPxcVLuHJcJTauIvQKbuTCekLxT_mO2UqDCe5YNgo45YxyMkx056ESp5bFyL2bOKAger9ELbKB-jFddw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 123456,
+    "failedMandateCount": 0,
+    "fileName": "fortestingpurpose.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "tester1234",
+    "whenModified": "2024-03-18T08:04:03.768Z[UTC]",
+    "mandateInterchangeKey": "12"
+}
+HTTP/1.1 200 OK
+Content-Length: 342
+Content-Type: application/json
+Date: Mon, 27 May 2024 04:33:58 GMT
+
+{
+    "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 123456,
+    "failedMandateCount": 0,
+    "fileName": "fortestingpurpose.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "tester1234",
+    "whenModified": "2024-03-18T08:04:03.768Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiNmxqMDlKU3N5c3NTRWZvaWxmMWFmbyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NDQxNSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODQ0MTUsImV4cCI6MTcxNjc4ODAxNX0.HDEsNXzcpqc0bmpTTlg3F-7f4g3a4xtEkcJTzl5bDnZeNaOr34v1jAyhhVj0LK_xTMrYq8JhW9zjD-kMU4arQ4QEVY3aWtHDm2GKCzcOg9F-bCrsDTQtStf-o8oR98tgy3vfISjC_5AWewNyOZFeH2D8P0a0vavzWVpeP7fwIZ0AemADaM1qzPeIzSsFuxnTtpO0v1YzduOlhZZDF4c_FwbEahGLPjcuYXMIYEB6VCVLSPdLxEtoJR8Ihq9I50sIubKY7-nPxcVLuHJcJTauIvQKbuTCekLxT_mO2UqDCe5YNgo45YxyMkx056ESp5bFyL2bOKAger9ELbKB-jFddw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Mon, 27 May 2024 04:34:02 GMT
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiNmxqMDlKU3N5c3NTRWZvaWxmMWFmbyIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NDQxNSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODQ0MTUsImV4cCI6MTcxNjc4ODAxNX0.HDEsNXzcpqc0bmpTTlg3F-7f4g3a4xtEkcJTzl5bDnZeNaOr34v1jAyhhVj0LK_xTMrYq8JhW9zjD-kMU4arQ4QEVY3aWtHDm2GKCzcOg9F-bCrsDTQtStf-o8oR98tgy3vfISjC_5AWewNyOZFeH2D8P0a0vavzWVpeP7fwIZ0AemADaM1qzPeIzSsFuxnTtpO0v1YzduOlhZZDF4c_FwbEahGLPjcuYXMIYEB6VCVLSPdLxEtoJR8Ihq9I50sIubKY7-nPxcVLuHJcJTauIvQKbuTCekLxT_mO2UqDCe5YNgo45YxyMkx056ESp5bFyL2bOKAger9ELbKB-jFddw
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Mon, 27 May 2024 04:34:05 GMT
+Request method:	POST
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR2lKVm16UHk1bVJlYklpeTZiQTJBNiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NTAyOSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODUwMjksImV4cCI6MTcxNjc4ODYyOX0.AKbPwbzFCLgh-g3lvvh3dEH2SXcHmJ2JyrXocp4V1sI9DvPg--A02atNub9U_8f1QBEJMlobrQPqSY8EiDtW4Pdls93-ikTqkvfur_mZTmQcnyejSsRElUUIrND_TgmSmrqBhJM5Fk60-IhxLfQDroEqnhSkHFnTHYacAsTjeEmS_ZBbU9OSuF1bnkUbtcWnC8sMssjRSroTAj2GSUImsE1_tJ0SG8OiIzVmr3l_TCeVdDtNXXQ0PvkrXiINzxN8rKuq2KUn2QFtMYVt5TriiapKcCjzFIaIbwZpedSj69rDVwMJUM3QnT8yEbT7_1zFahCQWnGF_UN7BYipTcZZVg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+    "whenModified": "2024-03-18T08:04:03.768Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": "195",
+    "failedMandateCount": 0,
+    "fileName": "Test23May24.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123"
+}
+HTTP/1.1 200 OK
+Content-Length: 335
+Content-Type: application/json
+Date: Mon, 27 May 2024 04:43:56 GMT
+
+{
+    "creationDateAndTime": "2024-05-27T04:43:56.044Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 195,
+    "failedMandateCount": 0,
+    "fileName": "Test23May24.xml",
+    "mandateInterchangeKey": 73,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "Test User123",
+    "whenModified": "2024-05-27T04:43:56.044Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR2lKVm16UHk1bVJlYklpeTZiQTJBNiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NTAyOSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODUwMjksImV4cCI6MTcxNjc4ODYyOX0.AKbPwbzFCLgh-g3lvvh3dEH2SXcHmJ2JyrXocp4V1sI9DvPg--A02atNub9U_8f1QBEJMlobrQPqSY8EiDtW4Pdls93-ikTqkvfur_mZTmQcnyejSsRElUUIrND_TgmSmrqBhJM5Fk60-IhxLfQDroEqnhSkHFnTHYacAsTjeEmS_ZBbU9OSuF1bnkUbtcWnC8sMssjRSroTAj2GSUImsE1_tJ0SG8OiIzVmr3l_TCeVdDtNXXQ0PvkrXiINzxN8rKuq2KUn2QFtMYVt5TriiapKcCjzFIaIbwZpedSj69rDVwMJUM3QnT8yEbT7_1zFahCQWnGF_UN7BYipTcZZVg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 342
+Content-Type: application/json
+Date: Mon, 27 May 2024 04:43:59 GMT
+
+{
+    "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 123456,
+    "failedMandateCount": 0,
+    "fileName": "fortestingpurpose.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "tester1234",
+    "whenModified": "2024-03-18T08:04:03.768Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=123456&fileName=fortestingpurpose.xml&uploadedUsername=tester1234
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=123456
+				fileName=fortestingpurpose.xml
+				uploadedUsername=tester1234
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR2lKVm16UHk1bVJlYklpeTZiQTJBNiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NTAyOSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODUwMjksImV4cCI6MTcxNjc4ODYyOX0.AKbPwbzFCLgh-g3lvvh3dEH2SXcHmJ2JyrXocp4V1sI9DvPg--A02atNub9U_8f1QBEJMlobrQPqSY8EiDtW4Pdls93-ikTqkvfur_mZTmQcnyejSsRElUUIrND_TgmSmrqBhJM5Fk60-IhxLfQDroEqnhSkHFnTHYacAsTjeEmS_ZBbU9OSuF1bnkUbtcWnC8sMssjRSroTAj2GSUImsE1_tJ0SG8OiIzVmr3l_TCeVdDtNXXQ0PvkrXiINzxN8rKuq2KUn2QFtMYVt5TriiapKcCjzFIaIbwZpedSj69rDVwMJUM3QnT8yEbT7_1zFahCQWnGF_UN7BYipTcZZVg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 344
+Content-Type: application/json
+Date: Mon, 27 May 2024 04:44:03 GMT
+
+[
+    {
+        "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+        "customerId": "BOL Customer",
+        "customerKey": 123456,
+        "failedMandateCount": 0,
+        "fileName": "fortestingpurpose.xml",
+        "mandateInterchangeKey": 12,
+        "status": "T",
+        "submissionChannel": "File Upload",
+        "totalMandateFieldCount": 0,
+        "uploadedUsername": "tester1234",
+        "whenModified": "2024-03-18T08:04:03.768Z[UTC]"
+    }
+]
+Request method:	PUT
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR2lKVm16UHk1bVJlYklpeTZiQTJBNiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NTAyOSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODUwMjksImV4cCI6MTcxNjc4ODYyOX0.AKbPwbzFCLgh-g3lvvh3dEH2SXcHmJ2JyrXocp4V1sI9DvPg--A02atNub9U_8f1QBEJMlobrQPqSY8EiDtW4Pdls93-ikTqkvfur_mZTmQcnyejSsRElUUIrND_TgmSmrqBhJM5Fk60-IhxLfQDroEqnhSkHFnTHYacAsTjeEmS_ZBbU9OSuF1bnkUbtcWnC8sMssjRSroTAj2GSUImsE1_tJ0SG8OiIzVmr3l_TCeVdDtNXXQ0PvkrXiINzxN8rKuq2KUn2QFtMYVt5TriiapKcCjzFIaIbwZpedSj69rDVwMJUM3QnT8yEbT7_1zFahCQWnGF_UN7BYipTcZZVg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 123456,
+    "failedMandateCount": 0,
+    "fileName": "fortestingpurpose.xml",
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "tester1234",
+    "whenModified": "2024-03-18T08:04:03.768Z[UTC]",
+    "mandateInterchangeKey": "12"
+}
+HTTP/1.1 200 OK
+Content-Length: 342
+Content-Type: application/json
+Date: Mon, 27 May 2024 04:44:08 GMT
+
+{
+    "creationDateAndTime": "2024-03-18T08:04:03.768Z[UTC]",
+    "customerId": "BOL Customer",
+    "customerKey": 123456,
+    "failedMandateCount": 0,
+    "fileName": "fortestingpurpose.xml",
+    "mandateInterchangeKey": 12,
+    "status": "T",
+    "submissionChannel": "File Upload",
+    "totalMandateFieldCount": 0,
+    "uploadedUsername": "tester1234",
+    "whenModified": "2024-03-18T08:04:03.768Z[UTC]"
+}
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange?customerKey=12&uploadedUsername=Test%20User123
+Proxy:			<none>
+Request params:	<none>
+Query params:	customerKey=12
+				uploadedUsername=Test User123
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR2lKVm16UHk1bVJlYklpeTZiQTJBNiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NTAyOSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODUwMjksImV4cCI6MTcxNjc4ODYyOX0.AKbPwbzFCLgh-g3lvvh3dEH2SXcHmJ2JyrXocp4V1sI9DvPg--A02atNub9U_8f1QBEJMlobrQPqSY8EiDtW4Pdls93-ikTqkvfur_mZTmQcnyejSsRElUUIrND_TgmSmrqBhJM5Fk60-IhxLfQDroEqnhSkHFnTHYacAsTjeEmS_ZBbU9OSuF1bnkUbtcWnC8sMssjRSroTAj2GSUImsE1_tJ0SG8OiIzVmr3l_TCeVdDtNXXQ0PvkrXiINzxN8rKuq2KUn2QFtMYVt5TriiapKcCjzFIaIbwZpedSj69rDVwMJUM3QnT8yEbT7_1zFahCQWnGF_UN7BYipTcZZVg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Mon, 27 May 2024 04:44:12 GMT
+Request method:	GET
+Request URI:	https://dev.cib.appfactory01.standardbank.co.za/mandates/api/v1/mandates/authenticated/mandate-interchange/12454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	mandateInterchangeKey=12454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRpZC0xIiwicGkuYXRtIjoieHkwaCJ9.eyJzY3AiOltdLCJhdXRob3JpemF0aW9uX2RldGFpbHMiOltdLCJjbGllbnRfaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpc3MiOiJodHRwczovL2VudGVycHJpc2VzdHNzaXQuc3RhbmRhcmRiYW5rLmNvLnphIiwianRpIjoiR2lKVm16UHk1bVJlYklpeTZiQTJBNiIsInN1YiI6IjBjN2I3MDhiLWQxMTUtNDk1NS04NjhmLWFmMzRkZDAxMDEyZiIsIm5iZiI6MTcxNjc4NTAyOSwiaWQiOiIwYzdiNzA4Yi1kMTE1LTQ5NTUtODY4Zi1hZjM0ZGQwMTAxMmYiLCJpYXQiOjE3MTY3ODUwMjksImV4cCI6MTcxNjc4ODYyOX0.AKbPwbzFCLgh-g3lvvh3dEH2SXcHmJ2JyrXocp4V1sI9DvPg--A02atNub9U_8f1QBEJMlobrQPqSY8EiDtW4Pdls93-ikTqkvfur_mZTmQcnyejSsRElUUIrND_TgmSmrqBhJM5Fk60-IhxLfQDroEqnhSkHFnTHYacAsTjeEmS_ZBbU9OSuF1bnkUbtcWnC8sMssjRSroTAj2GSUImsE1_tJ0SG8OiIzVmr3l_TCeVdDtNXXQ0PvkrXiINzxN8rKuq2KUn2QFtMYVt5TriiapKcCjzFIaIbwZpedSj69rDVwMJUM3QnT8yEbT7_1zFahCQWnGF_UN7BYipTcZZVg
+				User-Agent=PostmanRuntime/7.37.0
+				Accept=*/*
+				Accept-Encoding=gzip, deflate, br
+				Connection=keep-alive
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Length: 0
+Date: Mon, 27 May 2024 04:44:15 GMT
