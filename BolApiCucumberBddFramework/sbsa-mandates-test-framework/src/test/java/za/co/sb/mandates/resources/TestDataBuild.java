@@ -194,7 +194,7 @@ public class TestDataBuild {
 		CreateH2HMandate H2HmandateObject = new CreateH2HMandate();
 		H2HmandateObject.setCountryCode("ZA");
 		H2HmandateObject.setMessageIdentification(messageidentification);
-		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-10T09:33:00Z[UTC]");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-14T09:33:00Z[UTC]");
 		H2HmandateObject.setCreationDateTime(creationDateAndTime);
 		H2HmandateObject.setInitiatingParty("TestCustName3");
 		H2HmandateObject.setClientReference(clientreference);
@@ -203,7 +203,7 @@ public class TestDataBuild {
 		H2HmandateObject.setDebtorAuthenticationRequired("0227");
 		H2HmandateObject.setInstallmentOccurrence("RCUR");
 		H2HmandateObject.setFrequency("MNTH");
-		Date mandateInitiationDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-10T09:33:00Z[UTC]");
+		Date mandateInitiationDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-14T09:33:00Z[UTC]");
 		H2HmandateObject.setMandateInitiationDate(mandateInitiationDate);
 		H2HmandateObject.setInstallmentAmount(500.00);
 		H2HmandateObject.setInstallmentAmountCurrency("ZAR");

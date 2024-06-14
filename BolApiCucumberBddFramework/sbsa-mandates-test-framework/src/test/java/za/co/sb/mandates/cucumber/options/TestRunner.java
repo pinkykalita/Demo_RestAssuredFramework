@@ -5,7 +5,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/features",plugin = "json:target/jsonReports/JsonTestReport.json",glue = {"za.co.sb.mandates.stepdefinitions"},tags = "@H2HProcessor")
+@CucumberOptions(features = "src/test/java/features",plugin = "json:target/jsonReports/JsonTestReport.json",glue = {"za.co.sb.mandates.stepdefinitions"},tags = "@endtoendCreateH2HMandate")
 public class TestRunner {
 
 }

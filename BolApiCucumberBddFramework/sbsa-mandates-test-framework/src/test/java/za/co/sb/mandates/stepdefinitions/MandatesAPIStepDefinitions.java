@@ -48,6 +48,8 @@ public class MandatesAPIStepDefinitions extends Utils {
 	ResourceURL resourceAPI;
 	String mandateInterchangeKey;
 	String originalmessageRequestTransactionId;
+	String actualAction;
+	String actualStatus;
 	
 	
 	
@@ -354,7 +356,6 @@ public class MandatesAPIStepDefinitions extends Utils {
 		
 		//Extract the originalMessageRequestTransactionId when contractReference matches
 		JsonPath jsonPath = new JsonPath(response);		
-		//String contractreferenceToMatch = "8666267289QAPinky3";
 		List<Map<String, Object>> responseList = jsonPath.getList("$");
 		List<Map<String, Object>> mandateinstructionlist = responseList.stream()
 	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
@@ -373,6 +374,46 @@ public class MandatesAPIStepDefinitions extends Utils {
 				.body(payload);
 		
 	}
+	
+	
+	/*extract the mandate from response when contractReference matches*/
+	@Then("extract the mandate with {string} from response")
+	public void extract_the_mandate_with_from_response(String contractreferenceToMatch) 
+	{
+		JsonPath jsonPath = new JsonPath(response);		
+		List<Map<String, Object>> responseList = jsonPath.getList("$");
+		List<Map<String, Object>> mandateinstructionlist = responseList.stream()
+	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
+	            .collect(Collectors.toList());
+		actualStatus = responseList.stream()
+	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
+	            .filter(m -> contractreferenceToMatch.equals(m.get("contractReference")))
+	            .map(m -> (String) m.get("status"))
+	            .findFirst().orElse("status not found");
+		System.out.println("actualStatus: " + actualStatus);
+		actualAction = responseList.stream()
+	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
+	            .filter(m -> contractreferenceToMatch.equals(m.get("contractReference")))
+	            .map(m -> (String) m.get("action"))
+	            .findFirst().orElse("action not found");
+		System.out.println("actualAction: " + actualAction);
+		
+	}
+	
+	@Then("status in response body should be ACC")
+	public void status_in_response_body_should_be_acc() 
+	{
+		assertEquals(actualStatus, "ACC");
+	}
+
+	@Then("action in response body should be I")
+	public void action_in_response_body_should_be_i()
+	{
+		assertEquals(actualAction, "I");
+	}
+
+	
+	
 	
 }
 
