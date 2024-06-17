@@ -80,4 +80,43 @@ Scenario Outline: Verify Get Mandate Batch By Customer Id
   | queryparam 	|	CustomerId	|	contractreferenceToMatch	|	statusExpected	|	actionExpected	|
   | true				|	373731			|	8666267289QAPinky4				|	ACC							|	A								|
   
-   	 	
+ @endtoendCancelH2HMandate
+ Scenario Outline: Verify Cancel H2H mandate API
+	Given user has cancel H2H mandate Payload with access token and "<originalcontractreference>", "<originalclientreference>" and "<messageidentification>"
+  When user sends "PUT" request to "cancelH2HMandateAPI"
+  Then the response status code should be "200" 
+ # And the response body should indicate "<responseMessage>"
+  Examples:
+  | originalcontractreference		|	responseMessage	|	originalclientreference			|	messageidentification							|
+  | 8666267289QAPinky2					|	success					|	27349246745ServiceTest3			|	100/MANIN/00210001/20240610/77790	|  	 
+  
+ @endtoendCancelH2HMandate 
+ Scenario Outline: POST8 - GPP to MMS Send GPP Pain011 Ack
+	Given user has Payload with access token, "<contractreferenceToMatch>", "<messagetype>" and "<messageidentification>" 
+  When user sends a POST request to "GPPPainAckAPI"
+  Then the response status code should be "200" 
+  Examples:
+ 	|	messagetype |	messageidentification							|	contractreferenceToMatch	|
+ 	|	Pain_011		| 100/MANIN/00210001/20240610/77790	|	8666267289QAPinky2				|	
+ 	
+ @endtoendCancelH2HMandate
+ Scenario Outline: POST6 - GPP to MMS Send GPP Amend Accept Request
+	Given user has Payload with access token, "<contractreferenceToMatch>", "<messagetype>" and "<messageidentification>"
+  When user sends a POST request to "GPPPainAckAPI"
+  Then the response status code should be "200" 
+  Examples:
+  |	messagetype |	messageidentification							|	contractreferenceToMatch	|
+ 	|	Pain_012		| 100/MANIN/00210001/20240610/77790	|	8666267289QAPinky2				|	
+ 	
+@endtoendCancelH2HMandate
+Scenario Outline: Verify Get Mandate Batch By Customer Id
+	Given request with path parameter "<CustomerId>" and "<queryparam>"
+  When user sends "GET" request to "getMandateBatchAPICustomerId"
+  Then the response status code should be "200"
+  And extract the mandate with "<contractreferenceToMatch>" from response
+  And status in response body should be "<statusExpected>"
+  And action in response body should be "<actionExpected>"
+  Examples:
+  | queryparam 	|	CustomerId	|	contractreferenceToMatch	|	statusExpected	|	actionExpected	|
+  | true				|	373731			|	8666267289QAPinky2				|	ACC							|	C								|
+   	

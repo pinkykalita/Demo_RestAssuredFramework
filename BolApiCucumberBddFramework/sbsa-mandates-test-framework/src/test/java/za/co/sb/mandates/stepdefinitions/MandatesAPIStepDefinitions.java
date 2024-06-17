@@ -380,12 +380,9 @@ public class MandatesAPIStepDefinitions extends Utils {
 	@Then("extract the mandate with {string} from response")
 	public void extract_the_mandate_with_from_response(String contractreferenceToMatch) 
 	{
-		JsonPath jsonPath = new JsonPath(response);		
+		JsonPath jsonPath = new JsonPath(response);	
+		
 		List<Map<String, Object>> responseList = jsonPath.getList("$");
-		List<Map<String, Object>> mandateinstructionlist = responseList.stream()
-	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
-	            .collect(Collectors.toList());
-		System.out.println("mandateinstructionlist: "+mandateinstructionlist);
 		List<Map<String, Object>> matchingElements = responseList.stream()
 			    .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
 			    .filter(m -> contractreferenceToMatch.equals(m.get("contractReference")))
@@ -395,12 +392,14 @@ public class MandatesAPIStepDefinitions extends Utils {
 			} else {
 			    matchingElements.forEach(System.out::println);
 			}
+			
 		actualStatus = responseList.stream()
 	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
 	            .filter(m -> contractreferenceToMatch.equals(m.get("contractReference")))
 	            .map(m -> (String) m.get("status"))
 	            .findFirst().orElse("status not found");
 		System.out.println("actualStatus: " + actualStatus);
+		
 		actualAction = responseList.stream()
 	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
 	            .filter(m -> contractreferenceToMatch.equals(m.get("contractReference")))
@@ -421,7 +420,6 @@ public class MandatesAPIStepDefinitions extends Utils {
 	{
 		assertEquals(actualAction, actionExpected);
 	}
-
 	
 	
 	

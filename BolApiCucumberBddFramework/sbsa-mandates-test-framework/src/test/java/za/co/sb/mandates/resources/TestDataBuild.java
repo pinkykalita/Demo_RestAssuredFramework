@@ -271,17 +271,17 @@ public class TestDataBuild {
 		
 		cancelH2HMandateObject.setCountryCode("ZA");
 		cancelH2HMandateObject.setMessageIdentification(messageidentification);
-		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-05-20T12:55:00Z[UTC]");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-17T12:55:00Z[UTC]");
 		cancelH2HMandateObject.setCreationDateTime(creationDateAndTime);
-		cancelH2HMandateObject.setInitiatingParty("TestCustName");
+		cancelH2HMandateObject.setInitiatingParty("pinky kalita");
 		cancelH2HMandateObject.setCancellationReason("CEXP");
 		cancelH2HMandateObject.setOriginalClientReference(originalclientreference);
 		cancelH2HMandateObject.setOriginalContractReference(originalcontractreference);
 		cancelH2HMandateObject.setOriginalTrackingCancellationIndicator("T");
-		cancelH2HMandateObject.setOriginalCreditorName("OLD MUTUAL FINANCE QLINK");
-		cancelH2HMandateObject.setOriginalCreditorAbbreviatedShortName("OMFINANCE");
-		cancelH2HMandateObject.setOriginalDebtorAccountName("LETUMILE EDWARD TSHIPAGAEBONWE");
-		cancelH2HMandateObject.setOriginalDebtorBankBranchNumber("632005");
+		cancelH2HMandateObject.setOriginalCreditorName("TM Lesotho Customer 14");
+		cancelH2HMandateObject.setOriginalCreditorAbbreviatedShortName("ACMandates");
+		cancelH2HMandateObject.setOriginalDebtorAccountName("Vodacom");
+		cancelH2HMandateObject.setOriginalDebtorBankBranchNumber("301105");
 		cancelH2HMandateObject.setAuthenticationType("REAL TIME");
 		cancelH2HMandateObject.setRequestTransmissionNumber(1);
 		cancelH2HMandateObject.setOriginalMandateReferenceNumber("16803");
