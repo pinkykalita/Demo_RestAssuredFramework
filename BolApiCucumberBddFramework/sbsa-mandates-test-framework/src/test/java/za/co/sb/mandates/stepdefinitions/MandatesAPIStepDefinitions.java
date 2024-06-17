@@ -385,6 +385,16 @@ public class MandatesAPIStepDefinitions extends Utils {
 		List<Map<String, Object>> mandateinstructionlist = responseList.stream()
 	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
 	            .collect(Collectors.toList());
+		System.out.println("mandateinstructionlist: "+mandateinstructionlist);
+		List<Map<String, Object>> matchingElements = responseList.stream()
+			    .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
+			    .filter(m -> contractreferenceToMatch.equals(m.get("contractReference")))
+			    .collect(Collectors.toList());
+			if (matchingElements.isEmpty()) {
+			    System.out.println("No matching elements found");
+			} else {
+			    matchingElements.forEach(System.out::println);
+			}
 		actualStatus = responseList.stream()
 	            .flatMap(responseItem -> ((List<Map<String, Object>>) responseItem.get("mandateInstructionList")).stream())
 	            .filter(m -> contractreferenceToMatch.equals(m.get("contractReference")))
@@ -400,16 +410,16 @@ public class MandatesAPIStepDefinitions extends Utils {
 		
 	}
 	
-	@Then("status in response body should be ACC")
-	public void status_in_response_body_should_be_acc() 
+	@Then("status in response body should be {string}")
+	public void status_in_response_body_should_be(String statusExpected) 
 	{
-		assertEquals(actualStatus, "ACC");
+		assertEquals(actualStatus, statusExpected);
 	}
 
-	@Then("action in response body should be I")
-	public void action_in_response_body_should_be_i()
+	@Then("action in response body should be {string}")
+	public void action_in_response_body_should_be(String actionExpected)
 	{
-		assertEquals(actualAction, "I");
+		assertEquals(actualAction, actionExpected);
 	}
 
 	

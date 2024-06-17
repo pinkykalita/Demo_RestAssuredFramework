@@ -236,9 +236,9 @@ public class TestDataBuild {
 		
 		updateH2HmandateObject.setCountryCode("za");
 		updateH2HmandateObject.setMessageIdentification(messageidentification);
-		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-05-31T09:33:00Z[UTC]");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-17T09:33:00Z[UTC]");
 		updateH2HmandateObject.setCreationDateTime(creationDateAndTime);
-		updateH2HmandateObject.setInitiatingParty("TestCustName");
+		updateH2HmandateObject.setInitiatingParty("TestH2HUpdateAPI");
 		updateH2HmandateObject.setAmendmentReason("MD20");
 		updateH2HmandateObject.setClientReference("27349246745ServiceTestPinky");
 		updateH2HmandateObject.setDebtorAuthenticationRequired("0227");

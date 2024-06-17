@@ -19,8 +19,7 @@ public enum ResourceURL {
 	createH2HMandateAPI("authenticated/h2h/create-mandate"),
 	updateH2HMandateAPI("authenticated/h2h/update-mandate"),
 	cancelH2HMandateAPI("authenticated/h2h/cancel-mandate"),
-	GPPPainAckAPI("authenticated/gpp-stub"),
-	GPPInitiateAcceptRequestAPI("authenticated/gpp-stub");
+	GPPPainAckAPI("authenticated/gpp-stub");
 	
 	
 	
