@@ -370,8 +370,7 @@ public class MandatesAPIStepDefinitions extends Utils {
         		
         //creating gpp payload 
 		gppstub payload = data.gppstubPayload(messagetype, originalmessageRequestTransactionId, messageidentification);
-		request = given().spec(requestSpecifications())
-				.body(payload);
+		request = given().spec(requestSpecifications()).body(payload);
 		
 	}
 	

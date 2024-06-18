@@ -236,10 +236,10 @@ public class TestDataBuild {
 		
 		updateH2HmandateObject.setCountryCode("za");
 		updateH2HmandateObject.setMessageIdentification(messageidentification);
-		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-17T09:33:00Z[UTC]");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-18T09:33:00Z[UTC]");
 		updateH2HmandateObject.setCreationDateTime(creationDateAndTime);
-		updateH2HmandateObject.setInitiatingParty("TestH2HUpdateAPI");
-		updateH2HmandateObject.setAmendmentReason("MD20");
+		updateH2HmandateObject.setInitiatingParty("TestCustName");
+		updateH2HmandateObject.setAmendmentReason("MD18");
 		updateH2HmandateObject.setClientReference("27349246745ServiceTestPinky");
 		updateH2HmandateObject.setDebtorAuthenticationRequired("0227");
 		updateH2HmandateObject.setInstallmentOccurrence("RCUR");
@@ -271,7 +271,7 @@ public class TestDataBuild {
 		
 		cancelH2HMandateObject.setCountryCode("ZA");
 		cancelH2HMandateObject.setMessageIdentification(messageidentification);
-		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-17T12:55:00Z[UTC]");
+		Date creationDateAndTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-18T12:55:00Z[UTC]");
 		cancelH2HMandateObject.setCreationDateTime(creationDateAndTime);
 		cancelH2HMandateObject.setInitiatingParty("pinky kalita");
 		cancelH2HMandateObject.setCancellationReason("CEXP");
