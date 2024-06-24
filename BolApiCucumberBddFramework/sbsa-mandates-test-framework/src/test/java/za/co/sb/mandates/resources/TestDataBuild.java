@@ -69,10 +69,12 @@ public class TestDataBuild {
 		return mandateProcessingObject;
 	}
 	
-	public CreateMandateInterchange CreateMandateInterchangePayload(String newKey)
+	public CreateMandateInterchange CreateMandateInterchangePayload(String newKey) throws ParseException
 	{
 		CreateMandateInterchange mandateInterchangeObject = new CreateMandateInterchange();
 		
+		Date creationdateAndtime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-21T09:33:00Z[UTC]");
+		mandateInterchangeObject.setCreationDateAndTime(creationdateAndtime);
 		mandateInterchangeObject.setCustomerId("BOL Customer");
 		mandateInterchangeObject.setCustomerKey(newKey);
 		mandateInterchangeObject.setFailedMandateCount(0);
@@ -81,15 +83,18 @@ public class TestDataBuild {
 		mandateInterchangeObject.setSubmissionChannel("File Upload");
 		mandateInterchangeObject.setTotalMandateFieldCount(0);
 		mandateInterchangeObject.setUploadedUsername("Test User123");
+		Date whenmodified = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-21T09:33:00Z[UTC]");
+		mandateInterchangeObject.setWhenModified(whenmodified);
 		
 		return mandateInterchangeObject;
 	}
 	
-	public UpdateMandateInterchange UpdateMandateInterchangePayload(String key, String filename, String uploadedUsername)
+	public UpdateMandateInterchange UpdateMandateInterchangePayload(String key, String filename, String uploadedUsername) throws ParseException
 	{
 		UpdateMandateInterchange mandateInterchangeObject = new UpdateMandateInterchange();
 		
-		mandateInterchangeObject.setCreationDateAndTime("2024-03-18T08:04:03.768Z[UTC]");
+		Date creationdateAndtime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-24T09:33:00Z[UTC]");
+		mandateInterchangeObject.setCreationDateAndTime(creationdateAndtime);
 		mandateInterchangeObject.setCustomerId("BOL Customer");
 		mandateInterchangeObject.setCustomerKey(123456);
 		mandateInterchangeObject.setFailedMandateCount(0);
@@ -98,8 +103,10 @@ public class TestDataBuild {
 		mandateInterchangeObject.setStatus("T");
 		mandateInterchangeObject.setSubmissionChannel("File Upload");
 		mandateInterchangeObject.setTotalMandateFieldCount(0);
+		Date whenmodified = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse("2024-06-24T09:33:00Z[UTC]");
+		mandateInterchangeObject.setWhenModified(whenmodified);
 		mandateInterchangeObject.setUploadedUsername(uploadedUsername);
-		mandateInterchangeObject.setWhenModified("2024-03-18T08:04:03.768Z[UTC]");
+		
 		
 		return mandateInterchangeObject;
 	}

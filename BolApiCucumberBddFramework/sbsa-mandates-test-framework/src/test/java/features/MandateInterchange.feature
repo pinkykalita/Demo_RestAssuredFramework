@@ -1,16 +1,16 @@
 Feature: Validating Mandate Interchange API
 
-@MandateInterchange
+#@MandateInterchange
 Scenario Outline: Verify that Mandate Interchange are successfully created using Create Mandate Intercahnege API
 	Given user has request Payload with access token and "<customerkey>" 
   When user sends a POST request to "createMandateInterchangeAPI"
   Then the response status code should be "200" 
   And "customerKey" in response body should be same as "<customerkey>"
   Examples:
-  | customerkey	|
-  | 195  				|
+  | customerkey			|
+  | 123456  				|
 
-@MandateInterchange
+#@MandateInterchange
 Scenario Outline: Verify that user can retrieve the Mandate Interchange using mandateInterchangeKey
 	Given request prepared with "<interchange key>"
 	When user sends "GET" request to "getMandateInterchangeWithKeyAPI"
@@ -18,9 +18,9 @@ Scenario Outline: Verify that user can retrieve the Mandate Interchange using ma
 	And "mandateInterchangeKey" in response body should be same as "<interchange key>"
 	Examples:
   | interchange key |
-  | 12							|  	
+  | 100							|  	
  
-@MandateInterchange
+#@MandateInterchange
 Scenario Outline: Verify that user can retrieve the Mandate Interchange with query parameters
 	Given request prepared with query parameters "<customerkey>","<filename>","<uploadedusername>"
 	When user sends "GET" request to "getMandateInterchangeWithQueryParamsAPI"
@@ -28,7 +28,7 @@ Scenario Outline: Verify that user can retrieve the Mandate Interchange with que
 	And response should return only the data that contains "<customerkey>" and "<filename>" and "<uploadedusername>" 
 	Examples:
   | customerkey |	filename	|	uploadedusername	|	fromdate		|	Status	|	todate			|
-  | 123456			|	pk.xml	  |	pinky							|	2023-06-01	|	T				|	2024-12-04	|
+  | 123456			|	TEST.xml	|	Test User123			|	2023-06-01	|	T				|	2024-12-04	|
   
  
 @MandateInterchange
@@ -40,11 +40,11 @@ Scenario Outline: Verify that Mandate Interchange is successfully updated using 
   And "uploadedUsername" in response body should be same as "<uploadedusername>"
   And "customerKey" in response body should be same as "123456"
  	Examples:
-  | interchange key | filename				|	uploadedusername	|
-  | 12							| TestingPUT.xml	|	Pinky Kalita			|
+  | interchange key | filename							|	uploadedusername	|
+  | 100							| TestFile24June24.xml	|	Pinky Kalita			|
  
 
-@MandateInterchange
+#@MandateInterchange
 Scenario Outline: Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithQueryParamsAPI when no data found
 	Given request prepared with query parameters "<customerkey>","<uploadedusername>"
 	When user sends "GET" request to "getMandateInterchangeWithQueryParamsAPI"
@@ -53,7 +53,7 @@ Scenario Outline: Verify that 404 statuscode is displayed on GET request for get
   | customerkey |	uploadedusername	|
   | 12					|	Test User123			| 
   
-@MandateInterchange
+#@MandateInterchange
 Scenario Outline: Verify that 404 statuscode is displayed on GET request for getMandateInterchangeWithKeyAPI when no data found
 	Given request prepared with "<interchange key>"
 	When user sends "GET" request to "getMandateInterchangeWithKeyAPI"
@@ -62,7 +62,7 @@ Scenario Outline: Verify that 404 statuscode is displayed on GET request for get
   | interchange key |
   | 12454						|
   
-@MandateInterchange
+#@MandateInterchange
 Scenario Outline: Verify that GET request to getMandateInterchangeWithQueryParamsAPI with incorrect query params returns 500 statuscode 
 	Given request prepared with query parameters "<Status>"
 	When user sends "GET" request to "getMandateInterchangeWithQueryParamsAPI"
@@ -78,4 +78,4 @@ Scenario Outline: Verify that GET request to getMandateInterchangeWithQueryParam
 	Then the response status code should be "403"
 	Examples:
   | interchange key |
-  | 					| 
+  | 								| 

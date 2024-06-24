@@ -1,5 +1,9 @@
 package za.co.sb.mandates.pojo;
 
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class CreateMandateInterchange {
 	
 	 private String customerId; 
@@ -10,8 +14,26 @@ public class CreateMandateInterchange {
 	 private String submissionChannel;
 	 private int totalMandateFieldCount;
 	 private String uploadedUsername;
+	 @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+	 private Date creationDateAndTime;
+	 @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+	 private Date whenModified;
+	  
 	
 	 
+	public Date getWhenModified() {
+		return whenModified;
+	}
+	public void setWhenModified(Date whenModified) {
+		this.whenModified = whenModified;
+	}
+	
+	public Date getCreationDateAndTime() {
+		return creationDateAndTime;
+	}
+	public void setCreationDateAndTime(Date creationDateAndTime) {
+		this.creationDateAndTime = creationDateAndTime;
+	}
 	public String getCustomerKey() {
 		return customerKey;
 	}
@@ -59,6 +81,10 @@ public class CreateMandateInterchange {
 	}
 	public void setFailedMandateCount(int failedMandateCount) {
 		this.failedMandateCount = failedMandateCount;
+	}
+	public void setCreationDateTime(Date creationDateAndTime) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	 

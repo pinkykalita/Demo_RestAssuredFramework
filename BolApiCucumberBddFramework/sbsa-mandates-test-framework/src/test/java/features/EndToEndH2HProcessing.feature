@@ -98,7 +98,7 @@ Scenario Outline: Verify Get Mandate Batch By Customer Id
  	|	Pain_011		| 100/MANCN/00210001/20240618/77790	|	8666267289ContractRef1				|	
  	
  #@endtoendCancelH2HMandate
- Scenario Outline: POST6 - GPP to MMS Send GPP Amend Accept Request
+ Scenario Outline: POST9 - GPP to MMS Send GPP Cancel Accept Request
 	Given user has Payload with access token, "<contractreferenceToMatch>", "<messagetype>" and "<messageidentification>"
   When user sends a POST request to "GPPPainAckAPI"
   Then the response status code should be "200" 

@@ -8,7 +8,7 @@ Scenario Outline: Verify Get Mandate Batch By Customer Id & Mandate Batch Key
   Then the response status code should be "200" 
   Examples:
   |	queryparam	| MandteBatchKey 	|	CustomerId	|
-  |	true				| 6								|	373731			|
+  |	true				| 136								|	373731			|
   
 
 @MandateBatch

@@ -186,7 +186,7 @@ public class MandatesAPIStepDefinitions extends Utils {
 
 	/*create Mandate Interchange*/
 	@Given("user has request Payload with access token and {string}")
-	public void user_has_request_payload_with_access_token_and(String newKey) throws IOException 
+	public void user_has_request_payload_with_access_token_and(String newKey) throws IOException, ParseException 
 	{
 		interchangePayload.setCustomerKey(newKey);
 		request = given().spec(requestSpecifications())
@@ -233,7 +233,7 @@ public class MandatesAPIStepDefinitions extends Utils {
 	
 	/*update Mandate Interchange*/
 	@Given("a request with {string} and payload to update {string},{string}")
-	public void a_request_with_and_payload_to_update(String key, String keyvalue1, String keyvalue2) throws IOException 
+	public void a_request_with_and_payload_to_update(String key, String keyvalue1, String keyvalue2) throws IOException, ParseException 
 	{
 		
 		req1 = given().spec(requestSpecifications()).pathParam("mandateInterchangeKey", key)

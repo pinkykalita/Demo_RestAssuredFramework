@@ -1,9 +1,12 @@
 package za.co.sb.mandates.pojo;
 
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class UpdateMandateInterchange 
 {
 	
-	private String creationDateAndTime;
 	private String customerId;
     private int customerKey;
     private int failedMandateCount;
@@ -12,8 +15,11 @@ public class UpdateMandateInterchange
     private String submissionChannel;
     private int totalMandateFieldCount;
     private String uploadedUsername;
-    private String whenModified;
     private String mandateInterchangeKey;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+	 private Date creationDateAndTime;
+	 @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "UTC")
+	 private Date whenModified;
 	
 	public String getMandateInterchangeKey() {
 		return mandateInterchangeKey;
@@ -21,10 +27,10 @@ public class UpdateMandateInterchange
 	public void setMandateInterchangeKey(String mandateInterchangeKey) {
 		this.mandateInterchangeKey = mandateInterchangeKey;
 	}
-	public String getCreationDateAndTime() {
+	public Date getCreationDateAndTime() {
 		return creationDateAndTime;
 	}
-	public void setCreationDateAndTime(String creationDateAndTime) {
+	public void setCreationDateAndTime(Date creationDateAndTime) {
 		this.creationDateAndTime = creationDateAndTime;
 	}
 	public String getCustomerId() {
@@ -75,10 +81,10 @@ public class UpdateMandateInterchange
 	public void setUploadedUsername(String uploadedUsername) {
 		this.uploadedUsername = uploadedUsername;
 	}
-	public String getWhenModified() {
+	public Date getWhenModified() {
 		return whenModified;
 	}
-	public void setWhenModified(String whenModified) {
+	public void setWhenModified(Date whenModified) {
 		this.whenModified = whenModified;
 	}
 	
